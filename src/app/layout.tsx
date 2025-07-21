@@ -1,10 +1,15 @@
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export const metadata: Metadata = {
   title: 'NavioX Solutions Inc. | Charting Digital Excellence',
@@ -14,6 +19,11 @@ export const metadata: Metadata = {
   creator: 'NavioX Solutions Inc.',
   publisher: 'NavioX Solutions Inc.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://navioxbd.com'),
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'NavioX Solutions Inc. | Charting Digital Excellence',
     description: 'Your digital compass for navigating technological territories. We transform ideas into digital reality with precision-crafted software solutions.',
@@ -37,7 +47,6 @@ export const metadata: Metadata = {
     images: ['/images/brand/banner.png'],
     creator: '@NavioXSolutions',
   },
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
 }
 
@@ -47,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         <div className="min-h-screen flex flex-col">
           <Header />
