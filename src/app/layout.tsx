@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
-      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.ico', sizes: '16x16' },
+      { url: '/favicon-32x32.ico', sizes: '32x32' },
     ],
     shortcut: '/favicon.ico',
     apple: [
@@ -66,8 +66,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
-        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+                  <link rel="icon" href="/favicon-16x16.ico" type="image/x-icon" sizes="16x16" />
+          <link rel="icon" href="/favicon-32x32.ico" type="image/x-icon" sizes="32x32" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className={`${inter.className} antialiased`}>
