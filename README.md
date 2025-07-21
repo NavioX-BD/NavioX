@@ -97,7 +97,7 @@ Following the comprehensive development plan, the next phases include:
 4. **Admin Dashboard** - Content management system
 5. **Client Portal** - Project tracking and testimonials
 6. **CMS Integration** - Headless CMS setup
-7. **Deployment** - Netlify hosting and domain configuration
+7. **Deployment** - Vercel hosting and domain configuration
 
 ## 📄 License
 
@@ -115,9 +115,9 @@ For comprehensive project information, visit our **[Documentation Hub](./docs/RE
 
 ## 🔗 **Repository**
 
-- **GitHub:** [https://github.com/TheToriqul/NavioX](https://github.com/TheToriqul/NavioX)
-- **Issues:** [Report bugs or request features](https://github.com/TheToriqul/NavioX/issues)
-- **Author:** [TheToriqul](https://github.com/TheToriqul)
+- **GitHub:** [https://github.com/NavioX-BD/NavioX](https://github.com/NavioX-BD/NavioX)
+- **Issues:** [Report bugs or request features](https://github.com/NavioX-BD/NavioX/issues)
+- **Organization:** [NavioX-BD](https://github.com/NavioX-BD)
 
 ## 📄 **License**
 
@@ -126,4 +126,3 @@ MIT
 ---
 
 **NavioX Solutions Inc. - Where every line of code charts a course to your success.**
-# NavioX
