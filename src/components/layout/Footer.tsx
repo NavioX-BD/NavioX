@@ -54,15 +54,14 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center">
               <Image
                 className="h-8 w-auto"
-                src="/images/brand/logo_transparent.png"
+                src="/images/brand/banner_transparent.png"
                 alt="NavioX Solutions Inc."
-                width={32}
+                width={120}
                 height={32}
               />
-              <span className="text-xl font-bold text-white">NavioX Solutions Inc.</span>
             </div>
             <p className="text-sm leading-6 text-gray-300">
               Charting Digital Excellence, Navigating Your Success. We transform ideas into digital reality with precision-crafted software solutions.
