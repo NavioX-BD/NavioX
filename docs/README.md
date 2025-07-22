@@ -65,7 +65,7 @@ Technical specifications, development plans, and implementation guides.
   - Professional development workflow
 
 - **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Production deployment guide
-  - Vercel deployment (recommended)
+  - Render deployment (recommended)
   - Alternative hosting platforms
   - Custom domain configuration
   - Environment variables setup

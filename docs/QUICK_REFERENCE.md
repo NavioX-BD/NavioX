@@ -87,8 +87,8 @@ _"To become the lighthouse of innovation in the software engineering ocean—whe
 
 ### **Production:**
 
-- **Platform:** Vercel (recommended)
-- **URL:** naviox.vercel.app
+- **Platform:** Render (recommended)
+- **URL:** naviox.onrender.com
 - **Custom Domain:** navioxbd.com (planned)
 - **Deployment:** Automatic from main branch
 
@@ -170,7 +170,8 @@ cp .env.example .env.local  # Setup environment
 ### **Deployment:**
 
 ```bash
-# Vercel deployment (recommended)
+# Render deployment (recommended)
+# See https://render.com/docs/static-sites
 npm i -g vercel
 vercel login
 vercel --prod

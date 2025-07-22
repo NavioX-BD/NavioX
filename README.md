@@ -97,7 +97,7 @@ Following the comprehensive development plan, the next phases include:
 4. **Admin Dashboard** - Content management system
 5. **Client Portal** - Project tracking and testimonials
 6. **CMS Integration** - Headless CMS setup
-7. **Deployment** - Vercel hosting and domain configuration
+7. **Deployment** - Render hosting and domain configuration
 
 ## 📄 License
 
