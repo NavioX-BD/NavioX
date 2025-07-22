@@ -1,7 +1,6 @@
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import type { Metadata, Viewport } from 'next'
-import { ThemeProvider } from 'next-themes'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -71,20 +70,13 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange={false}
-        >
-          <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300">
-            <Header />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </ThemeProvider>
+        <div className="min-h-screen flex flex-col bg-white">
+          <Header />
+          <main className="flex-grow bg-pattern">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   )

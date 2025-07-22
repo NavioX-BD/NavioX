@@ -1,11 +1,11 @@
 'use client'
 
 import {
-  ArrowUpRightIcon,
-  CodeBracketIcon,
-  EnvelopeIcon,
-  LightBulbIcon,
-  MapPinIcon
+    ArrowUpRightIcon,
+    CodeBracketIcon,
+    EnvelopeIcon,
+    LightBulbIcon,
+    MapPinIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -87,7 +87,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800 border-t border-gray-300 dark:border-gray-700">
+    <footer className="bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 border-t border-gray-300">
       {/* Main Footer Content */}
       <div className="mx-auto max-w-7xl px-6 py-8 sm:py-10 lg:px-8">
         {/* Navigation Grid - 7 columns */}
@@ -103,39 +103,36 @@ const Footer = () => {
             <div className="space-y-6">
               <div className="flex items-start space-x-3">
                 <Image
-                  className="h-8 w-auto"
+                  className="h-10 w-auto max-w-[180px]"
                   src="/images/brand/banner_transparent.png"
                   alt="NavioX Solutions Inc."
-                  width={120}
-                  height={32}
+                  width={180}
+                  height={40}
                 />
               </div>
               
               <div className="space-y-4">
-                <p className="text-sm leading-6 text-gray-600 dark:text-gray-300">
-                  <span className="text-blue-600 dark:text-blue-400 font-semibold">NavioX Solutions Inc.</span> serves as your digital compass, guiding businesses through uncharted technological territories with precision-crafted software solutions.
+                <p className="text-sm leading-6 text-gray-600">
+                  <span className="text-blue-600 font-semibold">NavioX Solutions Inc.</span> serves as your digital compass, guiding businesses through uncharted technological territories with precision-crafted software solutions.
                 </p>
                 
-                <div className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
+                <div className="flex items-center space-x-2 text-gray-500">
                   <CodeBracketIcon className="h-4 w-4" />
                   <span className="text-sm">Built with excellence, engineered for scale</span>
                 </div>
               </div>
 
               {/* Contact Info */}
-              <div className="space-y-3">
-                <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Contact</h4>
-                <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
-                  <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
-                    <EnvelopeIcon className="h-4 w-4 text-blue-600 dark:text-blue-400 flex-shrink-0" />
-                    <a href="mailto:info@navioxbd.com" className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                      info@navioxbd.com
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
-                    <MapPinIcon className="h-4 w-4 text-blue-600 dark:text-blue-400 flex-shrink-0" />
-                    <span className="text-sm">Dhaka, Bangladesh</span>
-                  </div>
+              <div className="space-y-1">
+                <div className="flex items-center space-x-2 text-gray-600">
+                  <EnvelopeIcon className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                  <a href="mailto:info@navioxbd.com" className="text-sm hover:text-blue-600 transition-colors">
+                    info@navioxbd.com
+                  </a>
+                </div>
+                <div className="flex items-center space-x-2 text-gray-600">
+                  <MapPinIcon className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                  <span className="text-sm">Dhaka, Bangladesh</span>
                 </div>
               </div>
             </div>
@@ -149,8 +146,8 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
-              <LightBulbIcon className="h-4 w-4 mr-2 text-blue-600 dark:text-blue-400" />
+            <h3 className="text-sm font-semibold text-gray-900 mb-6 flex items-center">
+              <LightBulbIcon className="h-4 w-4 mr-2 text-blue-600" />
               Services
             </h3>
             <ul role="list" className="space-y-3">
@@ -158,7 +155,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link 
                     href={item.href} 
-                    className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group"
+                    className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center group"
                   >
                     {item.name}
                     <ArrowUpRightIcon className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -176,13 +173,13 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-6">Company</h3>
+            <h3 className="text-sm font-semibold text-gray-900 mb-6">Company</h3>
             <ul role="list" className="space-y-3">
               {navigation.company.map((item) => (
                 <li key={item.name}>
                   <Link 
                     href={item.href} 
-                    className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group"
+                    className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center group"
                   >
                     {item.name}
                     <ArrowUpRightIcon className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -200,13 +197,13 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-6">Resources</h3>
+            <h3 className="text-sm font-semibold text-gray-900 mb-6">Resources</h3>
             <ul role="list" className="space-y-3">
               {navigation.resources.map((item) => (
                 <li key={item.name}>
                   <Link 
                     href={item.href} 
-                    className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group"
+                    className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center group"
                   >
                     {item.name}
                     <ArrowUpRightIcon className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -224,11 +221,11 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-6">Stay Updated</h3>
+            <h3 className="text-sm font-semibold text-gray-900 mb-6">Stay Updated</h3>
             
             {/* Newsletter */}
             <div className="mb-6">
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              <p className="text-sm text-gray-600 mb-4">
                 Get the latest insights on software engineering and industry trends.
               </p>
               <div className="space-y-3">
@@ -236,13 +233,13 @@ const Footer = () => {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="flex-1 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-l-lg text-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400"
+                    className="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-l-lg text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500"
                   />
                   <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-r-lg transition-colors">
                     Subscribe
                   </button>
                 </div>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
+                <p className="text-xs text-gray-500">
                   No spam. Unsubscribe anytime.
                 </p>
               </div>
@@ -250,7 +247,7 @@ const Footer = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">Follow Us</h4>
+              <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Follow Us</h4>
               <div className="flex space-x-3">
                 {socialLinks.map((item) => (
                   <motion.a 
@@ -258,7 +255,7 @@ const Footer = () => {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-blue-50 dark:hover:bg-blue-900 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-colors"
+                    className="p-2 bg-white border border-gray-200 hover:bg-blue-50 text-gray-600 hover:text-blue-600 rounded-lg transition-colors"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -273,11 +270,11 @@ const Footer = () => {
       </div>
 
       {/* Simple Horizontal Divider */}
-      <div className="border-t border-gray-300 dark:border-gray-700"></div>
+      <div className="border-t border-gray-300"></div>
 
       {/* Bottom Bar - Compact */}
       <motion.div 
-        className="bg-gray-100 dark:bg-slate-800"
+        className="bg-gray-100"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
@@ -285,7 +282,7 @@ const Footer = () => {
       >
         <div className="mx-auto max-w-7xl px-6 py-2 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
-            <div className="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-400">
+            <div className="flex items-center space-x-4 text-xs text-gray-500">
               <span>&copy; {currentYear} NavioX Solutions Inc. All rights reserved.</span>
               <span className="hidden sm:inline">•</span>
               <span className="hidden sm:inline">Crafting digital excellence since 2024</span>
@@ -296,7 +293,7 @@ const Footer = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-xs text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-xs text-gray-500 hover:text-blue-600 transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -309,4 +306,4 @@ const Footer = () => {
   )
 }
 
-export default Footer 
+export default Footer
