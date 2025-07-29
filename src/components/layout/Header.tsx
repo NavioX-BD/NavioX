@@ -476,7 +476,7 @@ const Header = () => {
                 ) : (
                   <Link 
                     href={item.href} 
-                    className={`text-sm font-semibold leading-6 relative overflow-hidden group transition-colors duration-200 ${
+                    className={`text-sm font-semibold leading-6 relative overflow-hidden group transition-colors duration-200 flex items-center ${
                       active 
                         ? 'text-blue-600' 
                         : 'text-gray-900 hover:text-blue-600'

@@ -13,6 +13,8 @@ This proposal outlines a complete development strategy using cutting-edge, cost-
 **Tech Stack**: Next.js + Tailwind CSS + Firebase + Netlify  
 **Timeline**: 8-12 weeks for MVP, 16+ weeks for full features  
 **Budget**: $0-50/month operational costs
+Email Address: info@navioxbd.com (used everywhere)
+Phone Number: +880 1765-939006
 
 ---
 

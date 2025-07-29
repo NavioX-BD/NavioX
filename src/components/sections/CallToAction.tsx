@@ -69,14 +69,16 @@ const CallToAction = () => {
               </motion.div>
             </Link>
             
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="group inline-flex items-center justify-center rounded-lg border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200"
-            >
-              <PhoneIcon className="mr-3 h-5 w-5" />
-              Schedule a Call
-            </motion.button>
+            <Link href="/contact">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="group inline-flex items-center justify-center rounded-lg border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200"
+              >
+                <PhoneIcon className="mr-3 h-5 w-5" />
+                Schedule a Call
+              </motion.div>
+            </Link>
           </motion.div>
 
           {/* Contact Info */}
@@ -151,22 +153,22 @@ const CallToAction = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm">
             <a 
-              href="mailto:contact@navioxsolutions.com" 
+              href="mailto:info@navioxbd.com" 
               className="flex items-center text-blue-200 hover:text-white transition-colors duration-200"
             >
               <span className="mr-2">📧</span>
-              contact@navioxsolutions.com
+              info@navioxbd.com
             </a>
             <a 
-              href="tel:+1-555-NAVIOX-1" 
+              href="tel:+8801765939006" 
               className="flex items-center text-blue-200 hover:text-white transition-colors duration-200"
             >
               <span className="mr-2">📞</span>
-              +1 (555) NAVIOX-1
+              +880 1765-939006
             </a>
             <div className="flex items-center text-blue-200">
               <span className="mr-2">🌍</span>
-              Available Worldwide
+              Dhaka, Bangladesh
             </div>
           </div>
         </motion.div>

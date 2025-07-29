@@ -207,7 +207,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <motion.section 
         className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20"
@@ -599,25 +599,25 @@ export default function ContactPage() {
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200 h-32 flex flex-col justify-center">
+                    <div className="text-3xl font-bold text-blue-600 mb-2">150+</div>
                     <div className="text-sm font-medium text-gray-700">Projects Delivered</div>
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200 h-32 flex flex-col justify-center">
                     <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
                     <div className="text-sm font-medium text-gray-700">Client Satisfaction</div>
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200 h-32 flex flex-col justify-center">
                     <div className="text-3xl font-bold text-blue-600 mb-2">&lt; 24h</div>
                     <div className="text-sm font-medium text-gray-700">Response Time</div>
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200 h-32 flex flex-col justify-center">
                     <div className="text-3xl font-bold text-blue-600 mb-2">99.9%</div>
                     <div className="text-sm font-medium text-gray-700">Uptime Guarantee</div>
                   </div>

@@ -159,10 +159,12 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
               </Link>
               
-              <button className="group inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-gray-700 bg-white border border-gray-300 rounded-xl shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-300">
-                <PlayIcon className="mr-2 h-5 w-5 text-blue-600 group-hover:scale-110 transition-transform" />
-                Watch Demo
-              </button>
+              <Link href="/contact">
+                <button className="group inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-gray-700 bg-white border border-gray-300 rounded-xl shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-300">
+                  <PlayIcon className="mr-2 h-5 w-5 text-blue-600 group-hover:scale-110 transition-transform" />
+                  Request Demo
+                </button>
+              </Link>
             </motion.div>
 
             {/* Slide Indicators */}

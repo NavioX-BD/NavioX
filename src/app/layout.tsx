@@ -69,10 +69,10 @@ export default function RootLayout({
           <link rel="icon" href="/favicon-32x32.ico" type="image/x-icon" sizes="32x32" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
-      <body className={`${inter.className} antialiased`}>
-        <div className="min-h-screen flex flex-col bg-white">
+      <body className={`${inter.className} antialiased bg-pattern`}>
+        <div className="min-h-screen flex flex-col">
           <Header />
-          <main className="flex-grow bg-pattern">
+          <main className="flex-grow">
             {children}
           </main>
           <Footer />

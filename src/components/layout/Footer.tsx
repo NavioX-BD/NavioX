@@ -5,7 +5,8 @@ import {
     CodeBracketIcon,
     EnvelopeIcon,
     LightBulbIcon,
-    MapPinIcon
+    MapPinIcon,
+    PhoneIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -141,6 +142,12 @@ const Footer = () => {
                   <EnvelopeIcon className="h-4 w-4 text-blue-600 flex-shrink-0" />
                   <a href="mailto:info@navioxbd.com" className="text-sm hover:text-blue-600 transition-colors">
                     info@navioxbd.com
+                  </a>
+                </div>
+                <div className="flex items-center space-x-2 text-gray-600">
+                  <PhoneIcon className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                  <a href="tel:+8801765939006" className="text-sm hover:text-blue-600 transition-colors">
+                    +880 1765-939006
                   </a>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-600">

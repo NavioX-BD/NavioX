@@ -50,7 +50,7 @@ const LegalPageLayout = ({ title, lastUpdated, description, sections = [], child
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <motion.div 
         className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16"
