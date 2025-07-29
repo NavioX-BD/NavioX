@@ -346,6 +346,19 @@ const Header = () => {
                 width={180}
                 height={40}
                 priority
+                onError={(e) => {
+                  console.error('Failed to load logo:', e);
+                  // Fallback to text if image fails
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    const textFallback = document.createElement('span');
+                    textFallback.className = 'text-xl font-bold text-blue-600';
+                    textFallback.textContent = 'NavioX';
+                    parent.appendChild(textFallback);
+                  }
+                }}
               />
             </motion.div>
           </Link>
@@ -582,6 +595,19 @@ const Header = () => {
                       alt="NavioX Solutions Inc."
                       width={160}
                       height={32}
+                      onError={(e) => {
+                        console.error('Failed to load mobile logo:', e);
+                        // Fallback to text if image fails
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const parent = target.parentElement;
+                        if (parent) {
+                          const textFallback = document.createElement('span');
+                          textFallback.className = 'text-lg font-bold text-blue-600';
+                          textFallback.textContent = 'NavioX';
+                          parent.appendChild(textFallback);
+                        }
+                      }}
                     />
                   </div>
                 </div>
