@@ -6,6 +6,8 @@
   NODE_ENV = "production"
   NEXT_TELEMETRY_DISABLED = "1"
   NODE_VERSION = "18"
+  # Disable Netlify plugin to avoid migration issues
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # Handle Next.js routing - SPA fallback for client-side routing
 [[redirects]]

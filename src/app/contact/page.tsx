@@ -49,7 +49,7 @@ export default function ContactPage() {
     setSubmitStatus('idle')
 
     try {
-      // Prepare form data for Netlify
+      // Simple form submission without Netlify plugin dependency
       const formDataToSend = new FormData()
       formDataToSend.append('form-name', 'contact')
       formDataToSend.append('name', formData.name)
@@ -62,7 +62,7 @@ export default function ContactPage() {
       formDataToSend.append('message', formData.message)
       formDataToSend.append('newsletter', formData.newsletter ? 'true' : 'false')
 
-      // Submit to Netlify
+      // Submit to Netlify using standard form submission
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

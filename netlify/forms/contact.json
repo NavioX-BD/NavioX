@@ -1,0 +1,90 @@
+{
+  "name": "contact",
+  "fields": [
+    {
+      "name": "name",
+      "type": "text",
+      "required": true,
+      "label": "Full Name"
+    },
+    {
+      "name": "email",
+      "type": "email",
+      "required": true,
+      "label": "Email Address"
+    },
+    {
+      "name": "company",
+      "type": "text",
+      "required": false,
+      "label": "Company Name"
+    },
+    {
+      "name": "phone",
+      "type": "tel",
+      "required": false,
+      "label": "Phone Number"
+    },
+    {
+      "name": "service",
+      "type": "select",
+      "required": true,
+      "label": "Service Needed",
+      "options": [
+        "web-development",
+        "mobile-apps",
+        "cloud-solutions",
+        "digital-strategy",
+        "api-development",
+        "consulting",
+        "other"
+      ]
+    },
+    {
+      "name": "budget",
+      "type": "select",
+      "required": false,
+      "label": "Budget Range",
+      "options": [
+        "under-10k",
+        "10k-25k",
+        "25k-50k",
+        "50k-100k",
+        "over-100k",
+        "discuss"
+      ]
+    },
+    {
+      "name": "timeline",
+      "type": "select",
+      "required": false,
+      "label": "Project Timeline",
+      "options": [
+        "asap",
+        "1-month",
+        "2-3-months",
+        "3-6-months",
+        "6-months-plus",
+        "flexible"
+      ]
+    },
+    {
+      "name": "message",
+      "type": "textarea",
+      "required": true,
+      "label": "Project Details"
+    },
+    {
+      "name": "newsletter",
+      "type": "checkbox",
+      "required": false,
+      "label": "Subscribe to newsletter"
+    }
+  ],
+  "settings": {
+    "subject": "New Contact Form Submission - NavioX",
+    "to": "info@navioxbd.com",
+    "from": "noreply@navioxbd.com",
+    "reply_to": "{{email}}"
+  }
+}
