@@ -1,262 +1,265 @@
 # NavioX Solutions Inc. - Deployment Guide
 
-> **"Charting Digital Excellence, Navigating Your Success"**
+## 🚀 **Netlify Git-Based Deployment**
 
-## 🚀 **Deployment Options for Public Repositories**
-
-Since NavioX is now hosted in a public GitHub repository, here are the best deployment platforms that work seamlessly with public repos.
+NavioX uses **Git-based deployment** with Netlify for automatic deployments. Every push to your repository triggers a new deployment.
 
 ---
 
-## ⭐ **Recommended: Netlify (Best for Next.js Public Repos)**
+## 📋 **Prerequisites**
 
-### **Why Netlify is Perfect for NavioX:**
-
-- ✅ **Free tier supports public repositories**
-- ✅ **Static site hosting and serverless functions**
-- ✅ **Automatic deployments from GitHub**
-- ✅ **Automatic SSL certificates**
-- ✅ **Global CDN**
-- ✅ **Custom domains included**
-- ✅ **Environment variables support**
-- ✅ **Form handling and analytics**
-
-### **Netlify Setup Steps:**
-
-#### **1. Connect Repository:**
-
-1. Go to [https://netlify.com](https://netlify.com) and sign up with your GitHub account.
-2. Click "New site from Git".
-3. Select your public `naviox` repository.
-
-#### **2. Configuration:**
-
-- **Build Command:** `npm run build`
-- **Publish Directory:** `.next`
-
-> For static export, use:
->
-> - **Build Command:** `npm run export`
-> - **Publish Directory:** `out`
-
-#### **3. Environment Variables:**
-
-Set any required environment variables in the Netlify dashboard under the "Site settings > Environment variables" section.
-
-#### **4. Custom Domain Setup:**
-
-1. Go to "Site settings > Domain management" in your Netlify dashboard.
-2. Add your custom domain (e.g., navioxbd.com).
-3. Follow Netlify's DNS instructions to point your domain.
+1. **GitHub Repository**: Your code must be in a GitHub repository
+2. **Netlify Account**: Connected to your GitHub account
+3. **Domain**: `navioxbd.com` (already configured)
 
 ---
 
-## 🔥 **Alternative: Vercel**
+## 🔧 **Setup Instructions**
 
-### **Vercel Benefits:**
+### 1. **Connect Repository to Netlify**
 
-- ✅ **Automatic deployments**
-- ✅ **Next.js optimized**
-- ✅ **Environment variables**
-- ✅ **Custom domains**
+1. Go to [Netlify Dashboard](https://app.netlify.com)
+2. Click **"New site from Git"**
+3. Choose **GitHub** as your Git provider
+4. Select your **NavioX repository**
+5. Configure build settings:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `.next`
+   - **Node version**: `18`
 
-### **Vercel Setup:**
+### 2. **Environment Variables**
+
+Set these in Netlify Dashboard → Site settings → Environment variables:
 
 ```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Login and deploy
-vercel login
-vercel
+NODE_ENV=production
+NEXT_TELEMETRY_DISABLED=1
+NEXT_PUBLIC_SITE_URL=https://navioxbd.com
 ```
+
+### 3. **Domain Configuration**
+
+- **Custom domain**: `navioxbd.com`
+- **HTTPS**: Automatically enabled by Netlify
+- **DNS**: Configured to point to Netlify
 
 ---
 
-## 🌐 **Alternative: GitHub Pages**
+## 🚀 **Deployment Process**
 
-### **GitHub Pages Benefits:**
+### **Automatic Deployment**
 
-- ✅ **Free for public repositories**
-- ✅ **Automatic deployments**
-- ✅ **Custom domain support**
+1. **Make changes** to your code
+2. **Commit and push** to GitHub:
+   ```bash
+   git add .
+   git commit -m "Update: [describe your changes]"
+   git push origin main
+   ```
+3. **Netlify automatically**:
+   - Detects the push
+   - Starts building your site
+   - Deploys to production
+   - Updates your live site
 
-### **GitHub Pages Setup:**
+### **Manual Deployment**
 
-```yaml
-# .github/workflows/deploy.yml
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches: [main]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "18"
-      - run: npm ci
-      - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-```
+If you need to trigger a manual deployment:
+
+1. Go to Netlify Dashboard
+2. Select your site
+3. Click **"Deploys"** tab
+4. Click **"Trigger deploy"** → **"Deploy site"**
 
 ---
 
-## 🏆 **Recommended Deployment Strategy**
+## 🔍 **Troubleshooting**
 
-### **Phase 1: Development & Testing**
+### **Common Issues**
 
-```
-Netlify Free Tier
-├── Domain: naviox.netlify.app
-├── Automatic deployments from main branch
-├── Preview deployments for PRs
-└── Environment variables configured
-```
+#### 1. **Image Loading Errors (400 Bad Request)**
 
-### **Phase 2: Production Launch**
+**Problem**: Images not loading on Netlify
+**Solution**:
 
-```
-Custom Domain Setup
-├── Purchase: navioxbd.com
-├── DNS Configuration: Point to Netlify
-├── SSL Certificate: Automatic via Netlify
-└── Professional email: admin@navioxbd.com
-```
+- ✅ **Fixed**: Set `unoptimized: true` in `next.config.ts`
+- ✅ **Fixed**: Proper image caching headers in `netlify.toml`
 
-### **Phase 3: Scaling (Future)**
+#### 2. **Contact Page 404 Errors**
 
-```
-Netlify Pro Plan (optional)
-├── Advanced analytics
-├── Team collaboration features
-├── Enhanced security
-└── Priority support
-```
+**Problem**: Contact page not found
+**Solution**:
 
----
+- ✅ **Fixed**: Proper routing configuration in `netlify.toml`
+- ✅ **Fixed**: SPA fallback for client-side routing
 
-## 📋 **Deployment Checklist**
+#### 3. **Build Failures**
 
-### **Pre-Deployment:**
+**Check**:
 
-- [ ] Verify build works locally (`npm run build`)
-- [ ] Test static export (`npm run export`)
-- [ ] Configure environment variables
-- [ ] Update metadata URLs in layout.tsx
-- [ ] Optimize images and assets
+- Node.js version (should be 18+)
+- Dependencies are up to date
+- No TypeScript errors
+- All required environment variables set
 
-### **Deployment Steps:**
+#### 4. **Performance Issues**
 
-- [ ] Choose deployment platform (Netlify recommended)
-- [ ] Connect GitHub repository
-- [ ] Configure build settings
-- [ ] Set environment variables
-- [ ] Deploy and test
-- [ ] Configure custom domain (optional)
+**Optimizations**:
 
-### **Post-Deployment:**
-
-- [ ] Test all pages and functionality
-- [ ] Verify SEO metadata
-- [ ] Check mobile responsiveness
-- [ ] Set up analytics
-- [ ] Configure error monitoring
+- ✅ Image optimization disabled for Netlify compatibility
+- ✅ Proper caching headers configured
+- ✅ Static asset optimization enabled
 
 ---
 
-## 🔧 **Platform-Specific Configurations**
+## 📊 **Monitoring Deployment**
 
-### **For Netlify:**
+### **Netlify Dashboard**
+
+- **Deploy Status**: Real-time build status
+- **Build Logs**: Detailed error messages
+- **Performance**: Core Web Vitals
+- **Analytics**: Traffic and usage data
+
+### **Deployment URLs**
+
+- **Production**: https://navioxbd.com
+- **Preview**: Available for each PR
+- **Branch Deploy**: Available for feature branches
+
+---
+
+## 🔄 **Deployment Workflow**
+
+### **Development Workflow**
+
+1. **Create feature branch**:
+
+   ```bash
+   git checkout -b feature/new-feature
+   ```
+
+2. **Make changes** and test locally:
+
+   ```bash
+   npm run dev
+   ```
+
+3. **Commit and push**:
+
+   ```bash
+   git add .
+   git commit -m "Add: new feature"
+   git push origin feature/new-feature
+   ```
+
+4. **Create Pull Request** on GitHub
+
+5. **Netlify creates preview** for the PR
+
+6. **Merge to main** triggers production deployment
+
+### **Production Deployment**
+
+- **Trigger**: Push to `main` branch
+- **Build time**: ~2-3 minutes
+- **Deployment**: Automatic after successful build
+- **Rollback**: Available in Netlify dashboard
+
+---
+
+## 🛠️ **Configuration Files**
+
+### **netlify.toml**
 
 ```toml
-# netlify.toml
 [build]
   command = "npm run build"
   publish = ".next"
 
 [build.environment]
   NODE_ENV = "production"
+  NEXT_TELEMETRY_DISABLED = "1"
+  NODE_VERSION = "18"
 
+# Routing and caching configuration
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 ```
 
-> For static export, use:
->
-> ```toml
-> [build]
->   command = "npm run export"
->   publish = "out"
-> ```
+### **next.config.ts**
 
-### **For Vercel:**
-
-```json
-// vercel.json
-{
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "framework": "nextjs"
-}
+```typescript
+const nextConfig: NextConfig = {
+  images: {
+    unoptimized: true, // Key for Netlify compatibility
+  },
+  experimental: {
+    optimizePackageImports: ["@heroicons/react", "framer-motion"],
+  },
+  telemetry: false,
+  trailingSlash: false,
+};
 ```
 
 ---
 
-## 💰 **Cost Comparison**
+## 📈 **Performance Optimization**
 
-| Platform         | Free Tier | Public Repos | Custom Domain | Build Minutes     |
-| ---------------- | --------- | ------------ | ------------- | ----------------- |
-| **Netlify**      | ✅ Yes    | ✅ Yes       | ✅ Yes        | 300 minutes/month |
-| **Vercel**       | ✅ Yes    | ✅ Yes       | ✅ Yes        | 100 hours/month   |
-| **GitHub Pages** | ✅ Yes    | ✅ Yes       | ✅ Yes        | Unlimited         |
+### **Build Optimizations**
 
----
+- ✅ **Image optimization disabled** for Netlify compatibility
+- ✅ **Package optimization** for faster builds
+- ✅ **Static asset caching** for better performance
+- ✅ **Security headers** for protection
 
-## 🎯 **Recommendation for NavioX**
+### **Runtime Optimizations**
 
-### **Best Choice: Netlify**
-
-```
-✅ Perfect for Next.js (our tech stack)
-✅ Supports public repositories
-✅ Zero configuration required
-✅ Excellent performance and CDN
-✅ Professional deployment URLs
-✅ Seamless GitHub integration
-✅ Built-in form handling
-✅ Advanced analytics
-```
+- ✅ **Next.js Image component** with fallbacks
+- ✅ **Lazy loading** for components
+- ✅ **Code splitting** for smaller bundles
+- ✅ **CDN caching** via Netlify
 
 ---
 
-## 🔗 **Useful Resources**
+## 🚨 **Emergency Procedures**
 
-### **Deployment Platforms:**
+### **Quick Rollback**
 
-- **[Netlify](https://netlify.com)** - Static site hosting
-- **[Vercel](https://vercel.com)** - Next.js optimized platform
-- **[GitHub Pages](https://pages.github.com)** - Free static hosting
+1. Go to Netlify Dashboard
+2. Navigate to **Deploys** tab
+3. Find the last working deployment
+4. Click **"Publish deploy"**
 
-### **Domain Registration:**
+### **Manual Fix**
 
-- **[Namecheap](https://namecheap.com)** - Domain registration
-- **[Cloudflare](https://cloudflare.com)** - DNS and CDN
-- **[Google Domains](https://domains.google.com)** - Domain management
-
-### **Monitoring & Analytics:**
-
-- **[Google Analytics](https://analytics.google.com)** - Website analytics
-- **[Sentry](https://sentry.io)** - Error monitoring
-- **[Hotjar](https://hotjar.com)** - User behavior analytics
+1. **Fix the issue** in your code
+2. **Commit and push**:
+   ```bash
+   git add .
+   git commit -m "Fix: [describe the fix]"
+   git push origin main
+   ```
+3. **Monitor** the new deployment
 
 ---
 
-**NavioX Solutions Inc. - Deploying excellence across digital oceans.**
+## 📞 **Support**
+
+### **Netlify Support**
+
+- **Documentation**: [docs.netlify.com](https://docs.netlify.com)
+- **Community**: [community.netlify.com](https://community.netlify.com)
+- **Status**: [status.netlify.com](https://status.netlify.com)
+
+### **NavioX Team**
+
+- **Technical Issues**: Check build logs in Netlify dashboard
+- **Configuration**: Review `netlify.toml` and `next.config.ts`
+- **Performance**: Monitor Core Web Vitals in Netlify analytics
+
+---
+
+**NavioX Solutions Inc. - Charting Digital Excellence, Navigating Your Success** 🧭

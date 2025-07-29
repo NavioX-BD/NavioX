@@ -1,100 +1,36 @@
 #!/bin/bash
 
-# NavioX Solutions Inc. - Deployment Script
-# "Charting Digital Excellence, Navigating Your Success"
-
-echo "🚀 NavioX Deployment Script"
-echo "================================"
-
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+# Netlify Deployment Script for NavioX
+echo "🚀 Starting NavioX deployment to Netlify..."
 
 # Check if we're in the right directory
 if [ ! -f "package.json" ]; then
-    echo -e "${RED}❌ Error: package.json not found. Please run this script from the project root.${NC}"
+    echo "❌ Error: package.json not found. Please run this script from the project root."
     exit 1
 fi
 
-# Check if project is NavioX
-if ! grep -q "naviox" package.json; then
-    echo -e "${RED}❌ Error: This doesn't appear to be the NavioX project.${NC}"
-    exit 1
-fi
+# Install dependencies
+echo "📦 Installing dependencies..."
+npm install
 
-echo -e "${BLUE}📋 Pre-deployment checks...${NC}"
+# Verify images exist
+echo "🖼️ Verifying images..."
+npm run verify-images
 
-# Check Node.js version
-NODE_VERSION=$(node --version)
-echo -e "${GREEN}✅ Node.js version: $NODE_VERSION${NC}"
+# Build the project
+echo "🔨 Building project..."
+npm run build
 
-# Check if dependencies are installed
-if [ ! -d "node_modules" ]; then
-    echo -e "${YELLOW}⚠️  Dependencies not found. Installing...${NC}"
-    npm install
-fi
-
-# Run build test
-echo -e "${BLUE}🔨 Testing build...${NC}"
-if npm run build; then
-    echo -e "${GREEN}✅ Build successful!${NC}"
-else
-    echo -e "${RED}❌ Build failed. Please fix errors before deploying.${NC}"
-    exit 1
-fi
-
-# Check if Netlify CLI is installed
-if ! command -v netlify &> /dev/null; then
-    echo -e "${YELLOW}⚠️  Netlify CLI not found. Installing globally...${NC}"
-    npm install -g netlify-cli
-fi
-
-# Check if user is logged in to Netlify
-echo -e "${BLUE}🔐 Checking Netlify authentication...${NC}"
-if ! netlify status &> /dev/null; then
-    echo -e "${YELLOW}⚠️  Please log in to Netlify:${NC}"
-    netlify login
-fi
-
-# Deploy options
-echo -e "${BLUE}🚀 Choose deployment type:${NC}"
-echo "1) Development deployment (preview)"
-echo "2) Production deployment"
-echo "3) Cancel"
-
-read -p "Enter your choice (1-3): " choice
-
-case $choice in
-    1)
-        echo -e "${BLUE}🔄 Deploying to development...${NC}"
-        netlify deploy
-        ;;
-    2)
-        echo -e "${BLUE}🔄 Deploying to production...${NC}"
-        netlify deploy --prod
-        ;;
-    3)
-        echo -e "${YELLOW}⏹️  Deployment cancelled.${NC}"
-        exit 0
-        ;;
-    *)
-        echo -e "${RED}❌ Invalid choice. Deployment cancelled.${NC}"
-        exit 1
-        ;;
-esac
-
-# Check deployment status
+# Check if build was successful
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}🎉 Deployment successful!${NC}"
-    echo -e "${BLUE}📊 Netlify Dashboard: https://app.netlify.com${NC}"
-    echo -e "${BLUE}🌐 Your site is now live!${NC}"
+    echo "✅ Build completed successfully!"
+    echo "🌐 Ready for deployment to Netlify"
+    echo ""
+    echo "📋 Next steps:"
+    echo "1. Push your changes to GitHub"
+    echo "2. Netlify will automatically deploy from your repository"
+    echo "3. Check your Netlify dashboard for deployment status"
 else
-    echo -e "${RED}❌ Deployment failed. Check the errors above.${NC}"
+    echo "❌ Build failed. Please check the error messages above."
     exit 1
-fi
-
-echo -e "${GREEN}✨ NavioX deployment complete!${NC}"
-echo -e "${BLUE}🧭 Charting digital excellence across the web...${NC}" 
+fi 
