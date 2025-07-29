@@ -87,8 +87,8 @@ _"To become the lighthouse of innovation in the software engineering ocean—whe
 
 ### **Production:**
 
-- **Platform:** Render (recommended)
-- **URL:** naviox.onrender.com
+- **Platform:** Netlify (recommended)
+- **URL:** naviox.netlify.app
 - **Custom Domain:** navioxbd.com (planned)
 - **Deployment:** Automatic from main branch
 
@@ -170,14 +170,14 @@ cp .env.example .env.local  # Setup environment
 ### **Deployment:**
 
 ```bash
-# Render deployment (recommended)
-# See https://render.com/docs/static-sites
-npm i -g vercel
-vercel login
-vercel --prod
+# Netlify deployment (recommended)
+# See https://netlify.com/docs/continuous-deployment
+npm i -g netlify-cli
+netlify login
+netlify deploy --prod
 
 # Alternative: Direct GitHub integration
-# Go to https://vercel.com/new
+# Go to https://app.netlify.com/start
 # Import NavioX-BD/NavioX repository
 ```
 

@@ -212,11 +212,10 @@ const Header = () => {
       }
     },
     hover: {
-      scale: 1.05,
-      boxShadow: "0 10px 25px rgba(37, 99, 235, 0.3)",
+      scale: 1.02,
       transition: { duration: 0.2 }
     },
-    tap: { scale: 0.95 }
+    tap: { scale: 0.98 }
   }
 
   const mobileMenuVariants: Variants = {
@@ -500,16 +499,40 @@ const Header = () => {
           >
             <Link 
               href="/contact" 
-              className="text-sm font-semibold leading-6 text-white bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+              className="relative inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden border border-blue-500/30 hover:from-blue-700 hover:via-indigo-700 hover:to-blue-800"
             >
-              <span className="relative z-10">Get Started</span>
+              {/* Animated background overlay */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800"
+                className="absolute inset-0 bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-800 rounded-full"
                 initial={{ scale: 0, opacity: 0 }}
                 whileHover={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.4 }}
                 style={{ originX: 0.5, originY: 0.5 }}
               />
+              
+              {/* Shimmer effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-full"
+                initial={{ x: '-100%' }}
+                whileHover={{ x: '100%' }}
+                transition={{ duration: 0.6 }}
+              />
+              
+              {/* Button content */}
+              <span className="relative z-10 flex items-center gap-1.5">
+                Get Started
+                <motion.svg
+                  className="w-3.5 h-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </motion.svg>
+              </span>
             </Link>
           </motion.div>
         </div>
@@ -685,10 +708,41 @@ const Header = () => {
                   >
                     <Link
                       href="/contact"
-                      className="block w-full text-center px-4 py-3 text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
+                      className="relative block w-full text-center px-5 py-3 text-base font-semibold text-white bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-blue-500/30 hover:from-blue-700 hover:via-indigo-700 hover:to-blue-800"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Get Started
+                      {/* Animated background overlay */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-800 rounded-full"
+                        initial={{ scale: 0, opacity: 0 }}
+                        whileHover={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.4 }}
+                        style={{ originX: 0.5, originY: 0.5 }}
+                      />
+                      
+                      {/* Shimmer effect */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-full"
+                        initial={{ x: '-100%' }}
+                        whileHover={{ x: '100%' }}
+                        transition={{ duration: 0.6 }}
+                      />
+                      
+                      {/* Button content */}
+                      <span className="relative z-10 flex items-center justify-center gap-2">
+                        Get Started
+                        <motion.svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          initial={{ x: 0 }}
+                          whileHover={{ x: 4 }}
+                          transition={{ duration: 0.4 }}
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </motion.svg>
+                      </span>
                     </Link>
                   </motion.div>
                 </div>

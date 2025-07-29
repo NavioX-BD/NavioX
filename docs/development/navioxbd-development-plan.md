@@ -10,7 +10,7 @@ This proposal outlines a complete development strategy using cutting-edge, cost-
 
 **Company**: NavioX Solutions Inc.  
 **Domain**: navioxbd.com  
-**Tech Stack**: Next.js + Tailwind CSS + Firebase + Render  
+**Tech Stack**: Next.js + Tailwind CSS + Firebase + Netlify  
 **Timeline**: 8-12 weeks for MVP, 16+ weeks for full features  
 **Budget**: $0-50/month operational costs
 
@@ -22,7 +22,7 @@ This proposal outlines a complete development strategy using cutting-edge, cost-
 
 - **Professional Digital Presence**: Develop a fast, responsive, and SEO-friendly website using modern frontend technologies
 - **Scalable Architecture**: Design with growth in mind, enabling future additions such as admin dashboards and client portals
-- **Cost-Effective Deployment**: Deploy on Render with private repository support and custom domain integration
+- **Cost-Effective Deployment**: Deploy on Netlify with public repository support and custom domain integration
 - **Content Management**: Implement user-friendly CMS for non-technical content updates
 - **Client Engagement**: Create interactive features for client testimonials, project showcases, and contact management
 - **Security & Compliance**: Ensure the website is secure, accessible, and compliant with industry best practices
@@ -45,7 +45,7 @@ This proposal outlines a complete development strategy using cutting-edge, cost-
 | **Frontend Development**         | Build static and dynamic pages using Next.js and Tailwind CSS         | Responsive design, cross-browser compatibility |
 | **Backend Integration**          | Firebase authentication, Firestore database, and serverless functions | Secure data handling, real-time updates        |
 | **CMS Implementation**           | Headless CMS for content management and blog functionality            | Non-technical content editing capability       |
-| **Domain Setup & Hosting**       | Deploy on Render with `navioxbd.com` configuration and SSL            | Live website with HTTPS, fast loading times    |
+| **Domain Setup & Hosting**       | Deploy on Netlify with `navioxbd.com` configuration and SSL           | Live website with HTTPS, fast loading times    |
 | **User Authentication System**   | Multi-role authentication (Admin, Team, Client)                       | Secure login, role-based access control        |
 | **Admin Dashboard**              | Content management interface for site administration                  | Full CRUD operations for all content types     |
 | **Client Portal**                | Project tracking and communication interface                          | Real-time project updates, testimonial system  |
@@ -59,14 +59,14 @@ This proposal outlines a complete development strategy using cutting-edge, cost-
 
 ### 4.1 Hosting Platform Decision
 
-**Updated Decision: Render over Netlify**
+**Updated Decision: Netlify over Render**
 
-After careful consideration, we've updated our hosting strategy from Netlify to Render for the following reasons:
+After careful consideration, we've updated our hosting strategy from Render to Netlify for the following reasons:
 
-- **Private Repository Support**: Render's free tier supports private GitHub repositories, while Netlify requires paid plans
-- **Next.js Optimization**: Render is optimized for Next.js, offering great performance
-- **Organization Repository**: Our NavioX-BD GitHub organization works seamlessly with Render's free tier
-- **Edge Functions**: Better serverless function support for our Next.js API routes
+- **Public Repository Support**: Netlify's free tier supports public GitHub repositories, perfect for our open-source approach
+- **Next.js Optimization**: Netlify is optimized for Next.js, offering great performance
+- **Organization Repository**: Our NavioX-BD GitHub organization works seamlessly with Netlify's free tier
+- **Edge Functions**: Excellent serverless function support for our Next.js API routes
 - **Global CDN**: Excellent performance with automatic edge caching
 - **Zero Configuration**: Works out of the box with Next.js projects
 
@@ -79,7 +79,7 @@ After careful consideration, we've updated our hosting strategy from Netlify to 
 | **Styling**            | Tailwind CSS (v4.1.11)       | Utility-first CSS, rapid development, responsive design    | Free     |
 | **Type System**        | TypeScript (v5.8.3)          | Type safety, better developer experience, error prevention | Free     |
 | **Backend/Database**   | Firebase JS SDK (v11)        | Real-time database, authentication, serverless functions   | Free\*   |
-| **Hosting Platform**   | Render                       | Next.js optimized, private repo support, global CDN        | Free\*   |
+| **Hosting Platform**   | Netlify                      | Next.js optimized, public repo support, global CDN         | Free\*   |
 | **Animation**          | Framer Motion (v12)          | Smooth animations, gesture support, layout animations      | Free     |
 | **Icons**              | React Icons (v6)             | Comprehensive icon library, tree-shakeable                 | Free     |
 | **Theme Management**   | next-themes (v2.2)           | Dark/light mode, system preference detection               | Free     |
@@ -90,7 +90,7 @@ After careful consideration, we've updated our hosting strategy from Netlify to 
 | **Version Control**    | GitHub (Organization)        | Source code management, CI/CD, team collaboration          | Free     |
 | **Analytics**          | Google Analytics 4           | Traffic analysis, user behavior insights                   | Free     |
 | **Email Service**      | EmailJS                      | Contact form handling, no backend required                 | Free\*   |
-| **Monitoring**         | Render Analytics             | Performance monitoring, Core Web Vitals                    | Free\*   |
+| **Monitoring**         | Netlify Analytics            | Performance monitoring, Core Web Vitals                    | Free\*   |
 | **Domain**             | Custom Domain (navioxbd.com) | Professional branding, SEO benefits                        | $12/year |
 
 \*Free tiers available with paid upgrades as needed
@@ -546,9 +546,9 @@ service cloud.firestore {
 
 ### 🚀 Phase 8: Deployment & Domain Setup (Week 11-12)
 
-#### 8.1 Render Deployment
+#### 8.1 Netlify Deployment
 
-- [ ] Connect GitHub repository to Render
+- [ ] Connect GitHub repository to Netlify
 - [ ] Configure build settings
 - [ ] Set up environment variables
 - [ ] Configure redirects and rewrites
@@ -557,7 +557,7 @@ service cloud.firestore {
 #### 8.2 Domain Configuration
 
 - [ ] Update DNS settings at domain registrar
-- [ ] Point `navioxbd.com` to Render
+- [ ] Point `navioxbd.com` to Netlify
 - [ ] Configure SSL certificate
 - [ ] Set up www redirect
 - [ ] Test domain propagation
@@ -656,7 +656,7 @@ service cloud.firestore {
 
 ### 8.1 Hosting Strategy
 
-- **Primary Platform**: Render Free Tier
+- **Primary Platform**: Netlify Free Tier
   - 100GB bandwidth/month (sufficient for startup needs)
   - Automatic SSL certificates for secure HTTPS access
   - Continuous deployment from GitHub repository
@@ -666,8 +666,8 @@ service cloud.firestore {
 ### 8.2 Domain Management
 
 - **Domain**: navioxbd.com (existing domain)
-- **DNS Configuration**: Update registrar settings to point to Render
-- **SSL/TLS**: Automated certificate management via Render
+- **DNS Configuration**: Update registrar settings to point to Netlify
+- **SSL/TLS**: Automated certificate management via Netlify
 - **Subdomain Strategy**: www redirect to apex domain
 - **Email**: Professional email setup recommendations
 
@@ -677,7 +677,7 @@ service cloud.firestore {
 - **Image Optimization**: Next.js Image component with WebP support
 - **Code Splitting**: Automatic route-based code splitting
 - **Caching Strategy**: Aggressive caching for static assets
-- **CDN Distribution**: Global content delivery via Render CDN
+- **CDN Distribution**: Global content delivery via Netlify CDN
 
 ---
 
@@ -778,7 +778,7 @@ interface ContentTypes {
 
 - **Next.js Security Best Practices**: Secure coding standards implementation
 - **Firebase Security Rules**: Restrictive data access policies
-- **HTTPS Enforcement**: All communications encrypted via Render SSL
+- **HTTPS Enforcement**: All communications encrypted via Netlify SSL
 - **Input Validation**: Comprehensive client and server-side validation
 - **XSS Protection**: Content Security Policy implementation
 - **CSRF Protection**: Built-in Next.js CSRF handling
@@ -819,12 +819,12 @@ interface ContentTypes {
 
 | **Service**             | **Free Tier Limits**       | **Paid Tier Pricing** | **Expected Usage**                |
 | ----------------------- | -------------------------- | --------------------- | --------------------------------- |
-| **Render Hosting**      | 100GB bandwidth/month      | $19/month (Pro)       | Free tier sufficient initially    |
+| **Netlify Hosting**     | 100GB bandwidth/month      | $19/month (Pro)       | Free tier sufficient initially    |
 | **Firebase**            | 1GB storage, 50k reads/day | Pay-as-you-go         | Free tier covers startup needs    |
 | **Domain Registration** | N/A (existing domain)      | $10-15/year renewal   | Existing asset                    |
 | **Email Service**       | Limited free tiers         | $5-10/month           | Optional paid upgrade             |
 | **CMS Service**         | Free tier available        | $15-30/month          | Free initially, upgrade as needed |
-| **SSL Certificate**     | Free via Render            | Included              | No additional cost                |
+| **SSL Certificate**     | Free via Netlify           | Included              | No additional cost                |
 
 ### 12.3 Total Cost Projection
 
@@ -834,13 +834,13 @@ interface ContentTypes {
 
 ### 12.4 Free Tier Services
 
-- **Render**: 100GB bandwidth/month (sufficient for start)
+- **Netlify**: 100GB bandwidth/month (sufficient for start)
 - **Firebase**: 1GB storage, 50k reads/day (generous free tier)
 - **Domain**: Annual cost (~$10-15/year)
 
 ### 12.5 Potential Paid Upgrades
 
-- **Render Pro**: $19/month (if more bandwidth needed)
+- **Netlify Pro**: $19/month (if more bandwidth needed)
 - **Firebase Blaze**: Pay-as-you-go (scales with usage)
 - **Email Service**: $5-10/month (for transactional emails)
 
@@ -855,7 +855,7 @@ interface ContentTypes {
 | **Risk**                     | **Impact** | **Probability** | **Mitigation Strategy**                         |
 | ---------------------------- | ---------- | --------------- | ----------------------------------------------- |
 | **Firebase Service Limits**  | High       | Medium          | Monitor usage, implement caching, plan upgrades |
-| **Render Bandwidth Limits**  | Medium     | Low             | CDN optimization, image compression, monitoring |
+| **Netlify Bandwidth Limits**  | Medium     | Low             | CDN optimization, image compression, monitoring |
 | **Third-party CMS Outages**  | Medium     | Low             | Backup content strategy, multiple CMS options   |
 | **Security Vulnerabilities** | High       | Medium          | Regular security audits, dependency updates     |
 | **Performance Degradation**  | Medium     | Medium          | Continuous monitoring, optimization practices   |
@@ -871,7 +871,7 @@ interface ContentTypes {
 
 ### 13.3 Contingency Planning
 
-- **Backup Hosting**: Render as alternative deployment platform
+- **Backup Hosting**: Vercel as alternative deployment platform
 - **Database Alternatives**: Supabase as Firebase alternative
 - **Content Backup**: Regular content exports and version control
 - **Team Continuity**: Documentation for knowledge transfer

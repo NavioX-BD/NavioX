@@ -46,17 +46,17 @@ else
     exit 1
 fi
 
-# Check if Vercel CLI is installed
-if ! command -v vercel &> /dev/null; then
-    echo -e "${YELLOW}⚠️  Vercel CLI not found. Installing globally...${NC}"
-    npm install -g vercel
+# Check if Netlify CLI is installed
+if ! command -v netlify &> /dev/null; then
+    echo -e "${YELLOW}⚠️  Netlify CLI not found. Installing globally...${NC}"
+    npm install -g netlify-cli
 fi
 
-# Check if user is logged in to Vercel
-echo -e "${BLUE}🔐 Checking Vercel authentication...${NC}"
-if ! vercel whoami &> /dev/null; then
-    echo -e "${YELLOW}⚠️  Please log in to Vercel:${NC}"
-    vercel login
+# Check if user is logged in to Netlify
+echo -e "${BLUE}🔐 Checking Netlify authentication...${NC}"
+if ! netlify status &> /dev/null; then
+    echo -e "${YELLOW}⚠️  Please log in to Netlify:${NC}"
+    netlify login
 fi
 
 # Deploy options
@@ -70,11 +70,11 @@ read -p "Enter your choice (1-3): " choice
 case $choice in
     1)
         echo -e "${BLUE}🔄 Deploying to development...${NC}"
-        vercel
+        netlify deploy
         ;;
     2)
         echo -e "${BLUE}🔄 Deploying to production...${NC}"
-        vercel --prod
+        netlify deploy --prod
         ;;
     3)
         echo -e "${YELLOW}⏹️  Deployment cancelled.${NC}"
@@ -89,7 +89,7 @@ esac
 # Check deployment status
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}🎉 Deployment successful!${NC}"
-    echo -e "${BLUE}📊 Vercel Dashboard: https://vercel.com/dashboard${NC}"
+    echo -e "${BLUE}📊 Netlify Dashboard: https://app.netlify.com${NC}"
     echo -e "${BLUE}🌐 Your site is now live!${NC}"
 else
     echo -e "${RED}❌ Deployment failed. Check the errors above.${NC}"

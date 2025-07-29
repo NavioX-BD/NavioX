@@ -1,47 +1,77 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaRaspberryPi } from 'react-icons/fa'
+import {
+  SiAmazon,
+  SiAngular,
+  SiDocker,
+  SiDotnet,
+  SiElasticsearch,
+  SiFirebase,
+  SiFlutter,
+  SiGooglecloud,
+  SiGraphql,
+  SiIcloud,
+  SiIonic,
+  SiJavascript,
+  SiKotlin,
+  SiKubernetes,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiReact as SiReactNative,
+  SiRedis,
+  SiSwift,
+  SiTailwindcss,
+  SiTypescript,
+  SiVuedotjs
+} from 'react-icons/si'
 
 const technologies = {
   'Frontend': [
-    { name: 'React', description: 'Modern UI development', color: 'text-blue-600 bg-blue-50' },
-    { name: 'Next.js', description: 'Full-stack React framework', color: 'text-gray-700 bg-gray-50' },
-    { name: 'TypeScript', description: 'Type-safe development', color: 'text-blue-600 bg-blue-50' },
-    { name: 'Vue.js', description: 'Progressive framework', color: 'text-green-600 bg-green-50' },
-    { name: 'Angular', description: 'Enterprise applications', color: 'text-red-600 bg-red-50' },
-    { name: 'Tailwind CSS', description: 'Utility-first styling', color: 'text-cyan-600 bg-cyan-50' }
+    { name: 'React', description: 'Modern UI development', color: 'text-blue-600 bg-blue-50', icon: SiReact },
+    { name: 'Next.js', description: 'Full-stack React framework', color: 'text-gray-700 bg-gray-50', icon: SiNextdotjs },
+    { name: 'TypeScript', description: 'Type-safe development', color: 'text-blue-600 bg-blue-50', icon: SiTypescript },
+    { name: 'Vue.js', description: 'Progressive framework', color: 'text-green-600 bg-green-50', icon: SiVuedotjs },
+    { name: 'Angular', description: 'Enterprise applications', color: 'text-red-600 bg-red-50', icon: SiAngular },
+    { name: 'Tailwind CSS', description: 'Utility-first styling', color: 'text-cyan-600 bg-cyan-50', icon: SiTailwindcss }
   ],
   'Backend': [
-    { name: 'Node.js', description: 'JavaScript runtime', color: 'text-green-600 bg-green-50' },
-    { name: 'Python', description: 'Versatile programming', color: 'text-yellow-600 bg-yellow-50' },
-    { name: 'Java', description: 'Enterprise development', color: 'text-orange-600 bg-orange-50' },
-    { name: '.NET', description: 'Microsoft ecosystem', color: 'text-purple-600 bg-purple-50' },
-    { name: 'GraphQL', description: 'API query language', color: 'text-pink-600 bg-pink-50' },
-    { name: 'REST APIs', description: 'Web service architecture', color: 'text-indigo-600 bg-indigo-50' }
+    { name: 'Node.js', description: 'JavaScript runtime', color: 'text-green-600 bg-green-50', icon: SiNodedotjs },
+    { name: 'Python', description: 'Versatile programming', color: 'text-yellow-600 bg-yellow-50', icon: SiPython },
+    { name: 'Java', description: 'Enterprise development', color: 'text-orange-600 bg-orange-50', icon: SiJavascript },
+    { name: '.NET', description: 'Microsoft ecosystem', color: 'text-purple-600 bg-purple-50', icon: SiDotnet },
+    { name: 'GraphQL', description: 'API query language', color: 'text-pink-600 bg-pink-50', icon: SiGraphql },
+    { name: 'REST APIs', description: 'Web service architecture', color: 'text-indigo-600 bg-indigo-50', icon: FaRaspberryPi }
   ],
   'Cloud & DevOps': [
-    { name: 'AWS', description: 'Amazon Web Services', color: 'text-orange-600 bg-orange-50' },
-    { name: 'Azure', description: 'Microsoft Cloud', color: 'text-blue-600 bg-blue-50' },
-    { name: 'Google Cloud', description: 'GCP services', color: 'text-red-600 bg-red-50' },
-    { name: 'Docker', description: 'Containerization', color: 'text-blue-600 bg-blue-50' },
-    { name: 'Kubernetes', description: 'Container orchestration', color: 'text-purple-600 bg-purple-50' },
-    { name: 'CI/CD', description: 'Automated pipelines', color: 'text-green-600 bg-green-50' }
+    { name: 'AWS', description: 'Amazon Web Services', color: 'text-orange-600 bg-orange-50', icon: SiAmazon },
+    { name: 'Azure', description: 'Microsoft Cloud', color: 'text-blue-600 bg-blue-50', icon: SiIcloud },
+    { name: 'Google Cloud', description: 'GCP services', color: 'text-red-600 bg-red-50', icon: SiGooglecloud },
+    { name: 'Docker', description: 'Containerization', color: 'text-blue-600 bg-blue-50', icon: SiDocker },
+    { name: 'Kubernetes', description: 'Container orchestration', color: 'text-purple-600 bg-purple-50', icon: SiKubernetes },
+    { name: 'CI/CD', description: 'Automated pipelines', color: 'text-green-600 bg-green-50', icon: SiKubernetes }
   ],
   'Mobile': [
-    { name: 'React Native', description: 'Cross-platform apps', color: 'text-blue-600 bg-blue-50' },
-    { name: 'Flutter', description: 'Google mobile UI', color: 'text-blue-600 bg-blue-50' },
-    { name: 'iOS (Swift)', description: 'Native iOS development', color: 'text-gray-700 bg-gray-50' },
-    { name: 'Android (Kotlin)', description: 'Native Android development', color: 'text-green-600 bg-green-50' },
-    { name: 'PWA', description: 'Progressive Web Apps', color: 'text-purple-600 bg-purple-50' },
-    { name: 'Ionic', description: 'Hybrid mobile apps', color: 'text-blue-600 bg-blue-50' }
+    { name: 'React Native', description: 'Cross-platform apps', color: 'text-blue-600 bg-blue-50', icon: SiReactNative },
+    { name: 'Flutter', description: 'Google mobile UI', color: 'text-blue-600 bg-blue-50', icon: SiFlutter },
+    { name: 'iOS (Swift)', description: 'Native iOS development', color: 'text-gray-700 bg-gray-50', icon: SiSwift },
+    { name: 'Android (Kotlin)', description: 'Native Android development', color: 'text-green-600 bg-green-50', icon: SiKotlin },
+    { name: 'PWA', description: 'Progressive Web Apps', color: 'text-purple-600 bg-purple-50', icon: SiReact },
+    { name: 'Ionic', description: 'Hybrid mobile apps', color: 'text-blue-600 bg-blue-50', icon: SiIonic }
   ],
   'Database': [
-    { name: 'PostgreSQL', description: 'Relational database', color: 'text-blue-600 bg-blue-50' },
-    { name: 'MongoDB', description: 'NoSQL database', color: 'text-green-600 bg-green-50' },
-    { name: 'Redis', description: 'In-memory data store', color: 'text-red-600 bg-red-50' },
-    { name: 'MySQL', description: 'Popular SQL database', color: 'text-orange-600 bg-orange-50' },
-    { name: 'Elasticsearch', description: 'Search engine', color: 'text-yellow-600 bg-yellow-50' },
-    { name: 'Firebase', description: 'Google cloud database', color: 'text-orange-600 bg-orange-50' }
+    { name: 'PostgreSQL', description: 'Relational database', color: 'text-blue-600 bg-blue-50', icon: SiPostgresql },
+    { name: 'MongoDB', description: 'NoSQL database', color: 'text-green-600 bg-green-50', icon: SiMongodb },
+    { name: 'Redis', description: 'In-memory data store', color: 'text-red-600 bg-red-50', icon: SiRedis },
+    { name: 'MySQL', description: 'Popular SQL database', color: 'text-orange-600 bg-orange-50', icon: SiMysql },
+    { name: 'Elasticsearch', description: 'Search engine', color: 'text-yellow-600 bg-yellow-50', icon: SiElasticsearch },
+    { name: 'Firebase', description: 'Google cloud database', color: 'text-orange-600 bg-orange-50', icon: SiFirebase }
   ]
 }
 
@@ -119,9 +149,7 @@ const Technologies = () => {
                       {/* Tech Icon/Name */}
                       <div className="text-center">
                         <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg ${tech.color} mb-4 transition-transform duration-300 group-hover:scale-110`}>
-                          <span className="text-lg font-bold">
-                            {tech.name.charAt(0)}
-                          </span>
+                          <tech.icon className="text-lg font-bold" />
                         </div>
                         
                         <h4 className="text-sm font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">

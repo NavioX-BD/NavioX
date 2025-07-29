@@ -18,6 +18,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Fix text height issues - prevent descenders from being cut off */
+* {
+  line-height: 1.6;
+}
+
 /* Background Image Styles */
 .bg-pattern {
   position: relative;

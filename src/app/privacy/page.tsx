@@ -489,7 +489,7 @@ export default function PrivacyPolicy() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { category: 'Development Tools', services: ['GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Confluence'] },
-            { category: 'Cloud Platforms', services: ['AWS', 'Google Cloud', 'Azure', 'Heroku', 'Vercel'] },
+            { category: 'Cloud Platforms', services: ['AWS', 'Google Cloud', 'Azure', 'Heroku', 'Netlify'] },
             { category: 'Communication', services: ['Slack', 'Discord', 'Zoom', 'Microsoft Teams'] },
             { category: 'Analytics', services: ['Google Analytics', 'Mixpanel', 'Hotjar', 'LogRocket'] },
           ].map((category, index) => (

@@ -2,86 +2,86 @@
 
 > **"Charting Digital Excellence, Navigating Your Success"**
 
-## 🚀 **Deployment Options for Private Repositories**
+## 🚀 **Deployment Options for Public Repositories**
 
-Since NavioX is hosted in a private GitHub repository, here are the best deployment platforms that support private repos on their free tiers.
+Since NavioX is now hosted in a public GitHub repository, here are the best deployment platforms that work seamlessly with public repos.
 
 ---
 
-## ⭐ **Recommended: Render (Best for Next.js Private Repos)**
+## ⭐ **Recommended: Netlify (Best for Next.js Public Repos)**
 
-### **Why Render is Perfect for NavioX:**
+### **Why Netlify is Perfect for NavioX:**
 
-- ✅ **Free tier supports private repositories**
-- ✅ **Static site hosting and web services**
+- ✅ **Free tier supports public repositories**
+- ✅ **Static site hosting and serverless functions**
 - ✅ **Automatic deployments from GitHub**
 - ✅ **Automatic SSL certificates**
 - ✅ **Global CDN**
 - ✅ **Custom domains included**
 - ✅ **Environment variables support**
+- ✅ **Form handling and analytics**
 
-### **Render Setup Steps:**
+### **Netlify Setup Steps:**
 
 #### **1. Connect Repository:**
 
-1. Go to [https://render.com](https://render.com) and sign up with your GitHub account.
-2. Click "New > Static Site".
-3. Select your private `naviox` repository.
+1. Go to [https://netlify.com](https://netlify.com) and sign up with your GitHub account.
+2. Click "New site from Git".
+3. Select your public `naviox` repository.
 
 #### **2. Configuration:**
 
-- **Build Command:** `npm run export`
-- **Publish Directory:** `out`
+- **Build Command:** `npm run build`
+- **Publish Directory:** `.next`
 
-> If you need dynamic features, use "Web Service" instead of "Static Site" and set:
+> For static export, use:
 >
-> - **Build Command:** `npm run build`
-> - **Start Command:** `npm start`
+> - **Build Command:** `npm run export`
+> - **Publish Directory:** `out`
 
 #### **3. Environment Variables:**
 
-Set any required environment variables in the Render dashboard under the "Environment" tab for your service.
+Set any required environment variables in the Netlify dashboard under the "Site settings > Environment variables" section.
 
 #### **4. Custom Domain Setup:**
 
-1. Go to the "Settings" tab of your Render service.
+1. Go to "Site settings > Domain management" in your Netlify dashboard.
 2. Add your custom domain (e.g., navioxbd.com).
-3. Follow Render's DNS instructions to point your domain.
+3. Follow Netlify's DNS instructions to point your domain.
 
 ---
 
-## 🔥 **Alternative: Railway**
+## 🔥 **Alternative: Vercel**
 
-### **Railway Benefits:**
+### **Vercel Benefits:**
 
 - ✅ **Automatic deployments**
-- ✅ **Database hosting included**
+- ✅ **Next.js optimized**
 - ✅ **Environment variables**
 - ✅ **Custom domains**
 
-### **Railway Setup:**
+### **Vercel Setup:**
 
 ```bash
-# Install Railway CLI
-npm install -g @railway/cli
+# Install Vercel CLI
+npm install -g vercel
 
 # Login and deploy
-railway login
-railway link
-railway up
+vercel login
+vercel
 ```
 
 ---
 
-## 🌐 **Alternative: GitHub Pages (Public Only)**
+## 🌐 **Alternative: GitHub Pages**
 
-### **GitHub Pages Limitation:**
+### **GitHub Pages Benefits:**
 
-- ❌ **Requires public repository for free tier**
-- ✅ **Free custom domain support**
+- ✅ **Free for public repositories**
 - ✅ **Automatic deployments**
+- ✅ **Custom domain support**
 
-### **If Making Repo Public:**
+### **GitHub Pages Setup:**
 
 ```yaml
 # .github/workflows/deploy.yml
@@ -112,8 +112,8 @@ jobs:
 ### **Phase 1: Development & Testing**
 
 ```
-Render Free Tier
-├── Domain: naviox.onrender.com
+Netlify Free Tier
+├── Domain: naviox.netlify.app
 ├── Automatic deployments from main branch
 ├── Preview deployments for PRs
 └── Environment variables configured
@@ -124,15 +124,15 @@ Render Free Tier
 ```
 Custom Domain Setup
 ├── Purchase: navioxbd.com
-├── DNS Configuration: Point to Render
-├── SSL Certificate: Automatic via Render
+├── DNS Configuration: Point to Netlify
+├── SSL Certificate: Automatic via Netlify
 └── Professional email: admin@navioxbd.com
 ```
 
 ### **Phase 3: Scaling (Future)**
 
 ```
-Render Pro Plan (optional)
+Netlify Pro Plan (optional)
 ├── Advanced analytics
 ├── Team collaboration features
 ├── Enhanced security
@@ -153,7 +153,7 @@ Render Pro Plan (optional)
 
 ### **Deployment Steps:**
 
-- [ ] Choose deployment platform (Render recommended)
+- [ ] Choose deployment platform (Netlify recommended)
 - [ ] Connect GitHub repository
 - [ ] Configure build settings
 - [ ] Set environment variables
@@ -172,35 +172,39 @@ Render Pro Plan (optional)
 
 ## 🔧 **Platform-Specific Configurations**
 
-### **For Render (Static Export):**
+### **For Netlify:**
 
-```yaml
-# render.yaml
-services:
-  - type: static
-    name: naviox
-    buildCommand: npm run export
-    staticPublishPath: out
-    envVars:
-      - key: NODE_ENV
-        value: production
+```toml
+# netlify.toml
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_ENV = "production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 ```
 
-> For dynamic features, use type: web and set build/start commands as needed.
+> For static export, use:
+>
+> ```toml
+> [build]
+>   command = "npm run export"
+>   publish = "out"
+> ```
 
-### **For Railway:**
+### **For Vercel:**
 
 ```json
-// railway.json
+// vercel.json
 {
-  "build": {
-    "builder": "NIXPACKS"
-  },
-  "deploy": {
-    "startCommand": "npm start",
-    "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 10
-  }
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs"
 }
 ```
 
@@ -208,25 +212,27 @@ services:
 
 ## 💰 **Cost Comparison**
 
-| Platform    | Free Tier | Private Repos | Custom Domain | Build Minutes     |
-| ----------- | --------- | ------------- | ------------- | ----------------- |
-| **Render**  | ✅ Yes    | ✅ Yes        | ✅ Yes        | 400 hours/month   |
-| **Railway** | ✅ Yes    | ✅ Yes        | ✅ Yes        | 500 hours/month   |
-| **Netlify** | ❌ No     | ❌ No         | ✅ Yes        | 300 minutes/month |
+| Platform         | Free Tier | Public Repos | Custom Domain | Build Minutes     |
+| ---------------- | --------- | ------------ | ------------- | ----------------- |
+| **Netlify**      | ✅ Yes    | ✅ Yes       | ✅ Yes        | 300 minutes/month |
+| **Vercel**       | ✅ Yes    | ✅ Yes       | ✅ Yes        | 100 hours/month   |
+| **GitHub Pages** | ✅ Yes    | ✅ Yes       | ✅ Yes        | Unlimited         |
 
 ---
 
 ## 🎯 **Recommendation for NavioX**
 
-### **Best Choice: Render**
+### **Best Choice: Netlify**
 
 ```
 ✅ Perfect for Next.js (our tech stack)
-✅ Supports private repositories
+✅ Supports public repositories
 ✅ Zero configuration required
 ✅ Excellent performance and CDN
 ✅ Professional deployment URLs
 ✅ Seamless GitHub integration
+✅ Built-in form handling
+✅ Advanced analytics
 ```
 
 ---
@@ -235,9 +241,9 @@ services:
 
 ### **Deployment Platforms:**
 
-- **[Render](https://render.com)** - Static site hosting
-- **[Railway](https://railway.app)** - Full-stack platform
-- **[Surge](https://surge.sh)** - Simple static hosting
+- **[Netlify](https://netlify.com)** - Static site hosting
+- **[Vercel](https://vercel.com)** - Next.js optimized platform
+- **[GitHub Pages](https://pages.github.com)** - Free static hosting
 
 ### **Domain Registration:**
 
