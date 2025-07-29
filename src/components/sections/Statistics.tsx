@@ -80,7 +80,7 @@ const Counter = ({ value, suffix, inView }: { value: number; suffix: string; inV
 
 const Statistics = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.3 })
+  const isInView = useInView(ref, { once: true, amount: 0.3 })
 
   return (
     <section ref={ref} className="py-24 sm:py-32 bg-gradient-to-br from-gray-50 to-blue-50">
