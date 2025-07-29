@@ -27,7 +27,17 @@ NavioX uses **Git-based deployment** with Netlify for automatic deployments. Eve
    - **Publish directory**: `.next`
    - **Node version**: `18`
 
-### 2. **Environment Variables**
+### 2. **Remove Netlify Plugin (IMPORTANT)**
+
+**This is crucial to avoid deployment errors:**
+
+1. Go to your **Netlify Dashboard**
+2. Navigate to **Site settings → Build & deploy → Build plugins**
+3. **Remove** the `@netlify/plugin-nextjs` plugin if it exists
+4. **Remove** any other Next.js related plugins
+5. Save the changes
+
+### 3. **Environment Variables**
 
 Set these in Netlify Dashboard → Site settings → Environment variables:
 
@@ -37,7 +47,7 @@ NEXT_TELEMETRY_DISABLED=1
 NEXT_PUBLIC_SITE_URL=https://navioxbd.com
 ```
 
-### 3. **Domain Configuration**
+### 4. **Domain Configuration**
 
 - **Custom domain**: `navioxbd.com`
 - **HTTPS**: Automatically enabled by Netlify
@@ -77,7 +87,16 @@ If you need to trigger a manual deployment:
 
 ### **Common Issues**
 
-#### 1. **Image Loading Errors (400 Bad Request)**
+#### 1. **Plugin Migration Errors**
+
+**Problem**: `@netlify/plugin-nextjs` migration errors
+**Solution**:
+
+- ✅ **Remove the plugin** from Netlify Dashboard
+- ✅ **Use standard Next.js build** without plugins
+- ✅ **Updated configuration** in `netlify.toml`
+
+#### 2. **Image Loading Errors (400 Bad Request)**
 
 **Problem**: Images not loading on Netlify
 **Solution**:
@@ -85,7 +104,7 @@ If you need to trigger a manual deployment:
 - ✅ **Fixed**: Set `unoptimized: true` in `next.config.ts`
 - ✅ **Fixed**: Proper image caching headers in `netlify.toml`
 
-#### 2. **Contact Page 404 Errors**
+#### 3. **Contact Page 404 Errors**
 
 **Problem**: Contact page not found
 **Solution**:
@@ -93,7 +112,7 @@ If you need to trigger a manual deployment:
 - ✅ **Fixed**: Proper routing configuration in `netlify.toml`
 - ✅ **Fixed**: SPA fallback for client-side routing
 
-#### 3. **Build Failures**
+#### 4. **Build Failures**
 
 **Check**:
 
@@ -101,8 +120,9 @@ If you need to trigger a manual deployment:
 - Dependencies are up to date
 - No TypeScript errors
 - All required environment variables set
+- **No Netlify plugins installed**
 
-#### 4. **Performance Issues**
+#### 5. **Performance Issues**
 
 **Optimizations**:
 
@@ -199,7 +219,6 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["@heroicons/react", "framer-motion"],
   },
-  telemetry: false,
   trailingSlash: false,
 };
 ```

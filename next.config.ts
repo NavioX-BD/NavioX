@@ -16,8 +16,6 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["@heroicons/react", "framer-motion"],
   },
-  // Disable telemetry
-  telemetry: false,
   // Ensure proper static asset handling
   trailingSlash: false,
   // Disable image optimization for Netlify
