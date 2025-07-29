@@ -49,7 +49,7 @@ export default function ContactPage() {
     setSubmitStatus('idle')
 
     try {
-      // Simple form submission without Netlify plugin dependency
+      // Simple form submission for static export
       const formDataToSend = new FormData()
       formDataToSend.append('form-name', 'contact')
       formDataToSend.append('name', formData.name)
@@ -387,6 +387,12 @@ export default function ContactPage() {
                 onSubmit={handleSubmit} 
                 className="space-y-6"
               >
+                {/* Hidden form for Netlify detection */}
+                <input type="hidden" name="form-name" value="contact" />
+                <div className="hidden">
+                  <input name="bot-field" />
+                </div>
+
                 {/* Personal Information */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -529,14 +535,6 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
                     placeholder="Tell us about your project, goals, and any specific requirements..."
                   />
-                </div>
-
-                {/* Hidden field for Netlify */}
-                <input type="hidden" name="form-name" value="contact" />
-                
-                {/* Honeypot field for spam protection */}
-                <div className="hidden">
-                  <input name="bot-field" />
                 </div>
 
                 <div className="flex items-center">

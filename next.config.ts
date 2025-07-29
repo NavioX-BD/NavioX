@@ -20,6 +20,9 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   // Disable image optimization for Netlify
   // This is the key fix for the image loading issues
+  // Use static export to avoid plugin issues
+  output: "export",
+  distDir: "out",
 };
 
 export default nextConfig;
