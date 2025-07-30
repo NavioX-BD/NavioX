@@ -347,46 +347,13 @@ export default function ContactPage() {
                         </p>
                       </motion.div>
 
-                      {/* Next Steps */}
-                      <motion.div
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4, duration: 0.4 }}
-                        className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-2.5 mb-3 border border-blue-100/50"
-                      >
-                        <h4 className="font-medium text-blue-900 mb-2 flex items-center justify-center text-xs">
-                          <div className="bg-blue-100 rounded-full p-1 mr-1.5">
-                            <svg className="w-2.5 h-2.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                          </div>
-                          What happens next?
-                        </h4>
-                        <div className="space-y-1.5">
-                          {[
-                            { title: "Initial Review", desc: "Review within 2-4 hours" },
-                            { title: "Detailed Response", desc: "Response within 24 hours" },
-                            { title: "Free Consultation", desc: "30-minute consultation call" },
-                            { title: "Custom Proposal", desc: "Tailored project proposal" }
-                          ].map((step, index) => (
-                            <div key={index} className="flex items-start p-1.5 bg-white/70 rounded border border-white/80">
-                              <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs font-bold mr-2 mt-0.5 flex-shrink-0">
-                                {index + 1}
-                              </div>
-                              <div className="text-left">
-                                <p className="font-medium text-blue-900 text-xs mb-0.5">{step.title}</p>
-                                <p className="text-blue-700 text-xs leading-tight">{step.desc}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </motion.div>
+
 
                       {/* Response Time Badge */}
                       <motion.div
                         initial={{ opacity: 0, y: 5 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5, duration: 0.3 }}
+                        transition={{ delay: 0.4, duration: 0.3 }}
                         className="inline-flex items-center bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-full px-2 py-1 mb-3"
                       >
                         <div className="bg-amber-100 rounded-full p-0.5 mr-1.5">
@@ -401,7 +368,7 @@ export default function ContactPage() {
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.6, duration: 0.3 }}
+                        transition={{ delay: 0.5, duration: 0.3 }}
                         className="flex gap-2"
                       >
                         <button
