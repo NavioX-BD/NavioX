@@ -377,7 +377,7 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center space-x-6">
-              {navigation.legal.map((item, index) => (
+              {navigation.legal.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}

@@ -1,6 +1,6 @@
 'use client'
 
-import { loadCompanyStats, loadContactData } from '@/lib/data-loader'
+import { loadContactData } from '@/lib/data-loader'
 import {
   BuildingOfficeIcon,
   ChatBubbleLeftRightIcon,
@@ -38,7 +38,6 @@ export default function ContactPage() {
 
   // Load data from JSON files
   const contactData = loadContactData()
-  const companyStats = loadCompanyStats()
 
   // Icon mapping function
   const getIconComponent = (iconName: string) => {
