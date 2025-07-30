@@ -23,8 +23,13 @@ export default function TermsOfService() {
     { id: 'data-ownership', title: 'Data Ownership & Security' },
     { id: 'termination', title: 'Termination & Suspension' },
     { id: 'dispute-resolution', title: 'Dispute Resolution' },
+    { id: 'force-majeure', title: 'Force Majeure' },
+    { id: 'indemnification', title: 'Indemnification' },
+    { id: 'compliance-laws', title: 'Compliance & Laws' },
     { id: 'governing-law', title: 'Governing Law' },
     { id: 'modifications', title: 'Terms Modifications' },
+    { id: 'severability', title: 'Severability' },
+    { id: 'entire-agreement', title: 'Entire Agreement' },
     { id: 'contact-information', title: 'Contact Information' },
   ]
 
@@ -938,6 +943,1006 @@ export default function TermsOfService() {
                 <li>• Is required to be disclosed by law or court order</li>
                 <li>• Is independently developed without use of your information</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-section="warranties-disclaimers" className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-blue-100">
+          Warranties & Disclaimers
+        </h2>
+        
+        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg mb-6">
+          <p className="text-yellow-800 font-medium">
+            We provide warranties for our services while clearly disclaiming certain liabilities to ensure fair and transparent terms.
+          </p>
+        </div>
+
+        <p className="text-gray-700 leading-relaxed mb-8">
+          This section outlines the warranties we provide and the disclaimers that apply to our services. 
+          We believe in transparency and want to clearly communicate what we guarantee and what we don&apos;t.
+        </p>
+
+        <div className="grid lg:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-green-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Our Warranties
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Service Quality</h4>
+                  <p className="text-sm text-green-600">Services will be performed with reasonable care and skill</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Professional Standards</h4>
+                  <p className="text-sm text-green-600">Work will meet industry standards and best practices</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Compliance</h4>
+                  <p className="text-sm text-green-600">Services will comply with applicable laws and regulations</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Intellectual Property</h4>
+                  <p className="text-sm text-green-600">We have the right to provide the services and deliverables</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Performance Guarantees
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Timeline Commitment</h4>
+                  <p className="text-sm text-blue-600">Reasonable efforts to meet agreed project timelines</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Quality Assurance</h4>
+                  <p className="text-sm text-blue-600">Testing and review processes for all deliverables</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Communication</h4>
+                  <p className="text-sm text-blue-600">Regular updates and responsive communication</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Important Disclaimers</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-red-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">No Guarantee of Results</h4>
+                  <p className="text-sm text-gray-600">We cannot guarantee specific business outcomes or results</p>
+                </div>
+                <div className="border-l-4 border-orange-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Third-Party Services</h4>
+                  <p className="text-sm text-gray-600">No warranty for third-party services or integrations</p>
+                </div>
+                <div className="border-l-4 border-yellow-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Client Data</h4>
+                  <p className="text-sm text-gray-600">No warranty for data provided by client</p>
+                </div>
+                <div className="border-l-4 border-purple-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Future Compatibility</h4>
+                  <p className="text-sm text-gray-600">No guarantee of future compatibility with evolving technologies</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+              <h3 className="text-lg font-semibold text-red-800 mb-2">Exclusion of Warranties</h3>
+              <p className="text-red-700 text-sm mb-3">
+                EXCEPT AS EXPRESSLY PROVIDED IN THESE TERMS, ALL WARRANTIES, EXPRESS OR IMPLIED, 
+                INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, 
+                AND NON-INFRINGEMENT, ARE DISCLAIMED.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">Warranty Period</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p><strong>Software Defects:</strong> 90 days from delivery</p>
+                <p><strong>Documentation Errors:</strong> 30 days from delivery</p>
+                <p><strong>Performance Issues:</strong> 60 days from deployment</p>
+                <p><strong>Security Vulnerabilities:</strong> Ongoing during service period</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-section="limitation-liability" className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-blue-100">
+          Limitation of Liability
+        </h2>
+        
+        <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg mb-6">
+          <p className="text-red-800 font-medium">
+            Our liability is limited to the amount paid for services in the 12 months preceding the claim.
+          </p>
+        </div>
+
+        <p className="text-gray-700 leading-relaxed mb-8">
+          This section establishes the limits of our liability to ensure fair and reasonable risk allocation 
+          between both parties. These limitations are standard in the software development industry.
+        </p>
+
+        <div className="grid lg:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Liability Limits
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Maximum Liability</h4>
+                  <p className="text-sm text-blue-600">Limited to fees paid in the 12 months preceding the claim</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">No Consequential Damages</h4>
+                  <p className="text-sm text-blue-600">Excludes lost profits, business interruption, data loss</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">No Punitive Damages</h4>
+                  <p className="text-sm text-blue-600">Excludes exemplary or punitive damages</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-green-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Excluded Damages
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Indirect Damages</h4>
+                  <p className="text-sm text-green-600">Lost profits, revenue, or business opportunities</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Data Loss</h4>
+                  <p className="text-sm text-green-600">Loss of data, information, or content</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Reputational Harm</h4>
+                  <p className="text-sm text-green-600">Damage to reputation or brand value</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Exceptions to Limitations</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-red-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Gross Negligence</h4>
+                  <p className="text-sm text-gray-600">Limitations do not apply to gross negligence or willful misconduct</p>
+                </div>
+                <div className="border-l-4 border-orange-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Intellectual Property</h4>
+                  <p className="text-sm text-gray-600">IP infringement claims may exceed liability limits</p>
+                </div>
+                <div className="border-l-4 border-yellow-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Personal Injury</h4>
+                  <p className="text-sm text-gray-600">Personal injury or death claims are not limited</p>
+                </div>
+                <div className="border-l-4 border-purple-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Statutory Rights</h4>
+                  <p className="text-sm text-gray-600">Limitations do not affect statutory consumer rights</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+              <h3 className="text-lg font-semibold text-yellow-800 mb-2">Risk Allocation</h3>
+              <p className="text-yellow-700 text-sm">
+                These limitations reflect the nature of software development services and the risks inherent 
+                in technology projects. They ensure fair risk allocation between both parties.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">Insurance Coverage</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p><strong>Professional Liability:</strong> $2,000,000 per occurrence</p>
+                <p><strong>General Liability:</strong> $1,000,000 per occurrence</p>
+                <p><strong>Cyber Liability:</strong> $1,000,000 per occurrence</p>
+                <p><strong>Workers Compensation:</strong> As required by law</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-section="data-ownership" className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-blue-100">
+          Data Ownership & Security
+        </h2>
+        
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-6">
+          <p className="text-blue-800 font-medium">
+            Clear data ownership rights and comprehensive security measures protect your valuable information.
+          </p>
+        </div>
+
+        <p className="text-gray-700 leading-relaxed mb-8">
+          This section defines data ownership, outlines security measures, and establishes protocols 
+          for data handling throughout our engagement.
+        </p>
+
+        <div className="grid lg:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-green-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Data Ownership
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Client Data</h4>
+                  <p className="text-sm text-green-600">You retain full ownership of all your data and content</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Generated Data</h4>
+                  <p className="text-sm text-green-600">Data created during development belongs to you</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Usage Rights</h4>
+                  <p className="text-sm text-green-600">You have unlimited rights to use your data</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-violet-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-purple-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                Security Measures
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-purple-700 mb-2">Encryption</h4>
+                  <p className="text-sm text-purple-600">Data encrypted in transit and at rest</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-purple-700 mb-2">Access Controls</h4>
+                  <p className="text-sm text-purple-600">Role-based access and authentication</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-purple-700 mb-2">Monitoring</h4>
+                  <p className="text-sm text-purple-600">24/7 security monitoring and alerts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Data Handling Protocols</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-blue-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Collection</h4>
+                  <p className="text-sm text-gray-600">Only collect data necessary for project delivery</p>
+                </div>
+                <div className="border-l-4 border-green-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Processing</h4>
+                  <p className="text-sm text-gray-600">Process data according to agreed purposes</p>
+                </div>
+                <div className="border-l-4 border-orange-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Storage</h4>
+                  <p className="text-sm text-gray-600">Secure storage with appropriate retention periods</p>
+                </div>
+                <div className="border-l-4 border-purple-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Deletion</h4>
+                  <p className="text-sm text-gray-600">Secure deletion upon project completion</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+              <h3 className="text-lg font-semibold text-red-800 mb-2">Data Breach Response</h3>
+              <p className="text-red-700 text-sm mb-3">
+                In the event of a data breach:
+              </p>
+              <ul className="text-red-700 text-sm space-y-1">
+                <li>• Immediate notification within 24 hours</li>
+                <li>• Investigation and containment procedures</li>
+                <li>• Regulatory notification if required</li>
+                <li>• Remediation and prevention measures</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">Compliance Standards</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p><strong>GDPR:</strong> Full compliance with data protection regulations</p>
+                <p><strong>ISO 27001:</strong> Information security management system</p>
+                <p><strong>SOC 2:</strong> Security, availability, and confidentiality controls</p>
+                <p><strong>Industry Standards:</strong> Following best practices for data security</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-section="termination" className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-blue-100">
+          Termination & Suspension
+        </h2>
+        
+        <div className="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-r-lg mb-6">
+          <p className="text-orange-800 font-medium">
+            Clear termination rights and procedures ensure both parties can end the relationship fairly and orderly.
+          </p>
+        </div>
+
+        <p className="text-gray-700 leading-relaxed mb-8">
+          This section outlines the circumstances under which either party may terminate the agreement 
+          and the procedures that must be followed to ensure an orderly transition.
+        </p>
+
+        <div className="grid lg:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-red-50 to-rose-50 border border-red-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-red-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                Termination by Client
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-red-700 mb-2">Convenience</h4>
+                  <p className="text-sm text-red-600">30 days written notice for any reason</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-red-700 mb-2">Material Breach</h4>
+                  <p className="text-sm text-red-600">Immediate termination for our material breach</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-red-700 mb-2">Insolvency</h4>
+                  <p className="text-sm text-red-600">Immediate termination if we become insolvent</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Termination by Us
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Non-Payment</h4>
+                  <p className="text-sm text-blue-600">15 days after payment is overdue</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Material Breach</h4>
+                  <p className="text-sm text-blue-600">Immediate termination for client material breach</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Illegal Activity</h4>
+                  <p className="text-sm text-blue-600">Immediate termination for illegal use of services</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Termination Procedures</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-green-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Notice Period</h4>
+                  <p className="text-sm text-gray-600">Written notice with specific termination date</p>
+                </div>
+                <div className="border-l-4 border-blue-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Transition Period</h4>
+                  <p className="text-sm text-gray-600">Reasonable time for knowledge transfer</p>
+                </div>
+                <div className="border-l-4 border-orange-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Final Deliverables</h4>
+                  <p className="text-sm text-gray-600">Completion of work in progress</p>
+                </div>
+                <div className="border-l-4 border-purple-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Data Return</h4>
+                  <p className="text-sm text-gray-600">Return or deletion of client data</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+              <h3 className="text-lg font-semibold text-yellow-800 mb-2">Suspension Rights</h3>
+              <p className="text-yellow-700 text-sm mb-3">
+                We may suspend services for:
+              </p>
+              <ul className="text-yellow-700 text-sm space-y-1">
+                <li>• Non-payment of invoices</li>
+                <li>• Security concerns or violations</li>
+                <li>• Excessive resource usage</li>
+                <li>• Violation of acceptable use policies</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">Post-Termination Obligations</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p><strong>Confidentiality:</strong> Survives termination for 5 years</p>
+                <p><strong>Payment:</strong> Outstanding amounts due immediately</p>
+                <p><strong>Intellectual Property:</strong> Rights transfer upon final payment</p>
+                <p><strong>Data:</strong> Secure deletion or return within 30 days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-section="dispute-resolution" className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-blue-100">
+          Dispute Resolution
+        </h2>
+        
+        <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg mb-6">
+          <p className="text-green-800 font-medium">
+            We prefer to resolve disputes through direct communication and mediation before considering legal action.
+          </p>
+        </div>
+
+        <p className="text-gray-700 leading-relaxed mb-8">
+          This section establishes a structured approach to resolving disputes, starting with direct 
+          communication and progressing through mediation before any legal proceedings.
+        </p>
+
+        <div className="grid lg:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.013 8.013 0 01-7-4c0-4.418 3.582-8 8-8s8 3.582 8 8z" />
+                </svg>
+                Resolution Steps
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Direct Discussion</h4>
+                  <p className="text-sm text-blue-600">Initial attempt to resolve through direct communication</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Escalation</h4>
+                  <p className="text-sm text-blue-600">Escalate to senior management within 10 days</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Mediation</h4>
+                  <p className="text-sm text-blue-600">Formal mediation if direct resolution fails</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-green-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Mediation Process
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Selection</h4>
+                  <p className="text-sm text-green-600">Mutually agreed mediator or mediation service</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Timeline</h4>
+                  <p className="text-sm text-green-700">Mediation to be completed within 60 days</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-green-700 mb-2">Costs</h4>
+                  <p className="text-sm text-green-600">Costs shared equally between parties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Legal Proceedings</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-red-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Last Resort</h4>
+                  <p className="text-sm text-gray-600">Legal action only after mediation fails</p>
+                </div>
+                <div className="border-l-4 border-orange-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Jurisdiction</h4>
+                  <p className="text-sm text-gray-600">Courts in Dhaka, Bangladesh have jurisdiction</p>
+                </div>
+                <div className="border-l-4 border-yellow-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Governing Law</h4>
+                  <p className="text-sm text-gray-600">Bangladesh law governs these Terms</p>
+                </div>
+                <div className="border-l-4 border-purple-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Attorney Fees</h4>
+                  <p className="text-sm text-gray-600">Prevailing party may recover reasonable fees</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+              <h3 className="text-lg font-semibold text-yellow-800 mb-2">Interim Relief</h3>
+              <p className="text-yellow-700 text-sm">
+                Either party may seek interim relief (injunctive relief) from a court of competent 
+                jurisdiction to prevent irreparable harm while the dispute resolution process is ongoing.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">Communication During Disputes</h3>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p><strong>Good Faith:</strong> All parties must act in good faith</p>
+                <p><strong>Confidentiality:</strong> Dispute proceedings are confidential</p>
+                <p><strong>Continuation:</strong> Services continue during dispute resolution</p>
+                <p><strong>Documentation:</strong> All communications documented in writing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-section="force-majeure" className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-blue-100">
+          Force Majeure
+        </h2>
+        
+        <div className="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-r-lg mb-6">
+          <p className="text-orange-800 font-medium">
+            Neither party shall be liable for any failure or delay in performance due to circumstances beyond their reasonable control.
+          </p>
+        </div>
+
+        <p className="text-gray-700 leading-relaxed mb-6">
+          In the event that either party is unable to perform its obligations under these Terms due to circumstances 
+          beyond its reasonable control, such party shall not be liable for any failure or delay in performance.
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+              <svg className="w-6 h-6 mr-3 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 15.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+              Qualifying Events
+            </h3>
+            <ul className="text-gray-600 space-y-2 text-sm">
+              <li>• Natural disasters (earthquakes, floods, hurricanes)</li>
+              <li>• Government actions or regulations</li>
+              <li>• War, terrorism, or civil unrest</li>
+              <li>• Labor strikes or work stoppages</li>
+              <li>• Internet or utility service failures</li>
+              <li>• Acts of God or unforeseen circumstances</li>
+            </ul>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+              <svg className="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Notification Requirements
+            </h3>
+            <ul className="text-gray-600 space-y-2 text-sm">
+              <li>• Immediate notification within 24 hours</li>
+              <li>• Regular updates on situation status</li>
+              <li>• Documentation of impact and duration</li>
+              <li>• Cooperation in finding alternative solutions</li>
+              <li>• Resumption of services when possible</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-6 bg-gray-50 border border-gray-200 rounded-lg p-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-3">Mitigation Efforts</h3>
+          <p className="text-gray-700 text-sm mb-4">
+            Both parties agree to use reasonable efforts to minimize the impact of force majeure events:
+          </p>
+          <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
+            <div>
+              <h4 className="font-medium text-gray-700 mb-2">Our Commitments</h4>
+              <ul className="space-y-1">
+                <li>• Implement business continuity plans</li>
+                <li>• Provide remote work capabilities</li>
+                <li>• Maintain backup systems and data</li>
+                <li>• Communicate alternative arrangements</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-medium text-gray-700 mb-2">Client Cooperation</h4>
+              <ul className="space-y-1">
+                <li>• Provide necessary access and information</li>
+                <li>• Accept reasonable service modifications</li>
+                <li>• Maintain communication channels</li>
+                <li>• Consider alternative delivery methods</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-section="indemnification" className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-blue-100">
+          Indemnification
+        </h2>
+        
+        <p className="text-gray-700 leading-relaxed mb-8">
+          Both parties agree to protect each other from certain claims and losses arising from their respective 
+          actions or inactions under these Terms. This mutual protection ensures fair risk allocation.
+        </p>
+
+        <div className="grid lg:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Client Indemnification
+              </h3>
+              <p className="text-blue-700 text-sm mb-4">
+                You agree to indemnify and hold us harmless from:
+              </p>
+              <ul className="text-sm text-blue-600 space-y-2">
+                <li>• Claims arising from your content or materials</li>
+                <li>• Violations of third-party intellectual property rights</li>
+                <li>• Breaches of your obligations under these Terms</li>
+                <li>• Misuse of our services or deliverables</li>
+                <li>• Claims by your customers or end users</li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-green-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Our Indemnification
+              </h3>
+              <p className="text-green-700 text-sm mb-4">
+                We agree to indemnify and hold you harmless from:
+              </p>
+              <ul className="text-sm text-green-600 space-y-2">
+                <li>• Claims arising from our gross negligence</li>
+                <li>• Violations of our confidentiality obligations</li>
+                <li>• Breaches of our service warranties</li>
+                <li>• Claims by our employees or subcontractors</li>
+                <li>• Infringement of our own intellectual property</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Indemnification Process</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-blue-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Notification</h4>
+                  <p className="text-sm text-gray-600">Prompt written notice of any claim or potential claim</p>
+                </div>
+                <div className="border-l-4 border-green-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Cooperation</h4>
+                  <p className="text-sm text-gray-600">Reasonable assistance in defense and settlement</p>
+                </div>
+                <div className="border-l-4 border-purple-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Control</h4>
+                  <p className="text-sm text-gray-600">Indemnifying party controls defense and settlement</p>
+                </div>
+                <div className="border-l-4 border-orange-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Limitations</h4>
+                  <p className="text-sm text-gray-600">Excludes consequential and punitive damages</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+              <h3 className="text-lg font-semibold text-red-800 mb-2">Exclusions</h3>
+              <p className="text-red-700 text-sm mb-3">
+                Indemnification does not cover:
+              </p>
+              <ul className="text-red-700 text-sm space-y-1">
+                <li>• Claims arising from the other party&apos;s gross negligence</li>
+                <li>• Willful misconduct or intentional violations</li>
+                <li>• Claims covered by insurance policies</li>
+                <li>• Consequential or punitive damages</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-section="compliance-laws" className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-blue-100">
+          Compliance & Laws
+        </h2>
+        
+        <p className="text-gray-700 leading-relaxed mb-8">
+          Both parties agree to comply with all applicable laws, regulations, and industry standards. 
+          This includes data protection, export controls, and other relevant legal requirements.
+        </p>
+
+        <div className="grid lg:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-purple-50 to-violet-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-purple-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Data Protection & Privacy
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-purple-700 mb-2">GDPR Compliance</h4>
+                  <p className="text-sm text-purple-600">Processing personal data in accordance with GDPR requirements</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-purple-700 mb-2">Data Security</h4>
+                  <p className="text-sm text-purple-600">Implementing appropriate technical and organizational measures</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-purple-700 mb-2">Data Breach Notification</h4>
+                  <p className="text-sm text-purple-600">Prompt notification of any data security incidents</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-blue-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Export Controls & Sanctions
+              </h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Export Compliance</h4>
+                  <p className="text-sm text-blue-600">Compliance with applicable export control regulations</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Sanctions Screening</h4>
+                  <p className="text-sm text-blue-600">Screening against applicable sanctions lists</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-blue-700 mb-2">Technology Transfer</h4>
+                  <p className="text-sm text-blue-600">Proper licensing for controlled technology</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Industry Standards</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-green-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Security Standards</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• ISO 27001 Information Security</li>
+                    <li>• SOC 2 Type II Compliance</li>
+                    <li>• OWASP Security Guidelines</li>
+                    <li>• Industry best practices</li>
+                  </ul>
+                </div>
+                <div className="border-l-4 border-orange-400 pl-4">
+                  <h4 className="font-medium text-gray-700 mb-2">Quality Standards</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• ISO 9001 Quality Management</li>
+                    <li>• Agile development methodologies</li>
+                    <li>• Code review and testing standards</li>
+                    <li>• Documentation requirements</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+              <h3 className="text-lg font-semibold text-yellow-800 mb-3">Regulatory Changes</h3>
+              <p className="text-yellow-700 text-sm mb-3">
+                Both parties agree to:
+              </p>
+              <ul className="text-yellow-700 text-sm space-y-1">
+                <li>• Monitor relevant regulatory changes</li>
+                <li>• Update practices to maintain compliance</li>
+                <li>• Notify each other of compliance issues</li>
+                <li>• Cooperate in compliance audits</li>
+              </ul>
+            </div>
+
+            <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+              <h3 className="text-lg font-semibold text-red-800 mb-2">Non-Compliance Consequences</h3>
+              <p className="text-red-700 text-sm">
+                Failure to comply with applicable laws may result in immediate termination of services 
+                and potential legal action. Both parties reserve the right to suspend services if 
+                compliance cannot be maintained.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-section="severability" className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-blue-100">
+          Severability
+        </h2>
+        
+        <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-lg mb-6">
+          <p className="text-green-800 font-medium">
+            If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.
+          </p>
+        </div>
+
+        <p className="text-gray-700 leading-relaxed mb-6">
+          Should any provision of these Terms be determined to be invalid, illegal, or unenforceable 
+          by a court of competent jurisdiction, the validity, legality, and enforceability of the 
+          remaining provisions shall not be affected or impaired in any way.
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+              <svg className="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Partial Invalidity
+            </h3>
+            <ul className="text-gray-600 space-y-2 text-sm">
+              <li>• Invalid provisions do not affect other terms</li>
+              <li>• Remaining provisions remain fully enforceable</li>
+              <li>• Parties may negotiate replacement terms</li>
+              <li>• Court may modify unenforceable provisions</li>
+            </ul>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+              <svg className="w-6 h-6 mr-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Reformation
+            </h3>
+            <ul className="text-gray-600 space-y-2 text-sm">
+              <li>• Courts may reform invalid provisions</li>
+              <li>• Terms modified to be enforceable</li>
+              <li>• Original intent preserved where possible</li>
+              <li>• Parties agree to reasonable modifications</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-6 bg-gray-50 border border-gray-200 rounded-lg p-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-3">Severability Process</h3>
+          <div className="grid md:grid-cols-3 gap-4 text-sm">
+            <div className="text-center">
+              <div className="bg-blue-100 text-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">1</div>
+              <h4 className="font-medium text-gray-700 mb-1">Identification</h4>
+              <p className="text-gray-600">Identify the specific unenforceable provision</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-green-100 text-green-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">2</div>
+              <h4 className="font-medium text-gray-700 mb-1">Assessment</h4>
+              <p className="text-gray-600">Evaluate impact on remaining terms</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-purple-100 text-purple-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-2">3</div>
+              <h4 className="font-medium text-gray-700 mb-1">Enforcement</h4>
+              <p className="text-gray-600">Continue with valid provisions</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-section="entire-agreement" className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-blue-100">
+          Entire Agreement
+        </h2>
+        
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg mb-6">
+          <p className="text-blue-800 font-medium">
+            These Terms constitute the complete and exclusive agreement between the parties regarding the subject matter.
+          </p>
+        </div>
+
+        <p className="text-gray-700 leading-relaxed mb-8">
+          These Terms of Service, together with any project-specific agreements, statements of work, 
+          and other documents expressly incorporated by reference, constitute the entire agreement 
+          between you and NavioX Solutions Inc. regarding the subject matter hereof.
+        </p>
+
+        <div className="grid lg:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                Supersedes Previous Agreements
+              </h3>
+              <ul className="text-gray-600 space-y-2 text-sm">
+                <li>• All prior oral and written agreements</li>
+                <li>• Previous terms of service</li>
+                <li>• Contradictory communications</li>
+                <li>• Informal understandings</li>
+                <li>• Standard industry practices</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                <svg className="w-6 h-6 mr-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Incorporated Documents
+              </h3>
+              <ul className="text-gray-600 space-y-2 text-sm">
+                <li>• Project-specific agreements</li>
+                <li>• Statements of work (SOW)</li>
+                <li>• Service level agreements (SLA)</li>
+                <li>• Non-disclosure agreements (NDA)</li>
+                <li>• Change orders and amendments</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-purple-50 to-violet-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-purple-800 mb-4">Amendment Process</h3>
+              <div className="space-y-3">
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-purple-700 mb-2">Written Amendments</h4>
+                  <p className="text-sm text-purple-600">All changes must be in writing and signed by both parties</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-purple-700 mb-2">Specific References</h4>
+                  <p className="text-sm text-purple-600">Amendments must specifically reference these Terms</p>
+                </div>
+                <div className="bg-white/60 rounded-lg p-4">
+                  <h4 className="font-medium text-purple-700 mb-2">Effective Date</h4>
+                  <p className="text-sm text-purple-600">Changes become effective upon mutual agreement</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+              <h3 className="text-lg font-semibold text-yellow-800 mb-2">Parol Evidence Rule</h3>
+              <p className="text-yellow-700 text-sm">
+                No oral statements, negotiations, or other communications outside of this written agreement 
+                shall be considered part of the agreement or used to interpret its terms.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">Integration Clause</h3>
+              <p className="text-gray-700 text-sm">
+                This agreement represents the final, complete, and exclusive statement of the terms and conditions 
+                between the parties and supersedes all prior negotiations, representations, or agreements 
+                relating to the subject matter.
+              </p>
             </div>
           </div>
         </div>

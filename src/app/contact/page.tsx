@@ -24,6 +24,7 @@ export default function ContactPage() {
     email: '',
     company: '',
     phone: '',
+    subject: '',
     service: '',
     budget: '',
     timeline: '',
@@ -76,6 +77,7 @@ export default function ContactPage() {
       formDataToSend.append('email', formData.email)
       formDataToSend.append('company', formData.company)
       formDataToSend.append('phone', formData.phone)
+      formDataToSend.append('subject', formData.subject)
       formDataToSend.append('service', formData.service)
       formDataToSend.append('budget', formData.budget)
       formDataToSend.append('timeline', formData.timeline)
@@ -98,6 +100,7 @@ export default function ContactPage() {
             email: '',
             company: '',
             phone: '',
+            subject: '',
             service: '',
             budget: '',
             timeline: '',
@@ -293,15 +296,33 @@ export default function ContactPage() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg"
+                  className="mb-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl"
                 >
-                  <div className="flex items-center">
-                    <svg className="w-5 h-5 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-green-800 font-medium">
-                      Thank you! We&apos;ve received your message and will respond within 24 hours.
-                    </span>
+                  <div className="text-center">
+                    <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold text-green-800 mb-2">Message Sent Successfully!</h3>
+                    <p className="text-green-700 mb-4">
+                      Thank you for reaching out to NavioX. We&apos;ve received your project details and our team is excited to help you navigate your digital journey.
+                    </p>
+                    <div className="bg-white/60 rounded-lg p-4 mb-4">
+                      <h4 className="font-medium text-green-800 mb-2">What happens next?</h4>
+                      <ul className="text-sm text-green-700 space-y-1">
+                        <li>• We&apos;ll review your requirements within 2-4 hours</li>
+                        <li>• You&apos;ll receive a detailed response within 24 hours</li>
+                        <li>• We&apos;ll schedule a free consultation call</li>
+                        <li>• You&apos;ll get a customized project proposal</li>
+                      </ul>
+                    </div>
+                    <div className="flex items-center justify-center text-sm text-green-600">
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Response time: 24 hours or less
+                    </div>
                   </div>
                 </motion.div>
               )}
@@ -310,15 +331,41 @@ export default function ContactPage() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg"
+                  className="mb-6 p-6 bg-gradient-to-r from-red-50 to-rose-50 border border-red-200 rounded-xl"
                 >
-                  <div className="flex items-center">
-                    <svg className="w-5 h-5 text-red-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                    <span className="text-red-800 font-medium">
-                      Something went wrong. Please try again or contact us directly.
-                    </span>
+                  <div className="text-center">
+                    <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold text-red-800 mb-2">Oops! Something went wrong</h3>
+                    <p className="text-red-700 mb-4">
+                      We couldn&apos;t send your message right now. Don&apos;t worry - you can still reach us through other channels.
+                    </p>
+                    <div className="bg-white/60 rounded-lg p-4 mb-4">
+                      <h4 className="font-medium text-red-800 mb-2">Alternative ways to contact us:</h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-red-700">
+                        <div className="flex items-center">
+                          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                          <a href="mailto:info@navioxbd.com" className="hover:underline">info@navioxbd.com</a>
+                        </div>
+                        <div className="flex items-center">
+                          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                          </svg>
+                          <a href="tel:+8801765939006" className="hover:underline">+880 1765-939006</a>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => setSubmitStatus('idle')}
+                      className="text-sm text-red-600 hover:text-red-700 font-medium"
+                    >
+                      Try again
+                    </button>
                   </div>
                 </motion.div>
               )}
@@ -465,6 +512,27 @@ export default function ContactPage() {
                   </select>
                 </div>
 
+                {/* Subject Field */}
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    Subject *
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required
+                    maxLength={100}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    placeholder="Brief description of your inquiry or project"
+                  />
+                  <div className="mt-1 text-xs text-gray-500 text-right">
+                    {formData.subject.length}/100 characters
+                  </div>
+                </div>
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Project Details *
@@ -508,10 +576,15 @@ export default function ContactPage() {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      Sending Message...
+                      <span>Charting Your Course...</span>
                     </div>
                   ) : (
-                    'Chart Your Course'
+                    <div className="flex items-center justify-center">
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                      </svg>
+                      Chart Your Course
+                    </div>
                   )}
                 </motion.button>
               </form>
@@ -524,50 +597,59 @@ export default function ContactPage() {
                   <a href="/terms" className="text-blue-600 hover:text-blue-700">Terms of Service</a>
                 </p>
               </div>
+
+              {/* What to Expect Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200"
+              >
+                <h3 className="text-lg font-semibold text-blue-800 mb-4 flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  What to Expect After Submission
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div className="space-y-2">
+                    <div className="flex items-start">
+                      <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-semibold mr-3 mt-0.5">1</div>
+                      <div>
+                        <p className="font-medium text-blue-800">Initial Review</p>
+                        <p className="text-blue-700">We&apos;ll review your requirements within 2-4 hours</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-semibold mr-3 mt-0.5">2</div>
+                      <div>
+                        <p className="font-medium text-blue-800">Detailed Response</p>
+                        <p className="text-blue-700">You&apos;ll receive a comprehensive response within 24 hours</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-start">
+                      <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-semibold mr-3 mt-0.5">3</div>
+                      <div>
+                        <p className="font-medium text-blue-800">Free Consultation</p>
+                        <p className="text-blue-700">We&apos;ll schedule a free 30-minute consultation call</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-semibold mr-3 mt-0.5">4</div>
+                      <div>
+                        <p className="font-medium text-blue-800">Custom Proposal</p>
+                        <p className="text-blue-700">You&apos;ll get a tailored project proposal and timeline</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
 
-            {/* Why Choose NavioX Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="mt-6 bg-white rounded-2xl shadow-lg border border-gray-200 p-8"
-            >
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Why Choose NavioX?</h3>
-                <p className="text-gray-600 mb-6">
-                  We&apos;re not just developers—we&apos;re your digital navigators, charting the course to your success.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200 h-32 flex flex-col justify-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">150+</div>
-                    <div className="text-sm font-medium text-gray-700">Projects Delivered</div>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200 h-32 flex flex-col justify-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
-                    <div className="text-sm font-medium text-gray-700">Client Satisfaction</div>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200 h-32 flex flex-col justify-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">&lt; 24h</div>
-                    <div className="text-sm font-medium text-gray-700">Response Time</div>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 shadow-sm border border-blue-200 h-32 flex flex-col justify-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">99.9%</div>
-                    <div className="text-sm font-medium text-gray-700">Uptime Guarantee</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+
           </motion.div>
         </motion.div>
       </div>
