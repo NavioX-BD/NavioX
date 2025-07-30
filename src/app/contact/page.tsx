@@ -95,18 +95,18 @@ export default function ContactPage() {
       if (response.ok) {
         setSubmitStatus('success')
         // Reset form after success (no auto-close)
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          phone: '',
+          setFormData({
+            name: '',
+            email: '',
+            company: '',
+            phone: '',
           subject: '',
-          service: '',
-          budget: '',
-          timeline: '',
-          message: '',
-          newsletter: false
-        })
+            service: '',
+            budget: '',
+            timeline: '',
+            message: '',
+            newsletter: false
+          })
         // Do not setSubmitStatus('idle') automatically
       } else {
         setSubmitStatus('error')
@@ -295,23 +295,23 @@ export default function ContactPage() {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                  className="fixed inset-0 bg-black/60 backdrop-blur-md z-50 flex items-center justify-center p-6"
                   onClick={() => setSubmitStatus('idle')}
                 >
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                    className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-4 md:p-6 lg:p-8 relative max-h-[90vh] overflow-y-auto flex flex-col justify-center"
+                    transition={{ type: "spring", damping: 25, stiffness: 400 }}
+                    className="bg-white rounded-2xl shadow-xl w-full max-w-xs sm:max-w-sm p-3 sm:p-4 relative max-h-[50vh] overflow-y-auto border border-gray-100"
                     style={{ minHeight: 'auto' }}
                     onClick={e => e.stopPropagation()}
                   >
                     {/* Close Button */}
                     <button
                       onClick={() => setSubmitStatus('idle')}
-                      className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                      className="absolute top-3 sm:top-4 right-3 sm:right-4 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full p-2 sm:p-1.5 transition-all duration-200 z-10"
                     >
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </button>
@@ -322,109 +322,100 @@ export default function ContactPage() {
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ delay: 0.2, type: "spring", damping: 15, stiffness: 300 }}
-                        className="bg-gradient-to-r from-green-400 to-emerald-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+                        className="mb-3"
                       >
-                        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </motion.div>
-
-                      {/* Success Message */}
-                      <motion.h3
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
-                        className="text-2xl font-bold text-gray-900 mb-3"
-                      >
-                        Message Sent Successfully!
-                      </motion.h3>
-
-                      <motion.p
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                        className="text-gray-600 mb-6"
-                      >
-                        Thank you for reaching out to NavioX. We&apos;ve received your project details and our team is excited to help you navigate your digital journey.
-                      </motion.p>
-
-                      {/* Next Steps */}
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5 }}
-                        className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 mb-6"
-                      >
-                        <h4 className="font-semibold text-blue-800 mb-4 flex items-center justify-center">
-                          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <div className="bg-gradient-to-br from-emerald-400 via-green-500 to-teal-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto shadow-lg shadow-green-500/20">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
-                          What happens next?
-                        </h4>
-                        <div className="space-y-3 text-sm">
-                          <div className="flex items-start">
-                            <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-semibold mr-3 mt-0.5">1</div>
-                            <div>
-                              <p className="font-medium text-blue-800">Initial Review</p>
-                              <p className="text-blue-700">We&apos;ll review your requirements within 2-4 hours</p>
-                            </div>
-                          </div>
-                          <div className="flex items-start">
-                            <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-semibold mr-3 mt-0.5">2</div>
-                            <div>
-                              <p className="font-medium text-blue-800">Detailed Response</p>
-                              <p className="text-blue-700">You&apos;ll receive a comprehensive response within 24 hours</p>
-                            </div>
-                          </div>
-                          <div className="flex items-start">
-                            <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-semibold mr-3 mt-0.5">3</div>
-                            <div>
-                              <p className="font-medium text-blue-800">Free Consultation</p>
-                              <p className="text-blue-700">We&apos;ll schedule a free 30-minute consultation call</p>
-                            </div>
-                          </div>
-                          <div className="flex items-start">
-                            <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-semibold mr-3 mt-0.5">4</div>
-                            <div>
-                              <p className="font-medium text-blue-800">Custom Proposal</p>
-                              <p className="text-blue-700">You&apos;ll get a tailored project proposal and timeline</p>
-                            </div>
-                          </div>
                         </div>
                       </motion.div>
 
-                      {/* Response Time */}
+                      {/* Success Message */}
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.6 }}
-                        className="flex items-center justify-center text-sm text-gray-600 mb-6"
+                        transition={{ delay: 0.3, duration: 0.4 }}
+                        className="mb-3"
                       >
-                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        Response time: 24 hours or less
+                        <h3 className="text-base font-bold text-gray-900 mb-2">
+                          Message Sent Successfully!
+                        </h3>
+                        <p className="text-gray-600 text-xs leading-relaxed">
+                          Thank you for reaching out to <span className="font-semibold text-blue-600">NavioX</span>. 
+                          We&apos;ve received your project details and our team is excited to help you navigate your digital journey.
+                        </p>
+                      </motion.div>
+
+                      {/* Next Steps */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4, duration: 0.4 }}
+                        className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-2.5 mb-3 border border-blue-100/50"
+                      >
+                        <h4 className="font-medium text-blue-900 mb-2 flex items-center justify-center text-xs">
+                          <div className="bg-blue-100 rounded-full p-1 mr-1.5">
+                            <svg className="w-2.5 h-2.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                          </div>
+                          What happens next?
+                        </h4>
+                        <div className="space-y-1.5">
+                          {[
+                            { title: "Initial Review", desc: "Review within 2-4 hours" },
+                            { title: "Detailed Response", desc: "Response within 24 hours" },
+                            { title: "Free Consultation", desc: "30-minute consultation call" },
+                            { title: "Custom Proposal", desc: "Tailored project proposal" }
+                          ].map((step, index) => (
+                            <div key={index} className="flex items-start p-1.5 bg-white/70 rounded border border-white/80">
+                              <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs font-bold mr-2 mt-0.5 flex-shrink-0">
+                                {index + 1}
+                              </div>
+                              <div className="text-left">
+                                <p className="font-medium text-blue-900 text-xs mb-0.5">{step.title}</p>
+                                <p className="text-blue-700 text-xs leading-tight">{step.desc}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </motion.div>
+
+                      {/* Response Time Badge */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.3 }}
+                        className="inline-flex items-center bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-full px-2 py-1 mb-3"
+                      >
+                        <div className="bg-amber-100 rounded-full p-0.5 mr-1.5">
+                          <svg className="w-2.5 h-2.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <span className="text-amber-800 font-medium text-xs">Response: 24 hours or less</span>
                       </motion.div>
 
                       {/* Action Buttons */}
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.7 }}
-                        className="flex gap-3"
+                        transition={{ delay: 0.6, duration: 0.3 }}
+                        className="flex gap-2"
                       >
                         <button
                           onClick={() => setSubmitStatus('idle')}
-                          className="flex-1 bg-gray-100 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+                          className="flex-1 bg-gray-100 text-gray-700 py-2 px-3 rounded-md hover:bg-gray-200 transition-all duration-200 font-medium text-xs border border-gray-200 hover:border-gray-300"
                         >
-                          Stay Here
+                          Continue
                         </button>
-                                                 <Link
-                           href="/"
-                           className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-4 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all font-medium text-center"
-                         >
-                           Go Home
-                         </Link>
+                        <Link
+                          href="/"
+                          className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white py-2 px-3 rounded-md hover:from-blue-700 hover:to-blue-800 transition-all duration-200 font-medium text-center text-xs shadow-md shadow-blue-500/20 hover:shadow-blue-500/30 flex items-center justify-center"
+                        >
+                          Home
+                        </Link>
                       </motion.div>
                     </div>
                   </motion.div>
@@ -436,23 +427,23 @@ export default function ContactPage() {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                  className="fixed inset-0 bg-black/60 backdrop-blur-md z-50 flex items-center justify-center p-6"
                   onClick={() => setSubmitStatus('idle')}
                 >
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                    className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-4 md:p-6 lg:p-8 relative max-h-[90vh] overflow-y-auto flex flex-col justify-center"
+                    transition={{ type: "spring", damping: 25, stiffness: 400 }}
+                    className="bg-white rounded-2xl shadow-xl w-full max-w-xs sm:max-w-sm p-3 sm:p-4 relative max-h-[50vh] overflow-y-auto border border-gray-100"
                     style={{ minHeight: 'auto' }}
                     onClick={e => e.stopPropagation()}
                   >
                     {/* Close Button */}
                     <button
                       onClick={() => setSubmitStatus('idle')}
-                      className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                      className="absolute top-3 sm:top-4 right-3 sm:right-4 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full p-2 sm:p-1.5 transition-all duration-200 z-10"
                     >
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </button>
@@ -463,52 +454,50 @@ export default function ContactPage() {
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ delay: 0.2, type: "spring", damping: 15, stiffness: 300 }}
-                        className="bg-gradient-to-r from-red-400 to-rose-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+                        className="mb-3"
                       >
-                        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
+                        <div className="bg-gradient-to-br from-red-400 via-red-500 to-rose-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto shadow-lg shadow-red-500/20">
+                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </div>
                       </motion.div>
 
                       {/* Error Message */}
-                      <motion.h3
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
-                        className="text-2xl font-bold text-gray-900 mb-3"
-                      >
-                        Oops! Something went wrong
-                      </motion.h3>
-
-                      <motion.p
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4 }}
-                        className="text-gray-600 mb-6"
-                      >
-                        We couldn&apos;t send your message right now. Don&apos;t worry - you can still reach us through other channels.
-                      </motion.p>
-
-                      {/* Alternative Contact Methods */}
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5 }}
-                        className="bg-gradient-to-r from-red-50 to-rose-50 rounded-xl p-6 mb-6"
+                        transition={{ delay: 0.3, duration: 0.4 }}
+                        className="mb-3"
                       >
-                        <h4 className="font-semibold text-red-800 mb-4">Alternative ways to contact us:</h4>
-                        <div className="space-y-3 text-sm">
-                          <div className="flex items-center justify-center">
-                            <svg className="w-5 h-5 mr-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <h3 className="text-base font-bold text-gray-900 mb-2">
+                          Something went wrong
+                        </h3>
+                        <p className="text-gray-600 text-xs leading-relaxed">
+                          We couldn&apos;t send your message. You can still reach us directly.
+                        </p>
+                      </motion.div>
+
+                      {/* Alternative Contact Methods */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4, duration: 0.4 }}
+                        className="bg-gradient-to-br from-red-50 to-rose-50 rounded-lg p-2.5 mb-3 border border-red-100/50"
+                      >
+                        <h4 className="font-medium text-red-900 mb-2 text-xs">Contact us directly:</h4>
+                        <div className="space-y-1.5 text-xs">
+                          <div className="flex items-center justify-center p-1.5 bg-white/70 rounded border border-white/80">
+                            <svg className="w-3 h-3 mr-1.5 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
-                            <a href="mailto:info@navioxbd.com" className="text-red-700 hover:text-red-800 font-medium">info@navioxbd.com</a>
+                            <a href="mailto:info@navioxbd.com" className="text-red-700 hover:text-red-800 font-medium text-xs">info@navioxbd.com</a>
                           </div>
-                          <div className="flex items-center justify-center">
-                            <svg className="w-5 h-5 mr-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <div className="flex items-center justify-center p-1.5 bg-white/70 rounded border border-white/80">
+                            <svg className="w-3 h-3 mr-1.5 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
-                            <a href="tel:+8801765939006" className="text-red-700 hover:text-red-800 font-medium">+880 1765-939006</a>
+                            <a href="tel:+8801765939006" className="text-red-700 hover:text-red-800 font-medium text-xs">+880 1765-939006</a>
                           </div>
                         </div>
                       </motion.div>
@@ -517,20 +506,20 @@ export default function ContactPage() {
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.6 }}
-                        className="flex gap-3"
+                        transition={{ delay: 0.5, duration: 0.3 }}
+                        className="flex gap-2"
                       >
                         <button
                           onClick={() => setSubmitStatus('idle')}
-                          className="flex-1 bg-gray-100 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+                          className="flex-1 bg-gray-100 text-gray-700 py-2 px-3 rounded-md hover:bg-gray-200 transition-all duration-200 font-medium text-xs border border-gray-200 hover:border-gray-300"
                         >
                           Try Again
                         </button>
                         <Link
                           href="/contact"
-                          className="flex-1 bg-gradient-to-r from-red-600 to-red-700 text-white py-3 px-4 rounded-lg hover:from-red-700 hover:to-red-800 transition-all font-medium text-center"
+                          className="flex-1 bg-gradient-to-r from-red-600 to-red-700 text-white py-2 px-3 rounded-md hover:from-red-700 hover:to-red-800 transition-all duration-200 font-medium text-center text-xs shadow-md shadow-red-500/20 hover:shadow-red-500/30 flex items-center justify-center"
                         >
-                          Contact Directly
+                          Contact
                         </Link>
                       </motion.div>
                     </div>
@@ -764,14 +753,14 @@ export default function ContactPage() {
                   {' '}and{' '}
                   <a href="/terms" className="text-blue-600 hover:text-blue-700">Terms of Service</a>
                 </p>
-              </div>
+            </div>
 
               {/* What to Expect Section */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
                 className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200"
               >
                 <h3 className="text-lg font-semibold text-blue-800 mb-4 flex items-center">
@@ -787,15 +776,15 @@ export default function ContactPage() {
                       <div>
                         <p className="font-medium text-blue-800">Initial Review</p>
                         <p className="text-blue-700">We&apos;ll review your requirements within 2-4 hours</p>
-                      </div>
-                    </div>
+                  </div>
+                </div>
                     <div className="flex items-start">
                       <div className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-semibold mr-3 mt-0.5">2</div>
                       <div>
                         <p className="font-medium text-blue-800">Detailed Response</p>
                         <p className="text-blue-700">You&apos;ll receive a comprehensive response within 24 hours</p>
-                      </div>
-                    </div>
+                  </div>
+                </div>
                   </div>
                   <div className="space-y-2">
                     <div className="flex items-start">
@@ -810,12 +799,12 @@ export default function ContactPage() {
                       <div>
                         <p className="font-medium text-blue-800">Custom Proposal</p>
                         <p className="text-blue-700">You&apos;ll get a tailored project proposal and timeline</p>
-                      </div>
-                    </div>
+                  </div>
+                </div>
                   </div>
                 </div>
               </motion.div>
-            </div>
+              </div>
 
 
           </motion.div>

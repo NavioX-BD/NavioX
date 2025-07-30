@@ -31,14 +31,6 @@
       "contact": "careers@navioxbd.com",
       "link": "mailto:careers@navioxbd.com",
       "color": "orange"
-    },
-    {
-      "title": "Primary Contact",
-      "description": "Direct contact for urgent inquiries and project discussions",
-      "icon": "EnvelopeIcon",
-      "contact": "navioxsolutions@gmail.com",
-      "link": "mailto:navioxsolutions@gmail.com",
-      "color": "red"
     }
   ],
   "officeLocations": [
