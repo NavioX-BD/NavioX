@@ -1,18 +1,24 @@
 'use client'
 
 import {
-    ArrowUpRightIcon,
-    CodeBracketIcon,
-    EnvelopeIcon,
-    LightBulbIcon,
-    MapPinIcon,
-    PhoneIcon
+  ArrowUpRightIcon,
+  CheckIcon,
+  CodeBracketIcon,
+  EnvelopeIcon,
+  LightBulbIcon,
+  MapPinIcon,
+  PhoneIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const Footer = () => {
+  const [email, setEmail] = useState('')
+  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
   const currentYear = new Date().getFullYear()
 
   const navigation = {
@@ -46,6 +52,31 @@ const Footer = () => {
       { name: 'Cookie Policy', href: '/cookies' },
       { name: 'GDPR Compliance', href: '/gdpr' },
     ],
+  }
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!email || !emailRegex.test(email)) {
+      setError('Please enter a valid email address')
+      return
+    }
+
+    setIsLoading(true)
+    setError('')
+
+    // Simulate API call (you can replace this with actual API call later)
+    setTimeout(() => {
+      setIsSubscribed(true)
+      setIsLoading(false)
+      setEmail('')
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSubscribed(false)
+      }, 5000)
+    }, 1000)
   }
 
   const socialLinks = [
@@ -248,21 +279,58 @@ const Footer = () => {
               <p className="text-sm text-gray-600 mb-4">
                 Get the latest insights on software engineering and industry trends.
               </p>
-              <div className="space-y-3">
-                <div className="flex">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-l-lg text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500"
-                  />
-                  <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-r-lg transition-colors">
-                    Subscribe
-                  </button>
-                </div>
-                <p className="text-xs text-gray-500">
-                  No spam. Unsubscribe anytime.
-                </p>
-              </div>
+              
+              {isSubscribed ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="flex items-center space-x-2 p-3 bg-green-50 border border-green-200 rounded-lg"
+                >
+                  <CheckIcon className="h-5 w-5 text-green-600" />
+                  <span className="text-sm text-green-700 font-medium">
+                    Successfully subscribed! Thank you for joining our newsletter.
+                  </span>
+                </motion.div>
+              ) : (
+                <form onSubmit={handleSubscribe} className="space-y-3">
+                  <div className="flex">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter your email"
+                      className="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-l-lg text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 disabled:opacity-50"
+                      disabled={isLoading}
+                    />
+                    <button 
+                      type="submit"
+                      disabled={isLoading}
+                      className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white text-sm font-medium rounded-r-lg transition-colors flex items-center space-x-2"
+                    >
+                      {isLoading ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                          <span>Subscribing...</span>
+                        </>
+                      ) : (
+                        'Subscribe'
+                      )}
+                    </button>
+                  </div>
+                  {error && (
+                    <motion.p
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="text-xs text-red-600"
+                    >
+                      {error}
+                    </motion.p>
+                  )}
+                  <p className="text-xs text-gray-500">
+                    No spam. Unsubscribe anytime.
+                  </p>
+                </form>
+              )}
             </div>
 
             {/* Social Links */}
