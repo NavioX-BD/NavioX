@@ -1,0 +1,28 @@
+{
+  "leadershipValues": [
+    {
+      "title": "Innovation First",
+      "description": "We constantly push boundaries and explore cutting-edge technologies to deliver exceptional solutions.",
+      "icon": "LightBulbIcon",
+      "color": "blue"
+    },
+    {
+      "title": "Client Success",
+      "description": "Your success is our success. We measure our achievements by the impact we create for our clients.",
+      "icon": "ChartBarIcon",
+      "color": "green"
+    },
+    {
+      "title": "Quality Excellence",
+      "description": "We maintain the highest standards in code quality, design, and delivery processes.",
+      "icon": "ShieldCheckIcon",
+      "color": "purple"
+    },
+    {
+      "title": "Collaborative Spirit",
+      "description": "We believe in the power of teamwork and foster an environment of mutual respect and learning.",
+      "icon": "UserGroupIcon",
+      "color": "orange"
+    }
+  ]
+}

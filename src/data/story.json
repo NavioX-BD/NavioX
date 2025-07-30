@@ -1,0 +1,75 @@
+{
+  "storyElements": [
+    {
+      "title": "The Origin of NavioX",
+      "description": "NavioX is more than just a company name—it's a philosophy encoded in two powerful elements.",
+      "icon": "StarIcon",
+      "content": [
+        {
+          "subtitle": "\"Navio\" - The Navigator",
+          "text": "Derived from the Latin \"navis\" (ship) and Spanish \"navío\" (vessel), representing guidance through complex waters, expertise in charting unknown territories, safe passage through challenging journeys, and leadership in exploration and discovery."
+        },
+        {
+          "subtitle": "\"X\" - The Excellence Factor",
+          "text": "The X represents multiple dimensions of our identity: eXcellence in everything we deliver, eXploration of cutting-edge technologies, eXponential growth for our clients, X-factor that sets us apart from competitors, and the unknown variable we help solve for businesses."
+        }
+      ]
+    },
+    {
+      "title": "The Digital Ocean Metaphor",
+      "description": "In our brand universe, the technology landscape is a vast digital ocean.",
+      "icon": "GlobeAltIcon",
+      "content": [
+        {
+          "subtitle": "The Challenges (Storms & Currents)",
+          "text": "Rapidly changing technologies (shifting currents), complex integration requirements (treacherous reefs), security threats (pirate attacks), budget constraints (resource limitations), and timeline pressures (racing against storms)."
+        },
+        {
+          "subtitle": "NavioX as Your Navigator",
+          "text": "We have the experience of sailing these waters countless times, expertise in knowing safe routes and hidden shortcuts, the most advanced navigation tools (modern tech stack), skilled developers as your experienced maritime team, and proven methodologies to keep you on course."
+        }
+      ]
+    },
+    {
+      "title": "The NavioX Vessel",
+      "description": "Our \"ship\" is built with the finest materials in the software engineering world.",
+      "icon": "RocketLaunchIcon",
+      "content": [
+        {
+          "subtitle": "The Hull (Foundation)",
+          "text": "Next.js & React - Strong, flexible framework. TypeScript - Precision engineering and type safety. Modern architecture - Built to withstand digital storms."
+        },
+        {
+          "subtitle": "The Sails (Performance)",
+          "text": "Optimized code - Catches every performance breeze. Responsive design - Adapts to any digital wind direction. Scalable solutions - Expands as your journey grows."
+        },
+        {
+          "subtitle": "The Navigation Tools (Methodology)",
+          "text": "Agile development - Course corrections in real-time. Continuous integration - Always knowing your exact position. Quality assurance - Multiple navigation systems for accuracy."
+        }
+      ]
+    }
+  ],
+  "whatSetsUsApart": [
+    {
+      "title": "We don't just build websites",
+      "subtitle": "We chart digital destinies",
+      "icon": "MapPinIcon"
+    },
+    {
+      "title": "We don't just write code",
+      "subtitle": "We plot strategic courses",
+      "icon": "RocketLaunchIcon"
+    },
+    {
+      "title": "We don't just deliver projects",
+      "subtitle": "We navigate partnerships",
+      "icon": "UserGroupIcon"
+    },
+    {
+      "title": "We don't just solve problems",
+      "subtitle": "We discover opportunities",
+      "icon": "BeakerIcon"
+    }
+  ]
+}

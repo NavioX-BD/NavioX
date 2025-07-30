@@ -1,7 +1,12 @@
+import aboutData from "../data/about.json";
 import blogsData from "../data/blogs.json";
 import careersData from "../data/careers.json";
 import companyStats from "../data/company-stats.json";
+import contactData from "../data/contact.json";
+import leadershipData from "../data/leadership.json";
+import missionData from "../data/mission.json";
 import projectsData from "../data/projects.json";
+import storyData from "../data/story.json";
 import teamData from "../data/team.json";
 
 export const loadCompanyStats = () => companyStats;
@@ -9,6 +14,11 @@ export const loadTeamData = () => teamData;
 export const loadProjectsData = () => projectsData;
 export const loadCareersData = () => careersData;
 export const loadBlogsData = () => blogsData;
+export const loadAboutData = () => aboutData;
+export const loadContactData = () => contactData;
+export const loadLeadershipData = () => leadershipData;
+export const loadMissionData = () => missionData;
+export const loadStoryData = () => storyData;
 
 // Type definitions for better TypeScript support
 export interface CompanyStats {

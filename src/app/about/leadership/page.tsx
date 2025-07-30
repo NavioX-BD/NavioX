@@ -1,10 +1,9 @@
 'use client'
 
-import { loadCompanyStats, loadTeamData } from '@/lib/data-loader'
+import { loadCompanyStats, loadLeadershipData, loadTeamData } from '@/lib/data-loader'
 import {
   BuildingOfficeIcon,
   ChartBarIcon,
-  HeartIcon,
   LightBulbIcon,
   MapPinIcon,
   RocketLaunchIcon,
@@ -17,33 +16,7 @@ import Link from 'next/link'
 export default function LeadershipPage() {
   const { leadershipTeam } = loadTeamData()
   const { leadershipStats } = loadCompanyStats()
-
-  const leadershipValues = [
-    {
-      title: 'Innovation First',
-      description: 'We constantly push boundaries and explore cutting-edge technologies to deliver exceptional solutions.',
-      icon: LightBulbIcon,
-      color: 'blue'
-    },
-    {
-      title: 'Client Success',
-      description: 'Your success is our success. We measure our achievements by the impact we create for our clients.',
-      icon: ChartBarIcon,
-      color: 'green'
-    },
-    {
-      title: 'Quality Excellence',
-      description: 'We maintain the highest standards in code quality, design, and delivery processes.',
-      icon: ShieldCheckIcon,
-      color: 'purple'
-    },
-    {
-      title: 'Collaborative Spirit',
-      description: 'We believe in the power of teamwork and foster an environment of mutual respect and learning.',
-      icon: UserGroupIcon,
-      color: 'orange'
-    }
-  ]
+  const { leadershipValues } = loadLeadershipData()
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -64,6 +37,14 @@ export default function LeadershipPage() {
         duration: 0.5
       }
     }
+  }
+
+  // Icon mapping for dynamic rendering
+  const iconMap = {
+    LightBulbIcon,
+    ChartBarIcon,
+    ShieldCheckIcon,
+    UserGroupIcon
   }
 
   return (
@@ -120,10 +101,10 @@ export default function LeadershipPage() {
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: index * 0.1 }}
-                      className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center"
+                      className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center"
                     >
-                      <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                      <div className="text-sm font-medium text-gray-700">{stat.label}</div>
+                      <div className="text-2xl font-bold text-blue-600 mb-1">{stat.number}</div>
+                      <div className="text-xs font-medium text-gray-700">{stat.label}</div>
                     </motion.div>
                   ))}
                 </div>
@@ -132,49 +113,51 @@ export default function LeadershipPage() {
               {/* Leadership Values */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <HeartIcon className="h-6 w-6 mr-3 text-blue-600" />
+                  <LightBulbIcon className="h-6 w-6 mr-3 text-blue-600" />
                   Our Values
                 </h2>
                 <div className="space-y-4">
-                  {leadershipValues.map((value, index) => (
-                    <motion.div
-                      key={value.title}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: (index + 4) * 0.1 }}
-                      className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
-                    >
-                      <div className="flex items-start">
-                        <div className={`p-3 rounded-lg bg-${value.color}-100 mr-4`}>
-                          <value.icon className={`h-6 w-6 text-${value.color}-600`} />
+                  {leadershipValues.map((value, index) => {
+                    const IconComponent = iconMap[value.icon as keyof typeof iconMap]
+                    return (
+                      <motion.div
+                        key={value.title}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: (index + 4) * 0.1 }}
+                        className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+                      >
+                        <div className="flex items-start">
+                          <div className={`p-3 rounded-lg bg-${value.color}-100 mr-4`}>
+                            <IconComponent className={`h-6 w-6 text-${value.color}-600`} />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-gray-900 mb-2">{value.title}</h3>
+                            <p className="text-sm text-gray-600">{value.description}</p>
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <h3 className="font-semibold text-gray-900 mb-2">{value.title}</h3>
-                          <p className="text-sm text-gray-600">{value.description}</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
+                      </motion.div>
+                    )
+                  })}
                 </div>
               </div>
 
-              {/* Contact Leadership */}
+              {/* Join Our Team */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                   <RocketLaunchIcon className="h-6 w-6 mr-3 text-blue-600" />
-                  Get in Touch
+                  Join Our Team
                 </h2>
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
-                  <h3 className="font-semibold text-gray-900 mb-3">Connect with Our Leaders</h3>
+                  <h3 className="font-semibold text-gray-900 mb-3">We&apos;re Growing!</h3>
                   <p className="text-sm text-gray-600 mb-4">
-                    Ready to discuss your project with our leadership team? 
-                    We&rsquo;re here to guide you through your digital transformation journey.
+                    Join our team of digital navigators and help us chart the course for innovative software solutions.
                   </p>
                   <Link
-                    href="/contact"
+                    href="/about/careers"
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm"
                   >
-                    Schedule a Consultation
+                    View Open Positions
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
@@ -184,33 +167,33 @@ export default function LeadershipPage() {
             </div>
           </motion.div>
 
-          {/* Leadership Members - Right Column */}
+          {/* Team Members - Right Column */}
           <motion.div variants={itemVariants} className="lg:col-span-2">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Executive Leadership</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Our Leadership Team</h2>
               <p className="text-gray-600">
                 Meet the experts who lead our mission to transform businesses through innovative technology solutions.
               </p>
             </div>
-
-            <div className="space-y-8">
+            
+            <div className="grid md:grid-cols-2 gap-6">
               {leadershipTeam.map((member, index) => (
                 <motion.div
                   key={member.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow"
+                  className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
                 >
                   {/* Member Header */}
                   <div className="p-6 border-b border-gray-100">
                     <div className="flex items-start space-x-4">
-                      <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                      <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
                         {member.name.split(' ').map(n => n[0]).join('')}
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
-                        <p className="text-blue-600 font-medium text-lg">{member.role}</p>
+                        <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
+                        <p className="text-blue-600 font-medium">{member.role}</p>
                         <div className="flex items-center text-sm text-gray-500 mt-1">
                           <MapPinIcon className="h-4 w-4 mr-1" />
                           {member.location}
@@ -221,11 +204,11 @@ export default function LeadershipPage() {
 
                   {/* Member Details */}
                   <div className="p-6">
-                    <p className="text-sm text-gray-600 mb-6">{member.bio}</p>
+                    <p className="text-sm text-gray-600 mb-4">{member.bio}</p>
                     
-                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div className="space-y-3">
                       <div>
-                        <h4 className="text-sm font-semibold text-gray-900 mb-3">Expertise</h4>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-2">Expertise</h4>
                         <div className="flex flex-wrap gap-2">
                           {member.expertise.map((skill) => (
                             <span
@@ -238,8 +221,19 @@ export default function LeadershipPage() {
                         </div>
                       </div>
 
+                      <div className="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                          <span className="text-gray-500">Experience:</span>
+                          <div className="font-medium">{member.experience}</div>
+                        </div>
+                        <div>
+                          <span className="text-gray-500">Education:</span>
+                          <div className="font-medium">{member.education}</div>
+                        </div>
+                      </div>
+
                       <div>
-                        <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Skills</h4>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Skills</h4>
                         <div className="flex flex-wrap gap-2">
                           {member.skills.map((skill) => (
                             <span
@@ -251,48 +245,24 @@ export default function LeadershipPage() {
                           ))}
                         </div>
                       </div>
-                    </div>
 
-                    <div className="grid md:grid-cols-2 gap-4 mb-6 text-sm">
-                      <div>
-                        <span className="text-gray-500">Experience:</span>
-                        <div className="font-medium">{member.experience}</div>
+                      {/* Contact Links */}
+                      <div className="flex items-center space-x-4 pt-3 border-t border-gray-100">
+                        <a
+                          href={`mailto:${member.email}`}
+                          className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+                        >
+                          Email
+                        </a>
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+                        >
+                          LinkedIn
+                        </a>
                       </div>
-                      <div>
-                        <span className="text-gray-500">Education:</span>
-                        <div className="font-medium">{member.education}</div>
-                      </div>
-                    </div>
-
-                    {/* Achievements */}
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Achievements</h4>
-                      <div className="space-y-2">
-                        {member.achievements.map((achievement, achievementIndex) => (
-                          <div key={achievementIndex} className="flex items-start">
-                            <div className="w-2 h-2 rounded-full bg-blue-600 mt-2 mr-3 flex-shrink-0"></div>
-                            <p className="text-sm text-gray-600">{achievement}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Contact Links */}
-                    <div className="flex items-center space-x-4 pt-4 border-t border-gray-100">
-                      <a
-                        href={`mailto:${member.email}`}
-                        className="text-blue-600 hover:text-blue-700 text-sm font-medium"
-                      >
-                        Email
-                      </a>
-                      <a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-700 text-sm font-medium"
-                      >
-                        LinkedIn
-                      </a>
                     </div>
                   </div>
                 </motion.div>
@@ -309,9 +279,9 @@ export default function LeadershipPage() {
           viewport={{ once: true }}
           className="mt-20 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-center text-white"
         >
-          <h2 className="text-2xl font-bold mb-4">Ready to Work with Our Leadership Team?</h2>
+          <h2 className="text-2xl font-bold mb-4">Ready to Work with Our Leadership?</h2>
           <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-            Let&rsquo;s discuss your project and see how our expert leadership can help you achieve your digital goals.
+            Let&rsquo;s discuss your project and see how our experienced leadership team can guide your digital transformation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

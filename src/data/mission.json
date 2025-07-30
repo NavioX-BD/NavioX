@@ -1,0 +1,98 @@
+{
+  "missionVision": [
+    {
+      "title": "Our Mission",
+      "icon": "RocketLaunchIcon",
+      "color": "blue",
+      "description": "NavioX Solutions Inc. serves as your digital compass, guiding businesses through uncharted technological territories with precision-crafted software solutions. We don't just write code—we plot your digital destiny, ensuring every line of code steers your business toward sustainable growth and competitive advantage.",
+      "details": [
+        "Empower businesses with innovative software solutions",
+        "Drive growth, efficiency, and competitive advantage",
+        "Transform complex technological challenges into elegant solutions",
+        "Ensure every line of code serves your business compass"
+      ]
+    },
+    {
+      "title": "Our Vision",
+      "icon": "StarIcon",
+      "color": "purple",
+      "description": "To become the lighthouse of innovation in the software engineering ocean—where businesses navigate to find their true digital north, transforming complex challenges into streamlined solutions that propel them beyond their horizons.",
+      "details": [
+        "Become the lighthouse of innovation in software engineering",
+        "Help businesses find their true digital north",
+        "Transform complex challenges into streamlined solutions",
+        "Propel businesses beyond their horizons"
+      ]
+    }
+  ],
+  "coreValues": [
+    {
+      "title": "Direction",
+      "description": "Every project has a true north—we help you find it and stay on course.",
+      "icon": "LightBulbIcon",
+      "color": "blue"
+    },
+    {
+      "title": "Stability",
+      "description": "In turbulent digital seas, we provide the anchor of reliable, secure solutions.",
+      "icon": "ShieldCheckIcon",
+      "color": "green"
+    },
+    {
+      "title": "Adaptability",
+      "description": "Like skilled sailors, we adjust our approach when conditions change.",
+      "icon": "GlobeAltIcon",
+      "color": "purple"
+    },
+    {
+      "title": "Discovery",
+      "description": "We don't just reach your intended destination—we help you discover new islands of opportunity.",
+      "icon": "BeakerIcon",
+      "color": "orange"
+    },
+    {
+      "title": "Partnership",
+      "description": "We're not just your service provider—we're your co-navigators on this digital voyage.",
+      "icon": "UserGroupIcon",
+      "color": "indigo"
+    }
+  ],
+  "brandValues": [
+    {
+      "title": "Integrity",
+      "description": "Honest, transparent, and ethical business practices in everything we do.",
+      "icon": "ShieldCheckIcon",
+      "color": "blue"
+    },
+    {
+      "title": "Innovation",
+      "description": "Continuous learning and adoption of new technologies.",
+      "icon": "LightBulbIcon",
+      "color": "yellow"
+    },
+    {
+      "title": "Excellence",
+      "description": "Commitment to delivering the highest quality solutions.",
+      "icon": "StarIcon",
+      "color": "purple"
+    },
+    {
+      "title": "Collaboration",
+      "description": "Working together with clients as true partners.",
+      "icon": "UserGroupIcon",
+      "color": "green"
+    },
+    {
+      "title": "Growth",
+      "description": "Supporting client success and business growth.",
+      "icon": "ChartBarIcon",
+      "color": "indigo"
+    },
+    {
+      "title": "Sustainability",
+      "description": "Building long-term solutions that scale and adapt with your business needs.",
+      "icon": "GlobeAltIcon",
+      "color": "emerald"
+    }
+  ]
+}

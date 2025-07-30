@@ -1,0 +1,60 @@
+{
+  "coreValues": [
+    {
+      "title": "Direction",
+      "description": "Every project has a true north—we help you find it and stay on course.",
+      "icon": "LightBulbIcon",
+      "color": "blue"
+    },
+    {
+      "title": "Stability",
+      "description": "In turbulent digital seas, we provide the anchor of reliable, secure solutions.",
+      "icon": "ShieldCheckIcon",
+      "color": "green"
+    },
+    {
+      "title": "Adaptability",
+      "description": "Like skilled sailors, we adjust our approach when conditions change.",
+      "icon": "GlobeAltIcon",
+      "color": "purple"
+    },
+    {
+      "title": "Discovery",
+      "description": "We don't just reach your intended destination—we help you discover new islands of opportunity.",
+      "icon": "BeakerIcon",
+      "color": "orange"
+    },
+    {
+      "title": "Partnership",
+      "description": "We're not just your service provider—we're your co-navigators on this digital voyage.",
+      "icon": "UserGroupIcon",
+      "color": "indigo"
+    }
+  ],
+  "milestones": [
+    {
+      "year": "2025",
+      "title": "Company Founded",
+      "description": "NavioX Solutions Inc. was established with a vision to become the digital navigator for businesses worldwide.",
+      "icon": "RocketLaunchIcon"
+    },
+    {
+      "year": "2025",
+      "title": "First Client Success",
+      "description": "Successfully delivered our first major project, establishing our reputation for excellence and innovation.",
+      "icon": "StarIcon"
+    },
+    {
+      "year": "2025",
+      "title": "Team Expansion",
+      "description": "Grew our team to include experienced developers, designers, and strategists from diverse backgrounds.",
+      "icon": "UserGroupIcon"
+    },
+    {
+      "year": "2025",
+      "title": "Technology Innovation",
+      "description": "Implemented cutting-edge technologies and methodologies to deliver superior digital solutions.",
+      "icon": "LightBulbIcon"
+    }
+  ]
+}

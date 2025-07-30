@@ -42,3 +42,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# User data
+/user-data
+
+# Project data
+/project-data
+/docs
+/docs*
+# Remove /docs from git history and prevent future commits
+docs/
+!.gitkeep
+

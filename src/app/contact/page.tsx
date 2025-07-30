@@ -1,5 +1,6 @@
 'use client'
 
+import { loadCompanyStats, loadContactData } from '@/lib/data-loader'
 import {
   BuildingOfficeIcon,
   ChatBubbleLeftRightIcon,
@@ -32,6 +33,25 @@ export default function ContactPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  // Load data from JSON files
+  const contactData = loadContactData()
+  const companyStats = loadCompanyStats()
+
+  // Icon mapping function
+  const getIconComponent = (iconName: string) => {
+    const iconMap: { [key: string]: React.ComponentType<React.SVGProps<SVGSVGElement>> } = {
+      EnvelopeIcon,
+      UserGroupIcon,
+      ComputerDesktopIcon,
+      BuildingOfficeIcon,
+      GlobeAltIcon,
+      DevicePhoneMobileIcon,
+      CloudIcon,
+      DocumentTextIcon
+    }
+    return iconMap[iconName] || DocumentTextIcon
+  }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target
@@ -97,93 +117,17 @@ export default function ContactPage() {
     }
   }
 
-  const contactMethods = [
-    {
-      title: 'General Inquiries',
-      description: 'Get in touch for any questions about our services',
-      icon: EnvelopeIcon,
-      contact: 'info@navioxbd.com',
-      link: 'mailto:info@navioxbd.com',
-      color: 'blue'
-    },
-    {
-      title: 'Sales & Partnerships',
-      description: 'Discuss business opportunities and partnerships',
-      icon: UserGroupIcon,
-      contact: 'sales@navioxbd.com',
-      link: 'mailto:sales@navioxbd.com',
-      color: 'green'
-    },
-    {
-      title: 'Technical Support',
-      description: 'Get help with existing projects and technical issues',
-      icon: ComputerDesktopIcon,
-      contact: 'support@navioxbd.com',
-      link: 'mailto:support@navioxbd.com',
-      color: 'purple'
-    },
-    {
-      title: 'Career Opportunities',
-      description: 'Join our team of digital navigators',
-      icon: BuildingOfficeIcon,
-      contact: 'careers@navioxbd.com',
-      link: 'mailto:careers@navioxbd.com',
-      color: 'orange'
-    },
+  // Transform contact methods data to include icon components
+  const contactMethods = contactData.contactMethods.map(method => ({
+    ...method,
+    icon: getIconComponent(method.icon)
+  }))
 
-  ]
-
-  const officeLocations = [
-    {
-      city: 'Dhaka, Bangladesh',
-      address: 'Gulshan-2, Dhaka 1212',
-      country: 'Bangladesh',
-      timezone: 'GMT+6',
-      phone: '+880 1765-939006',
-      email: 'dhaka@navioxbd.com',
-      hours: 'Sunday - Thursday: 9:00 AM - 6:00 PM',
-      services: ['Web Development', 'Mobile Apps', 'Cloud Solutions', 'Digital Strategy']
-    },
-
-    {
-      city: 'Remote Team',
-      address: 'Global Development Team',
-      country: 'Worldwide',
-      timezone: 'Multiple Timezones',
-      phone: 'Available via email',
-      email: 'remote@navioxbd.com',
-      hours: '24/7 Development Support',
-      services: ['Full-Stack Development', 'DevOps', 'API Development', 'Consulting']
-    }
-  ]
-
-  const services = [
-    { value: 'web-development', label: 'Web Development', icon: GlobeAltIcon },
-    { value: 'mobile-apps', label: 'Mobile Apps', icon: DevicePhoneMobileIcon },
-    { value: 'cloud-solutions', label: 'Cloud Solutions', icon: CloudIcon },
-    { value: 'digital-strategy', label: 'Digital Strategy', icon: DocumentTextIcon },
-    { value: 'api-development', label: 'API Development', icon: ComputerDesktopIcon },
-    { value: 'consulting', label: 'Technology Consulting', icon: UserGroupIcon },
-    { value: 'other', label: 'Other', icon: DocumentTextIcon }
-  ]
-
-  const budgetRanges = [
-    { value: 'under-10k', label: 'Under $10,000' },
-    { value: '10k-25k', label: '$10,000 - $25,000' },
-    { value: '25k-50k', label: '$25,000 - $50,000' },
-    { value: '50k-100k', label: '$50,000 - $100,000' },
-    { value: 'over-100k', label: 'Over $100,000' },
-    { value: 'discuss', label: 'Let\'s discuss' }
-  ]
-
-  const timelineOptions = [
-    { value: 'asap', label: 'ASAP (1-2 weeks)' },
-    { value: '1-month', label: '1 month' },
-    { value: '2-3-months', label: '2-3 months' },
-    { value: '3-6-months', label: '3-6 months' },
-    { value: '6-months-plus', label: '6+ months' },
-    { value: 'flexible', label: 'Flexible timeline' }
-  ]
+  // Transform services data to include icon components
+  const services = contactData.services.map(service => ({
+    ...service,
+    icon: getIconComponent(service.icon)
+  }))
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -292,7 +236,7 @@ export default function ContactPage() {
                   Our Locations
                 </h2>
                 <div className="space-y-4">
-                  {officeLocations.map((office, index) => (
+                  {contactData.officeLocations.map((office, index) => (
                     <motion.div
                       key={office.city}
                       initial={{ opacity: 0, x: -20 }}
@@ -492,7 +436,7 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                     >
                       <option value="">Select budget range</option>
-                      {budgetRanges.map((budget) => (
+                      {contactData.budgetRanges.map((budget) => (
                         <option key={budget.value} value={budget.value}>
                           {budget.label}
                         </option>
@@ -513,7 +457,7 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                   >
                     <option value="">Select timeline</option>
-                    {timelineOptions.map((timeline) => (
+                    {contactData.timelineOptions.map((timeline) => (
                       <option key={timeline.value} value={timeline.value}>
                         {timeline.label}
                       </option>

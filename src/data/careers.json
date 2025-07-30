@@ -6,7 +6,7 @@
       "location": "Remote (Global)",
       "type": "Full-time",
       "experience": "5+ years",
-      "description": "We&rsquo;re looking for an experienced full-stack developer to join our team and help build innovative software solutions for our clients.",
+      "description": "We're looking for an experienced full-stack developer to join our team and help build innovative software solutions for our clients.",
       "requirements": [
         "Strong experience with React, Node.js, and TypeScript",
         "Experience with cloud platforms (AWS, Azure, or GCP)",
@@ -50,7 +50,7 @@
       "location": "Remote (Global)",
       "type": "Full-time",
       "experience": "4+ years",
-      "description": "Help us build and maintain robust, scalable infrastructure that supports our clients&rsquo; applications.",
+      "description": "Help us build and maintain robust, scalable infrastructure that supports our clients' applications.",
       "requirements": [
         "Experience with AWS, Docker, and Kubernetes",
         "Knowledge of CI/CD pipelines and automation",
@@ -98,59 +98,71 @@
     },
     {
       "title": "Global Collaboration",
-      "description": "Our diverse team spans multiple countries, bringing unique perspectives and innovative solutions.",
+      "description": "Work with talented professionals from around the world in a diverse and inclusive environment.",
       "icon": "GlobeAltIcon",
       "color": "green"
     },
     {
-      "title": "Innovation Lab",
-      "description": "We encourage experimentation and creative problem-solving through our innovation initiatives.",
-      "icon": "BeakerIcon",
-      "color": "purple"
+      "title": "Innovation Focus",
+      "description": "We encourage creative thinking and experimentation with cutting-edge technologies.",
+      "icon": "LightBulbIcon",
+      "color": "yellow"
     },
     {
       "title": "Work-Life Balance",
-      "description": "Flexible work arrangements and wellness programs to support your well-being.",
-      "icon": "HeartIcon",
+      "description": "Flexible schedules and remote work options to support your personal and professional life.",
+      "icon": "ClockIcon",
+      "color": "purple"
+    },
+    {
+      "title": "Team Support",
+      "description": "A supportive environment where everyone's contributions are valued and recognized.",
+      "icon": "UserGroupIcon",
+      "color": "indigo"
+    },
+    {
+      "title": "Impact-Driven",
+      "description": "Work on projects that make a real difference for businesses and their customers.",
+      "icon": "StarIcon",
       "color": "orange"
     }
   ],
   "benefits": [
     {
+      "title": "Competitive Salary",
+      "description": "Attractive compensation packages that reflect your skills and experience.",
+      "icon": "ChartBarIcon",
+      "color": "green"
+    },
+    {
+      "title": "Health Insurance",
+      "description": "Comprehensive health, dental, and vision coverage for you and your family.",
+      "icon": "HeartIcon",
+      "color": "red"
+    },
+    {
       "title": "Remote Work",
-      "description": "Work from anywhere in the world with flexible hours",
+      "description": "Work from anywhere with flexible hours and a supportive remote culture.",
       "icon": "GlobeAltIcon",
       "color": "blue"
     },
     {
       "title": "Professional Development",
-      "description": "Continuous learning opportunities and career growth",
+      "description": "Continuous learning opportunities, conferences, and skill development programs.",
       "icon": "AcademicCapIcon",
-      "color": "green"
-    },
-    {
-      "title": "Health & Wellness",
-      "description": "Comprehensive health insurance and wellness programs",
-      "icon": "HeartIcon",
       "color": "purple"
     },
     {
       "title": "Team Events",
-      "description": "Regular team building and social activities",
+      "description": "Regular team building activities, social events, and celebrations.",
       "icon": "UserGroupIcon",
       "color": "orange"
     },
     {
-      "title": "Competitive Salary",
-      "description": "Attractive compensation packages and benefits",
-      "icon": "StarIcon",
-      "color": "yellow"
-    },
-    {
-      "title": "Innovation Time",
-      "description": "Dedicated time for personal projects and innovation",
+      "title": "Technology Budget",
+      "description": "Latest tools and equipment to help you do your best work.",
       "icon": "LightBulbIcon",
-      "color": "indigo"
+      "color": "yellow"
     }
   ]
 }
