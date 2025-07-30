@@ -94,22 +94,20 @@ export default function ContactPage() {
 
       if (response.ok) {
         setSubmitStatus('success')
-        // Reset form after success
-        setTimeout(() => {
-          setFormData({
-            name: '',
-            email: '',
-            company: '',
-            phone: '',
-            subject: '',
-            service: '',
-            budget: '',
-            timeline: '',
-            message: '',
-            newsletter: false
-          })
-          setSubmitStatus('idle')
-        }, 3000)
+        // Reset form after success (no auto-close)
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          subject: '',
+          service: '',
+          budget: '',
+          timeline: '',
+          message: '',
+          newsletter: false
+        })
+        // Do not setSubmitStatus('idle') automatically
       } else {
         setSubmitStatus('error')
       }
@@ -304,8 +302,9 @@ export default function ContactPage() {
                     initial={{ opacity: 0, scale: 0.8, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                    className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative"
-                    onClick={(e) => e.stopPropagation()}
+                    className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-4 md:p-6 lg:p-8 relative max-h-[90vh] overflow-y-auto flex flex-col justify-center"
+                    style={{ minHeight: 'auto' }}
+                    onClick={e => e.stopPropagation()}
                   >
                     {/* Close Button */}
                     <button
@@ -444,8 +443,9 @@ export default function ContactPage() {
                     initial={{ opacity: 0, scale: 0.8, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                    className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative"
-                    onClick={(e) => e.stopPropagation()}
+                    className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-4 md:p-6 lg:p-8 relative max-h-[90vh] overflow-y-auto flex flex-col justify-center"
+                    style={{ minHeight: 'auto' }}
+                    onClick={e => e.stopPropagation()}
                   >
                     {/* Close Button */}
                     <button
