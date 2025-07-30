@@ -1,178 +1,24 @@
 'use client'
 
+import { loadCareersData } from '@/lib/data-loader'
 import {
-    AcademicCapIcon,
-    BeakerIcon,
-    BriefcaseIcon,
-    ClockIcon,
-    GlobeAltIcon,
-    HeartIcon,
-    LightBulbIcon,
-    MapPinIcon,
-    RocketLaunchIcon,
-    StarIcon,
-    UserGroupIcon
+  AcademicCapIcon,
+  BeakerIcon,
+  BriefcaseIcon,
+  ClockIcon,
+  GlobeAltIcon,
+  HeartIcon,
+  LightBulbIcon,
+  MapPinIcon,
+  RocketLaunchIcon,
+  StarIcon,
+  UserGroupIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 export default function CareersPage() {
-  const openPositions = [
-    {
-      title: 'Senior Full-Stack Developer',
-      department: 'Engineering',
-      location: 'Remote (Global)',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'We&rsquo;re looking for an experienced full-stack developer to join our team and help build innovative software solutions for our clients.',
-      requirements: [
-        'Strong experience with React, Node.js, and TypeScript',
-        'Experience with cloud platforms (AWS, Azure, or GCP)',
-        'Knowledge of database design and optimization',
-        'Experience with CI/CD pipelines and DevOps practices',
-        'Strong problem-solving and communication skills'
-      ],
-      benefits: [
-        'Competitive salary and benefits package',
-        'Remote work with flexible hours',
-        'Professional development opportunities',
-        'Health insurance and wellness programs',
-        'Team building and social events'
-      ]
-    },
-    {
-      title: 'UX/UI Designer',
-      department: 'Design',
-      location: 'Remote (Global)',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Join our design team to create beautiful, intuitive user experiences that delight our clients and their users.',
-      requirements: [
-        'Strong portfolio demonstrating UX/UI skills',
-        'Experience with Figma, Adobe Creative Suite',
-        'Knowledge of user research and testing methodologies',
-        'Understanding of accessibility and inclusive design',
-        'Excellent communication and collaboration skills'
-      ],
-      benefits: [
-        'Creative freedom and innovative projects',
-        'Professional development and training',
-        'Flexible work arrangements',
-        'Health and wellness benefits',
-        'Collaborative team environment'
-      ]
-    },
-    {
-      title: 'DevOps Engineer',
-      department: 'Engineering',
-      location: 'Remote (Global)',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Help us build and maintain robust, scalable infrastructure that supports our clients\' applications.',
-      requirements: [
-        'Experience with AWS, Docker, and Kubernetes',
-        'Knowledge of CI/CD pipelines and automation',
-        'Experience with monitoring and logging tools',
-        'Understanding of security best practices',
-        'Strong scripting skills (Python, Bash)'
-      ],
-      benefits: [
-        'Cutting-edge technology stack',
-        'Continuous learning opportunities',
-        'Competitive compensation',
-        'Remote work flexibility',
-        'Health and dental insurance'
-      ]
-    },
-    {
-      title: 'Project Manager',
-      department: 'Operations',
-      location: 'Remote (Global)',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Lead project delivery and ensure successful outcomes for our clients through effective planning and communication.',
-      requirements: [
-        'Experience managing software development projects',
-        'Strong organizational and leadership skills',
-        'Experience with Agile methodologies',
-        'Excellent client communication skills',
-        'Technical background preferred'
-      ],
-      benefits: [
-        'Leadership and growth opportunities',
-        'Professional development programs',
-        'Competitive salary and benefits',
-        'Flexible work arrangements',
-        'Team collaboration and support'
-      ]
-    }
-  ]
-
-  const companyCulture = [
-    {
-      title: 'Continuous Learning',
-      description: 'We invest in your growth with regular training, conferences, and skill development programs.',
-      icon: AcademicCapIcon,
-      color: 'blue'
-    },
-    {
-      title: 'Global Collaboration',
-      description: 'Our diverse team spans multiple countries, bringing unique perspectives and innovative solutions.',
-      icon: GlobeAltIcon,
-      color: 'green'
-    },
-    {
-      title: 'Innovation Lab',
-      description: 'We encourage experimentation and creative problem-solving through our innovation initiatives.',
-      icon: BeakerIcon,
-      color: 'purple'
-    },
-    {
-      title: 'Work-Life Balance',
-      description: 'Flexible work arrangements and wellness programs to support your well-being.',
-      icon: HeartIcon,
-      color: 'orange'
-    }
-  ]
-
-  const benefits = [
-    {
-      title: 'Remote Work',
-      description: 'Work from anywhere in the world with flexible hours',
-      icon: GlobeAltIcon,
-      color: 'blue'
-    },
-    {
-      title: 'Professional Development',
-      description: 'Continuous learning opportunities and career growth',
-      icon: AcademicCapIcon,
-      color: 'green'
-    },
-    {
-      title: 'Health & Wellness',
-      description: 'Comprehensive health insurance and wellness programs',
-      icon: HeartIcon,
-      color: 'purple'
-    },
-    {
-      title: 'Team Events',
-      description: 'Regular team building and social activities',
-      icon: UserGroupIcon,
-      color: 'orange'
-    },
-    {
-      title: 'Competitive Salary',
-      description: 'Attractive compensation packages and benefits',
-      icon: StarIcon,
-      color: 'yellow'
-    },
-    {
-      title: 'Innovation Time',
-      description: 'Dedicated time for personal projects and innovation',
-      icon: LightBulbIcon,
-      color: 'indigo'
-    }
-  ]
+  const { openPositions, companyCulture, benefits } = loadCareersData()
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -193,6 +39,21 @@ export default function CareersPage() {
         duration: 0.5
       }
     }
+  }
+
+  // Icon mapping for dynamic icon rendering
+  const iconMap = {
+    AcademicCapIcon,
+    BeakerIcon,
+    BriefcaseIcon,
+    ClockIcon,
+    GlobeAltIcon,
+    HeartIcon,
+    LightBulbIcon,
+    MapPinIcon,
+    RocketLaunchIcon,
+    StarIcon,
+    UserGroupIcon
   }
 
   return (
@@ -237,30 +98,33 @@ export default function CareersPage() {
           <motion.div variants={itemVariants}>
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Join NavioX?</h2>
-                          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We&rsquo;re not just building software—we&rsquo;re charting digital destinies. Join us in our mission 
-              to become the lighthouse of innovation in the software engineering ocean.
-            </p>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We&rsquo;re not just building software—we&rsquo;re charting digital destinies. Join us in our mission 
+                to become the lighthouse of innovation in the software engineering ocean.
+              </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {companyCulture.map((culture, index) => (
-                <motion.div
-                  key={culture.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center"
-                >
-                  <div className={`bg-${culture.color}-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <culture.icon className={`h-8 w-8 text-${culture.color}-600`} />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{culture.title}</h3>
-                  <p className="text-gray-600">
-                    {culture.description}
-                  </p>
-                </motion.div>
-              ))}
+              {companyCulture.map((culture, index) => {
+                const IconComponent = iconMap[culture.icon as keyof typeof iconMap]
+                return (
+                  <motion.div
+                    key={culture.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center"
+                  >
+                    <div className={`bg-${culture.color}-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      <IconComponent className={`h-8 w-8 text-${culture.color}-600`} />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{culture.title}</h3>
+                    <p className="text-gray-600">
+                      {culture.description}
+                    </p>
+                  </motion.div>
+                )
+              })}
             </div>
           </motion.div>
 
@@ -268,31 +132,34 @@ export default function CareersPage() {
           <motion.div variants={itemVariants}>
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Benefits & Perks</h2>
-                          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We believe in taking care of our team members. Here&rsquo;s what we offer to support your growth and well-being.
-            </p>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We believe in taking care of our team members. Here&rsquo;s what we offer to support your growth and well-being.
+              </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
-                >
-                  <div className="flex items-start">
-                    <div className={`p-3 rounded-lg bg-${benefit.color}-100 mr-4`}>
-                      <benefit.icon className={`h-6 w-6 text-${benefit.color}-600`} />
+              {benefits.map((benefit, index) => {
+                const IconComponent = iconMap[benefit.icon as keyof typeof iconMap]
+                return (
+                  <motion.div
+                    key={benefit.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+                  >
+                    <div className="flex items-start">
+                      <div className={`p-3 rounded-lg bg-${benefit.color}-100 mr-4`}>
+                        <IconComponent className={`h-6 w-6 text-${benefit.color}-600`} />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                        <p className="text-sm text-gray-600">{benefit.description}</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-                      <p className="text-sm text-gray-600">{benefit.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                )
+              })}
             </div>
           </motion.div>
 

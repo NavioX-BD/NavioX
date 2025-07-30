@@ -1,0 +1,156 @@
+{
+  "openPositions": [
+    {
+      "title": "Senior Full-Stack Developer",
+      "department": "Engineering",
+      "location": "Remote (Global)",
+      "type": "Full-time",
+      "experience": "5+ years",
+      "description": "We&rsquo;re looking for an experienced full-stack developer to join our team and help build innovative software solutions for our clients.",
+      "requirements": [
+        "Strong experience with React, Node.js, and TypeScript",
+        "Experience with cloud platforms (AWS, Azure, or GCP)",
+        "Knowledge of database design and optimization",
+        "Experience with CI/CD pipelines and DevOps practices",
+        "Strong problem-solving and communication skills"
+      ],
+      "benefits": [
+        "Competitive salary and benefits package",
+        "Remote work with flexible hours",
+        "Professional development opportunities",
+        "Health insurance and wellness programs",
+        "Team building and social events"
+      ]
+    },
+    {
+      "title": "UX/UI Designer",
+      "department": "Design",
+      "location": "Remote (Global)",
+      "type": "Full-time",
+      "experience": "3+ years",
+      "description": "Join our design team to create beautiful, intuitive user experiences that delight our clients and their users.",
+      "requirements": [
+        "Strong portfolio demonstrating UX/UI skills",
+        "Experience with Figma, Adobe Creative Suite",
+        "Knowledge of user research and testing methodologies",
+        "Understanding of accessibility and inclusive design",
+        "Excellent communication and collaboration skills"
+      ],
+      "benefits": [
+        "Creative freedom and innovative projects",
+        "Professional development and training",
+        "Flexible work arrangements",
+        "Health and wellness benefits",
+        "Collaborative team environment"
+      ]
+    },
+    {
+      "title": "DevOps Engineer",
+      "department": "Engineering",
+      "location": "Remote (Global)",
+      "type": "Full-time",
+      "experience": "4+ years",
+      "description": "Help us build and maintain robust, scalable infrastructure that supports our clients&rsquo; applications.",
+      "requirements": [
+        "Experience with AWS, Docker, and Kubernetes",
+        "Knowledge of CI/CD pipelines and automation",
+        "Experience with monitoring and logging tools",
+        "Understanding of security best practices",
+        "Strong scripting skills (Python, Bash)"
+      ],
+      "benefits": [
+        "Cutting-edge technology stack",
+        "Continuous learning opportunities",
+        "Competitive compensation",
+        "Remote work flexibility",
+        "Health and dental insurance"
+      ]
+    },
+    {
+      "title": "Project Manager",
+      "department": "Operations",
+      "location": "Remote (Global)",
+      "type": "Full-time",
+      "experience": "3+ years",
+      "description": "Lead project delivery and ensure successful outcomes for our clients through effective planning and communication.",
+      "requirements": [
+        "Experience managing software development projects",
+        "Strong organizational and leadership skills",
+        "Experience with Agile methodologies",
+        "Excellent client communication skills",
+        "Technical background preferred"
+      ],
+      "benefits": [
+        "Leadership and growth opportunities",
+        "Professional development programs",
+        "Competitive salary and benefits",
+        "Flexible work arrangements",
+        "Team collaboration and support"
+      ]
+    }
+  ],
+  "companyCulture": [
+    {
+      "title": "Continuous Learning",
+      "description": "We invest in your growth with regular training, conferences, and skill development programs.",
+      "icon": "AcademicCapIcon",
+      "color": "blue"
+    },
+    {
+      "title": "Global Collaboration",
+      "description": "Our diverse team spans multiple countries, bringing unique perspectives and innovative solutions.",
+      "icon": "GlobeAltIcon",
+      "color": "green"
+    },
+    {
+      "title": "Innovation Lab",
+      "description": "We encourage experimentation and creative problem-solving through our innovation initiatives.",
+      "icon": "BeakerIcon",
+      "color": "purple"
+    },
+    {
+      "title": "Work-Life Balance",
+      "description": "Flexible work arrangements and wellness programs to support your well-being.",
+      "icon": "HeartIcon",
+      "color": "orange"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Remote Work",
+      "description": "Work from anywhere in the world with flexible hours",
+      "icon": "GlobeAltIcon",
+      "color": "blue"
+    },
+    {
+      "title": "Professional Development",
+      "description": "Continuous learning opportunities and career growth",
+      "icon": "AcademicCapIcon",
+      "color": "green"
+    },
+    {
+      "title": "Health & Wellness",
+      "description": "Comprehensive health insurance and wellness programs",
+      "icon": "HeartIcon",
+      "color": "purple"
+    },
+    {
+      "title": "Team Events",
+      "description": "Regular team building and social activities",
+      "icon": "UserGroupIcon",
+      "color": "orange"
+    },
+    {
+      "title": "Competitive Salary",
+      "description": "Attractive compensation packages and benefits",
+      "icon": "StarIcon",
+      "color": "yellow"
+    },
+    {
+      "title": "Innovation Time",
+      "description": "Dedicated time for personal projects and innovation",
+      "icon": "LightBulbIcon",
+      "color": "indigo"
+    }
+  ]
+}

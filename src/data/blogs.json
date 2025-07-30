@@ -1,0 +1,119 @@
+{
+  "blogStats": {
+    "totalPosts": "50+",
+    "monthlyReaders": "5,000+",
+    "categories": "8",
+    "averageReadTime": "5 minutes"
+  },
+  "featuredPosts": [
+    {
+      "id": 1,
+      "title": "The Future of Web Development: Trends to Watch in 2025",
+      "excerpt": "Explore the latest trends in web development including AI integration, WebAssembly, and the rise of edge computing.",
+      "author": "Sarah Chen",
+      "date": "2025-01-15",
+      "category": "Technology Trends",
+      "readTime": "8 min read",
+      "image": "/images/blog/web-development-trends.jpg",
+      "tags": ["Web Development", "AI", "Technology Trends", "2025"],
+      "content": "The landscape of web development is evolving rapidly, with new technologies and methodologies emerging every day..."
+    },
+    {
+      "id": 2,
+      "title": "Building Scalable React Applications: Best Practices",
+      "excerpt": "Learn the essential best practices for building scalable React applications that can handle growth and maintain performance.",
+      "author": "David Kim",
+      "date": "2025-01-10",
+      "category": "Development",
+      "readTime": "12 min read",
+      "image": "/images/blog/react-best-practices.jpg",
+      "tags": ["React", "JavaScript", "Best Practices", "Scalability"],
+      "content": "React has become the go-to framework for building modern web applications..."
+    },
+    {
+      "id": 3,
+      "title": "The Impact of AI on Software Development",
+      "excerpt": "Discover how artificial intelligence is transforming the software development process and what it means for developers.",
+      "author": "Ahmed Rahman",
+      "date": "2025-01-05",
+      "category": "AI & Machine Learning",
+      "readTime": "10 min read",
+      "image": "/images/blog/ai-software-development.jpg",
+      "tags": ["AI", "Machine Learning", "Software Development", "Automation"],
+      "content": "Artificial Intelligence is revolutionizing the way we approach software development..."
+    },
+    {
+      "id": 4,
+      "title": "UX Design Principles for Better User Experience",
+      "excerpt": "Master the fundamental UX design principles that create intuitive and engaging user experiences.",
+      "author": "Maria Rodriguez",
+      "date": "2024-12-28",
+      "category": "Design",
+      "readTime": "7 min read",
+      "image": "/images/blog/ux-design-principles.jpg",
+      "tags": ["UX Design", "User Experience", "Design Principles", "UI/UX"],
+      "content": "User experience design is more than just making things look good..."
+    },
+    {
+      "id": 5,
+      "title": "DevOps Best Practices for Modern Teams",
+      "excerpt": "Implement effective DevOps practices to streamline your development workflow and improve team productivity.",
+      "author": "Sarah Chen",
+      "date": "2024-12-20",
+      "category": "DevOps",
+      "readTime": "15 min read",
+      "image": "/images/blog/devops-best-practices.jpg",
+      "tags": ["DevOps", "CI/CD", "Automation", "Team Productivity"],
+      "content": "DevOps has become essential for modern software development teams..."
+    },
+    {
+      "id": 6,
+      "title": "Building Secure Web Applications",
+      "excerpt": "Learn essential security practices to protect your web applications from common vulnerabilities and attacks.",
+      "author": "David Kim",
+      "date": "2024-12-15",
+      "category": "Security",
+      "readTime": "11 min read",
+      "image": "/images/blog/web-security.jpg",
+      "tags": [
+        "Security",
+        "Web Development",
+        "Best Practices",
+        "Cybersecurity"
+      ],
+      "content": "Security should be a top priority when building web applications..."
+    }
+  ],
+  "blogCategories": [
+    {
+      "name": "Technology Trends",
+      "count": 12,
+      "description": "Latest trends and innovations in technology"
+    },
+    {
+      "name": "Development",
+      "count": 15,
+      "description": "Programming tips, tutorials, and best practices"
+    },
+    {
+      "name": "Design",
+      "count": 8,
+      "description": "UX/UI design insights and principles"
+    },
+    {
+      "name": "DevOps",
+      "count": 6,
+      "description": "DevOps practices and automation"
+    },
+    {
+      "name": "AI & Machine Learning",
+      "count": 5,
+      "description": "AI and ML in software development"
+    },
+    {
+      "name": "Security",
+      "count": 4,
+      "description": "Cybersecurity and secure development"
+    }
+  ]
+}

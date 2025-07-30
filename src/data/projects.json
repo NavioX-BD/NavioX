@@ -1,0 +1,129 @@
+{
+  "projectStats": {
+    "totalProjects": "150+",
+    "completedProjects": "150+",
+    "ongoingProjects": "25+",
+    "clientSatisfaction": "98%",
+    "averageDeliveryTime": "2-3 months",
+    "technologiesUsed": "15+"
+  },
+  "featuredProjects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "category": "Web Application",
+      "description": "A comprehensive e-commerce solution with advanced features including payment processing, inventory management, and analytics dashboard.",
+      "technologies": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+      "image": "/images/projects/ecommerce.jpg",
+      "client": "TechRetail Inc.",
+      "duration": "3 months",
+      "results": [
+        "40% increase in conversion rate",
+        "60% reduction in cart abandonment",
+        "99.9% uptime achieved"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Healthcare Management System",
+      "category": "Enterprise Software",
+      "description": "A complete healthcare management system for hospitals with patient records, appointment scheduling, and billing integration.",
+      "technologies": ["Next.js", "TypeScript", "MongoDB", "Docker", "Azure"],
+      "image": "/images/projects/healthcare.jpg",
+      "client": "MediCare Solutions",
+      "duration": "6 months",
+      "results": [
+        "Streamlined patient care workflow",
+        "Reduced administrative overhead by 30%",
+        "Improved data accuracy by 95%"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Mobile Banking App",
+      "category": "Mobile Application",
+      "description": "A secure mobile banking application with biometric authentication, real-time transactions, and financial analytics.",
+      "technologies": ["React Native", "Node.js", "Firebase", "Stripe", "AWS"],
+      "image": "/images/projects/banking.jpg",
+      "client": "DigitalBank Ltd.",
+      "duration": "4 months",
+      "results": [
+        "50% increase in mobile transactions",
+        "Enhanced security with biometric auth",
+        "4.8/5 user rating"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "AI-Powered Analytics Dashboard",
+      "category": "Data Analytics",
+      "description": "An intelligent analytics platform that provides real-time insights and predictive analytics for business decision-making.",
+      "technologies": ["Python", "TensorFlow", "React", "PostgreSQL", "Docker"],
+      "image": "/images/projects/analytics.jpg",
+      "client": "DataInsight Corp.",
+      "duration": "5 months",
+      "results": [
+        "80% faster data processing",
+        "90% accuracy in predictions",
+        "Real-time insights delivery"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Real Estate Management System",
+      "category": "Web Application",
+      "description": "A comprehensive real estate platform with property listings, virtual tours, and customer relationship management.",
+      "technologies": ["Vue.js", "Laravel", "MySQL", "AWS", "Stripe"],
+      "image": "/images/projects/realestate.jpg",
+      "client": "PropertyMax Realty",
+      "duration": "4 months",
+      "results": [
+        "35% increase in property inquiries",
+        "Streamlined property management",
+        "Enhanced customer experience"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Educational Learning Platform",
+      "category": "E-Learning",
+      "description": "An interactive learning platform with video courses, assessments, and progress tracking for educational institutions.",
+      "technologies": ["React", "Node.js", "MongoDB", "AWS", "WebRTC"],
+      "image": "/images/projects/education.jpg",
+      "client": "EduTech Academy",
+      "duration": "5 months",
+      "results": [
+        "10,000+ active students",
+        "95% course completion rate",
+        "Improved learning outcomes"
+      ]
+    }
+  ],
+  "projectCategories": [
+    {
+      "name": "Web Applications",
+      "count": 60,
+      "description": "Custom web applications and platforms"
+    },
+    {
+      "name": "Mobile Applications",
+      "count": 35,
+      "description": "iOS and Android mobile apps"
+    },
+    {
+      "name": "E-Commerce Solutions",
+      "count": 25,
+      "description": "Online stores and marketplaces"
+    },
+    {
+      "name": "Enterprise Software",
+      "count": 20,
+      "description": "Business management systems"
+    },
+    {
+      "name": "Data Analytics",
+      "count": 10,
+      "description": "Analytics and reporting platforms"
+    }
+  ]
+}

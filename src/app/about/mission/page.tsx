@@ -12,8 +12,11 @@ import {
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { loadCompanyStats } from '@/lib/data-loader'
 
 export default function MissionVisionPage() {
+  const { successMetrics } = loadCompanyStats()
+  
   const missionVision = [
     {
       title: 'Our Mission',
@@ -107,28 +110,7 @@ export default function MissionVisionPage() {
     }
   ]
 
-  const successMetrics = [
-    {
-      metric: '10,000+',
-      label: 'Monthly Unique Visitors',
-      description: 'Year 1 objective for website traffic'
-    },
-    {
-      metric: '50+',
-      label: 'Qualified Leads per Month',
-      description: 'Target lead generation goal'
-    },
-    {
-      metric: '15%',
-      label: 'Inquiry-to-Client Conversion',
-      description: 'Target conversion rate'
-    },
-    {
-      metric: '95%+',
-      label: 'Client Satisfaction Rating',
-      description: 'Target satisfaction score'
-    }
-  ]
+
 
   const containerVariants = {
     hidden: { opacity: 0 },

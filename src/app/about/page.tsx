@@ -1,5 +1,6 @@
 'use client'
 
+import { loadCompanyStats } from '@/lib/data-loader'
 import {
   AcademicCapIcon,
   BeakerIcon,
@@ -17,12 +18,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 export default function AboutPage() {
-  const companyStats = [
-    { number: '2025', label: 'Launch Year' },
-    { number: '10K+', label: 'Monthly Visitors Target' },
-    { number: '50+', label: 'Leads per Month' },
-    { number: '95%+', label: 'Client Satisfaction' }
-  ]
+  const { companyStats } = loadCompanyStats()
 
   const coreValues = [
     {
