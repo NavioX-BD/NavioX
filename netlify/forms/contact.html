@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Contact Form Submission - NavioX</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f8fafc;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 700;
+      }
+      .header p {
+        margin: 10px 0 0 0;
+        opacity: 0.9;
+        font-size: 16px;
+      }
+      .content {
+        padding: 30px;
+      }
+      .section {
+        margin-bottom: 25px;
+        padding: 20px;
+        background: #f8fafc;
+        border-radius: 8px;
+        border-left: 4px solid #2563eb;
+      }
+      .section h2 {
+        margin: 0 0 15px 0;
+        color: #1e293b;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .field {
+        display: flex;
+        margin-bottom: 12px;
+        align-items: flex-start;
+      }
+      .field-label {
+        font-weight: 600;
+        color: #475569;
+        min-width: 140px;
+        margin-right: 15px;
+      }
+      .field-value {
+        color: #1e293b;
+        flex: 1;
+      }
+      .service-badge {
+        display: inline-block;
+        background: #2563eb;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .budget-badge {
+        display: inline-block;
+        background: #059669;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .timeline-badge {
+        display: inline-block;
+        background: #dc2626;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .message-box {
+        background: #f1f5f9;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #64748b;
+        margin-top: 10px;
+      }
+      .footer {
+        background: #f8fafc;
+        padding: 20px 30px;
+        text-align: center;
+        border-top: 1px solid #e2e8f0;
+      }
+      .footer p {
+        margin: 0;
+        color: #64748b;
+        font-size: 14px;
+      }
+      .naviox-logo {
+        font-weight: 700;
+        color: #2563eb;
+      }
+      @media (max-width: 600px) {
+        .container {
+          margin: 10px;
+          border-radius: 8px;
+        }
+        .header {
+          padding: 20px;
+        }
+        .content {
+          padding: 20px;
+        }
+        .field {
+          flex-direction: column;
+        }
+        .field-label {
+          min-width: auto;
+          margin-bottom: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🚀 New Project Inquiry</h1>
+        <p>NavioX Solutions - Digital Navigation Experts</p>
+      </div>
+
+      <div class="content">
+        <div class="section">
+          <h2>👤 Contact Information</h2>
+          <div class="field">
+            <span class="field-label">Full Name:</span>
+            <span class="field-value">{{name}}</span>
+          </div>
+          <div class="field">
+            <span class="field-label">Email:</span>
+            <span class="field-value">{{email}}</span>
+          </div>
+          <div class="field">
+            <span class="field-label">Company:</span>
+            <span class="field-value">{{company}}</span>
+          </div>
+          <div class="field">
+            <span class="field-label">Phone:</span>
+            <span class="field-value">{{phone}}</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>📋 Project Details</h2>
+          <div class="field">
+            <span class="field-label">Subject:</span>
+            <span class="field-value">{{subject}}</span>
+          </div>
+          <div class="field">
+            <span class="field-label">Service Needed:</span>
+            <span class="field-value">
+              <span class="service-badge">{{service}}</span>
+            </span>
+          </div>
+          <div class="field">
+            <span class="field-label">Budget Range:</span>
+            <span class="field-value">
+              <span class="budget-badge">{{budget}}</span>
+            </span>
+          </div>
+          <div class="field">
+            <span class="field-label">Timeline:</span>
+            <span class="field-value">
+              <span class="timeline-badge">{{timeline}}</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>💬 Project Message</h2>
+          <div class="message-box">{{message}}</div>
+        </div>
+
+        {{#if newsletter}}
+        <div class="section">
+          <h2>📧 Newsletter Subscription</h2>
+          <p>
+            ✅ Client has opted to receive our newsletter and industry insights.
+          </p>
+        </div>
+        {{/if}}
+      </div>
+
+      <div class="footer">
+        <p>
+          This inquiry was submitted via the
+          <span class="naviox-logo">NavioX Solutions</span> contact form.
+        </p>
+        <p>Response time: <strong>24 hours or less</strong></p>
+      </div>
+    </div>
+  </body>
+</html>

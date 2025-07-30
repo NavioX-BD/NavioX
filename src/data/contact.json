@@ -4,7 +4,7 @@
       "title": "General Inquiries",
       "description": "Get in touch for any questions about our services",
       "icon": "EnvelopeIcon",
-      "contact": "info@navioxbd.com",
+      "contact": "info@navioxbd.com, navioxsolutions@gmail.com",
       "link": "mailto:info@navioxbd.com",
       "color": "blue"
     },
@@ -31,6 +31,14 @@
       "contact": "careers@navioxbd.com",
       "link": "mailto:careers@navioxbd.com",
       "color": "orange"
+    },
+    {
+      "title": "Primary Contact",
+      "description": "Direct contact for urgent inquiries and project discussions",
+      "icon": "EnvelopeIcon",
+      "contact": "navioxsolutions@gmail.com",
+      "link": "mailto:navioxsolutions@gmail.com",
+      "color": "red"
     }
   ],
   "officeLocations": [
@@ -41,6 +49,7 @@
       "timezone": "GMT+6, Bangladesh Standard Time",
       "phone": "+880 1765-939006",
       "email": "dhaka@navioxbd.com",
+      "primaryEmail": "navioxsolutions@gmail.com",
       "hours": "Sunday - Thursday: 9:00 AM - 6:00 PM",
       "services": [
         "Web Development",
