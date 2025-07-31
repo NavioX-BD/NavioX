@@ -59,7 +59,7 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32">
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-slate-50 border-b border-slate-200">
+      <section className="py-12 bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -153,7 +153,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24">
+      <section className="py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -252,7 +252,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 bg-slate-50"></section>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -261,12 +261,12 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-                         <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
-               Our Process
-             </h2>
-             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-               A proven methodology that ensures successful delivery and exceptional results
-             </p>
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
+              Our Process
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              A proven methodology that ensures successful delivery and exceptional results
+            </p>
           </motion.div>
 
           <motion.div
@@ -290,7 +290,7 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <step.icon className="h-8 w-8 text-white" />
                 </div>
-                                 <h3 className="text-lg font-bold text-slate-900 mb-3">{step.title}</h3>
+                <h3 className="text-lg font-bold text-slate-900 mb-3">{step.title}</h3>
                 <p className="text-slate-600">{step.description}</p>
               </motion.div>
             ))}
@@ -299,7 +299,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-24">
+      <section className="py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -308,12 +308,12 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-                         <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
-               Technology Stack
-             </h2>
-             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-               We leverage cutting-edge technologies to build robust, scalable solutions
-             </p>
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
+              Technology Stack
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              We leverage cutting-edge technologies to build robust, scalable solutions
+            </p>
           </motion.div>
 
           <motion.div
@@ -329,9 +329,9 @@ export default function ServicesPage() {
                 variants={itemVariants}
                 className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8"
               >
-                                 <h3 className="text-lg font-bold text-slate-900 mb-6 capitalize">
-                    {category.replace('-', ' ')}
-                  </h3>
+                <h3 className="text-lg font-bold text-slate-900 mb-6 capitalize">
+                  {category.replace('-', ' ')}
+                </h3>
                 <div className="space-y-3">
                   {techList.slice(0, 8).map((tech) => (
                     <div key={tech} className="flex items-center text-slate-600">
@@ -352,7 +352,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 bg-slate-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -421,7 +421,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
