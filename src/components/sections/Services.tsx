@@ -1,13 +1,13 @@
 'use client'
 
 import {
-    ArrowRightIcon,
-    ChartBarIcon,
-    CloudArrowUpIcon,
-    CodeBracketIcon,
-    CogIcon,
-    DevicePhoneMobileIcon,
-    ShieldCheckIcon
+  ArrowRightIcon,
+  ChartBarIcon,
+  CloudArrowUpIcon,
+  CodeBracketIcon,
+  CogIcon,
+  DevicePhoneMobileIcon,
+  ShieldCheckIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -162,7 +162,7 @@ const Services = () => {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200"
+            className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200"
           >
             Discuss Your Project
             <ArrowRightIcon className="ml-2 h-4 w-4" />

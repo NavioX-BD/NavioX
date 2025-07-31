@@ -1,14 +1,14 @@
 'use client'
 
 import {
-    BoltIcon,
-    ChartBarIcon,
-    ChatBubbleLeftRightIcon,
-    ClockIcon,
-    CogIcon,
-    GlobeAltIcon,
-    ShieldCheckIcon,
-    UserGroupIcon
+  BoltIcon,
+  ChartBarIcon,
+  ChatBubbleLeftRightIcon,
+  ClockIcon,
+  CogIcon,
+  GlobeAltIcon,
+  ShieldCheckIcon,
+  UserGroupIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 
@@ -221,7 +221,7 @@ const WhyChooseUs = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-blue-600 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors duration-200"
+                    className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-blue-600 shadow-sm hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors duration-200"
                   >
                     Start Your Project
                   </motion.button>
@@ -229,7 +229,7 @@ const WhyChooseUs = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center justify-center rounded-lg border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors duration-200"
+                    className="inline-flex items-center justify-center rounded-lg border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors duration-200"
                   >
                     Schedule a Call
                   </motion.button>
