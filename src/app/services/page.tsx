@@ -2,18 +2,18 @@
 
 import { loadServicesData } from '@/lib/data-loader'
 import {
-    ArrowRightIcon,
-    ChartBarIcon,
-    CheckIcon,
-    CloudArrowUpIcon,
-    CodeBracketIcon,
-    CogIcon,
-    ComputerDesktopIcon,
-    DevicePhoneMobileIcon,
-    RocketLaunchIcon,
-    ShieldCheckIcon,
-    SparklesIcon,
-    UserGroupIcon
+  ArrowRightIcon,
+  ChartBarIcon,
+  CheckIcon,
+  CloudArrowUpIcon,
+  CodeBracketIcon,
+  CogIcon,
+  ComputerDesktopIcon,
+  DevicePhoneMobileIcon,
+  RocketLaunchIcon,
+  ShieldCheckIcon,
+  SparklesIcon,
+  UserGroupIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -124,7 +124,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-slate-50 border-b border-slate-200">
+      <section className="py-16 bg-slate-50 border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -153,7 +153,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16">
+      <section className="py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -175,76 +175,76 @@ export default function ServicesPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {serviceCategories.map((service, index) => {
               const IconComponent = iconMap[service.icon as keyof typeof iconMap]
               return (
-                <motion.div
-                  key={service.id}
-                  variants={itemVariants}
-                  whileHover={{ y: -8 }}
-                  className="group relative bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300"
-                >
-                  {/* Service Header */}
-                  <div className={`relative h-48 bg-gradient-to-br from-${service.color}-500 to-${service.color}-600 overflow-hidden`}>
-                    <div className="absolute inset-0 bg-black/10"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-white shadow-lg">
-                        <IconComponent className="h-10 w-10" />
-                      </div>
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>
-                      <p className="text-white/90 text-sm">{service.description}</p>
-                    </div>
-                  </div>
+                                 <motion.div
+                   key={service.id}
+                   variants={itemVariants}
+                   whileHover={{ y: -8, scale: 1.02 }}
+                   className="group relative bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300"
+                 >
+                   {/* Service Header */}
+                   <div className={`relative h-40 bg-gradient-to-br from-${service.color}-500 to-${service.color}-600 overflow-hidden`}>
+                     <div className="absolute inset-0 bg-black/10"></div>
+                     <div className="absolute inset-0 flex items-center justify-center">
+                       <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-white shadow-lg">
+                         <IconComponent className="h-8 w-8" />
+                       </div>
+                     </div>
+                     <div className="absolute bottom-4 left-4 right-4">
+                       <h3 className="text-lg font-bold text-white mb-1">{service.name}</h3>
+                       <p className="text-white/90 text-sm">{service.description}</p>
+                     </div>
+                   </div>
 
-                  {/* Service Content */}
-                  <div className="p-8">
-                    {/* Features */}
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-slate-900 mb-3 uppercase tracking-wide">Key Features</h4>
-                      <div className="space-y-2">
-                        {service.features.slice(0, 4).map((feature) => (
-                          <div key={feature} className="flex items-center text-sm text-slate-600">
-                            <CheckIcon className="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
-                            {feature}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                   {/* Service Content */}
+                   <div className="p-6">
+                     {/* Features */}
+                     <div className="mb-5">
+                       <h4 className="text-xs font-semibold text-slate-900 mb-3 uppercase tracking-wide">Key Features</h4>
+                       <div className="space-y-2">
+                         {service.features.slice(0, 3).map((feature) => (
+                           <div key={feature} className="flex items-center text-sm text-slate-600">
+                             <CheckIcon className="h-3 w-3 text-green-500 mr-2 flex-shrink-0" />
+                             {feature}
+                           </div>
+                         ))}
+                       </div>
+                     </div>
 
-                    {/* Technologies */}
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-slate-900 mb-3 uppercase tracking-wide">Technologies</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {service.technologies.slice(0, 4).map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-full"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                        {service.technologies.length > 4 && (
-                          <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">
-                            +{service.technologies.length - 4}
-                          </span>
-                        )}
-                      </div>
-                    </div>
+                     {/* Technologies */}
+                     <div className="mb-5">
+                       <h4 className="text-xs font-semibold text-slate-900 mb-3 uppercase tracking-wide">Technologies</h4>
+                       <div className="flex flex-wrap gap-1.5">
+                         {service.technologies.slice(0, 3).map((tech) => (
+                           <span
+                             key={tech}
+                             className="px-2 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md"
+                           >
+                             {tech}
+                           </span>
+                         ))}
+                         {service.technologies.length > 3 && (
+                           <span className="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md">
+                             +{service.technologies.length - 3}
+                           </span>
+                         )}
+                       </div>
+                     </div>
 
-                    {/* CTA */}
-                    <Link
-                      href={`/services/${service.id}`}
-                      className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors group"
-                    >
-                      Learn more
-                      <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </div>
-                </motion.div>
+                     {/* CTA */}
+                     <Link
+                       href={`/services/${service.id}`}
+                       className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors group"
+                     >
+                       Learn more
+                       <ArrowRightIcon className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                     </Link>
+                   </div>
+                 </motion.div>
               )
             })}
           </motion.div>
@@ -252,7 +252,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-slate-50"></section>
+      <section className="py-16 lg:py-20 bg-slate-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -261,12 +261,12 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
-              Our Process
-            </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              A proven methodology that ensures successful delivery and exceptional results
-            </p>
+                         <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
+               Our Process
+             </h2>
+             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+               A proven methodology that ensures successful delivery and exceptional results
+             </p>
           </motion.div>
 
           <motion.div
@@ -290,7 +290,7 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <step.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-3">{step.title}</h3>
+                                 <h3 className="text-lg font-bold text-slate-900 mb-3">{step.title}</h3>
                 <p className="text-slate-600">{step.description}</p>
               </motion.div>
             ))}
@@ -299,7 +299,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-16">
+      <section className="py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -308,12 +308,12 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
-              Technology Stack
-            </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies to build robust, scalable solutions
-            </p>
+                         <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
+               Technology Stack
+             </h2>
+             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+               We leverage cutting-edge technologies to build robust, scalable solutions
+             </p>
           </motion.div>
 
           <motion.div
@@ -329,9 +329,9 @@ export default function ServicesPage() {
                 variants={itemVariants}
                 className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8"
               >
-                <h3 className="text-lg font-bold text-slate-900 mb-6 capitalize">
-                  {category.replace('-', ' ')}
-                </h3>
+                                 <h3 className="text-lg font-bold text-slate-900 mb-6 capitalize">
+                    {category.replace('-', ' ')}
+                  </h3>
                 <div className="space-y-3">
                   {techList.slice(0, 8).map((tech) => (
                     <div key={tech} className="flex items-center text-slate-600">
@@ -352,7 +352,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 lg:py-20 bg-slate-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -421,7 +421,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
