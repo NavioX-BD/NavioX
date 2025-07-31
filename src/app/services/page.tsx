@@ -20,10 +20,42 @@ import {
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import {
+  SiAmazon,
+  SiAngular,
+  SiDigitalocean,
+  SiDocker,
+  SiElasticsearch,
+  SiFlutter,
+  SiGo,
+  SiGooglecloud,
+  SiHeroku,
+  SiIonic,
+  SiJavascript,
+  SiKotlin,
+  SiKubernetes,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPhp,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiReact as SiReactNative,
+  SiRedis,
+  SiRuby,
+  SiSwift,
+  SiTailwindcss,
+  SiTerraform,
+  SiTypescript,
+  SiVercel,
+  SiVuedotjs
+} from 'react-icons/si'
 
 export default function ServicesPage() {
   const servicesData = loadServicesData()
-  const { serviceCategories, serviceStats, pricingTiers, technologies } = servicesData
+  const { serviceCategories, pricingTiers, technologies } = servicesData
 
   const iconMap = {
     CodeBracketIcon,
@@ -36,6 +68,70 @@ export default function ServicesPage() {
     ServerIcon,
     CpuChipIcon,
     CommandLineIcon
+  }
+
+  // Technology icon mapping based on TheToriqul's actual expertise
+  const techIconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
+    // Frontend & Web Development
+    'React': SiReact,
+    'Next.js': SiNextdotjs,
+    'TypeScript': SiTypescript,
+    'Vue.js': SiVuedotjs,
+    'Angular': SiAngular,
+    'Tailwind CSS': SiTailwindcss,
+    'JavaScript': SiJavascript,
+    
+    // Backend & Programming
+    'Node.js': SiNodedotjs,
+    'Python': SiPython, // Primary language from profile
+    'Go': SiGo, // Secondary language from profile
+    'Java': SiJavascript,
+    'PHP': SiPhp,
+    'Ruby': SiRuby,
+    
+    // Databases & Storage
+    'PostgreSQL': SiPostgresql, // Core database from profile
+    'MongoDB': SiMongodb, // NoSQL expertise
+    'MySQL': SiMysql,
+    'Redis': SiRedis, // Caching expertise
+    'Elasticsearch': SiElasticsearch,
+    'Snowflake': CogIcon,
+    
+    // Mobile Development
+    'React Native': SiReactNative,
+    'Flutter': SiFlutter,
+    'Swift': SiSwift,
+    'Kotlin': SiKotlin,
+    'Xamarin': CogIcon,
+    'Ionic': SiIonic,
+    
+    // Cloud Platforms (Core expertise from profile)
+    'AWS': SiAmazon, // Solutions Architect Associate
+    'Azure': CloudArrowUpIcon, // Microsoft Azure from profile
+    'Google Cloud': SiGooglecloud, // GCP from profile
+    'DigitalOcean': SiDigitalocean,
+    'Heroku': SiHeroku,
+    'Vercel': SiVercel,
+    
+    // DevOps & Infrastructure (Major focus area)
+    'Docker': SiDocker, // Container expertise
+    'Kubernetes': SiKubernetes, // K8s specialization
+    'Terraform': SiTerraform, // Infrastructure as Code
+    'Ansible': CogIcon, // Configuration management from profile
+    'Jenkins': CogIcon, // CI/CD from profile
+    'GitHub Actions': CogIcon, // Automation workflows
+    'ArgoCD': CogIcon, // GitOps implementation
+    'Flux': CogIcon, // GitOps implementation
+    'Prometheus': CogIcon, // Monitoring from profile
+    'Grafana': CogIcon, // Visualization from profile
+    
+    // Security & DevSecOps
+    'AWS Security': SiAmazon,
+    'Azure Security': CloudArrowUpIcon,
+    'Docker Security': SiDocker,
+    'Kubernetes Security': SiKubernetes,
+    'Terraform Security': SiTerraform,
+    'Security Scanning': ShieldCheckIcon
   }
 
   const containerVariants = {
@@ -135,10 +231,10 @@ export default function ServicesPage() {
       <section className="py-16 lg:py-20 bg-slate-50/60 backdrop-blur-sm mb-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
@@ -373,7 +469,7 @@ export default function ServicesPage() {
                 'mobile': DevicePhoneMobileIcon,
                 'cloud': CloudArrowUpIcon,
                 'databases': ComputerDesktopIcon,
-                'devsecops': ShieldCheckIcon
+                'DevSecOps': ShieldCheckIcon
               }
               
               const CategoryIcon = categoryIcons[category as keyof typeof categoryIcons] || CogIcon
@@ -406,23 +502,29 @@ export default function ServicesPage() {
 
                     {/* Tech Grid */}
                     <div className="grid grid-cols-2 gap-3">
-                      {techList.slice(0, 6).map((tech, techIndex) => (
-                        <motion.div
-                          key={tech}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: (index * 0.1) + (techIndex * 0.05), duration: 0.3 }}
-                          viewport={{ once: true }}
-                          className="group/tech relative"
-                        >
-                          <div className="flex items-center p-3 bg-slate-50 rounded-lg border border-slate-100 transition-all duration-200 group-hover/tech:bg-slate-100 group-hover/tech:border-slate-200">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
-                            <span className="text-sm font-medium text-slate-700 truncate">
-                              {tech}
-                            </span>
-                          </div>
-                        </motion.div>
-                      ))}
+                      {techList.slice(0, 6).map((tech, techIndex) => {
+                        const TechIcon = techIconMap[tech] || CogIcon
+                        
+                        return (
+                          <motion.div
+                            key={tech}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: (index * 0.1) + (techIndex * 0.05), duration: 0.3 }}
+                            viewport={{ once: true }}
+                            className="group/tech relative"
+                          >
+                            <div className="flex items-center p-3 bg-slate-50 rounded-lg border border-slate-100 transition-all duration-200 group-hover/tech:bg-slate-100 group-hover/tech:border-slate-200">
+                              <div className="flex items-center justify-center w-6 h-6 mr-3 flex-shrink-0">
+                                <TechIcon className="w-4 h-4 text-slate-600 group-hover/tech:text-blue-600 transition-colors duration-200" />
+                              </div>
+                              <span className="text-sm font-medium text-slate-700 truncate">
+                                {tech}
+                              </span>
+                            </div>
+                          </motion.div>
+                        )
+                      })}
                     </div>
 
                     {/* More Technologies Indicator */}
