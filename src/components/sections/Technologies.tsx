@@ -3,33 +3,34 @@
 import { motion } from 'framer-motion'
 import { FaRaspberryPi } from 'react-icons/fa'
 import {
-  SiAmazon,
-  SiAngular,
-  SiDocker,
-  SiDotnet,
-  SiElasticsearch,
-  SiFirebase,
-  SiFlutter,
-  SiGooglecloud,
-  SiGraphql,
-  SiIcloud,
-  SiIonic,
-  SiJavascript,
-  SiKotlin,
-  SiKubernetes,
-  SiMongodb,
-  SiMysql,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiPostgresql,
-  SiPython,
-  SiReact,
-  SiReact as SiReactNative,
-  SiRedis,
-  SiSwift,
-  SiTailwindcss,
-  SiTypescript,
-  SiVuedotjs
+    SiAmazon,
+    SiAngular,
+    SiDocker,
+    SiDotnet,
+    SiElasticsearch,
+    SiFirebase,
+    SiFlutter,
+    SiGooglecloud,
+    SiGraphql,
+    SiIcloud,
+    SiIonic,
+    SiJavascript,
+    SiKotlin,
+    SiKubernetes,
+    SiMongodb,
+    SiMysql,
+    SiNextdotjs,
+    SiNodedotjs,
+    SiPostgresql,
+    SiPython,
+    SiReact,
+    SiReact as SiReactNative,
+    SiRedis,
+    SiSwift,
+    SiTailwindcss,
+    SiTerraform,
+    SiTypescript,
+    SiVuedotjs
 } from 'react-icons/si'
 
 const technologies = {
@@ -49,13 +50,21 @@ const technologies = {
     { name: 'GraphQL', description: 'API query language', color: 'text-pink-600 bg-pink-50', icon: SiGraphql },
     { name: 'REST APIs', description: 'Web service architecture', color: 'text-indigo-600 bg-indigo-50', icon: FaRaspberryPi }
   ],
+  'DevSecOps & Security': [
+    { name: 'AWS Security', description: 'Cloud security services', color: 'text-orange-600 bg-orange-50', icon: SiAmazon },
+    { name: 'Azure Security', description: 'Microsoft security', color: 'text-blue-600 bg-blue-50', icon: SiIcloud },
+    { name: 'Docker Security', description: 'Container security', color: 'text-blue-600 bg-blue-50', icon: SiDocker },
+    { name: 'Kubernetes Security', description: 'K8s security', color: 'text-purple-600 bg-purple-50', icon: SiKubernetes },
+    { name: 'Security Scanning', description: 'Vulnerability assessment', color: 'text-red-600 bg-red-50', icon: SiAmazon },
+    { name: 'CI/CD Security', description: 'Secure pipelines', color: 'text-green-600 bg-green-50', icon: SiKubernetes }
+  ],
   'Cloud & DevOps': [
     { name: 'AWS', description: 'Amazon Web Services', color: 'text-orange-600 bg-orange-50', icon: SiAmazon },
     { name: 'Azure', description: 'Microsoft Cloud', color: 'text-blue-600 bg-blue-50', icon: SiIcloud },
     { name: 'Google Cloud', description: 'GCP services', color: 'text-red-600 bg-red-50', icon: SiGooglecloud },
     { name: 'Docker', description: 'Containerization', color: 'text-blue-600 bg-blue-50', icon: SiDocker },
     { name: 'Kubernetes', description: 'Container orchestration', color: 'text-purple-600 bg-purple-50', icon: SiKubernetes },
-    { name: 'CI/CD', description: 'Automated pipelines', color: 'text-green-600 bg-green-50', icon: SiKubernetes }
+    { name: 'Terraform', description: 'Infrastructure as code', color: 'text-green-600 bg-green-50', icon: SiTerraform }
   ],
   'Mobile': [
     { name: 'React Native', description: 'Cross-platform apps', color: 'text-blue-600 bg-blue-50', icon: SiReactNative },

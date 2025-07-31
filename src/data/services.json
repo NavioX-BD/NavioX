@@ -1,0 +1,285 @@
+{
+  "serviceCategories": [
+    {
+      "id": "web-development",
+      "name": "Web Development",
+      "description": "Custom web applications and digital solutions",
+      "icon": "CodeBracketIcon",
+      "color": "blue",
+      "features": [
+        "Custom Web Applications",
+        "E-commerce Solutions",
+        "Progressive Web Apps",
+        "Content Management Systems"
+      ],
+      "technologies": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "MongoDB"
+      ],
+      "process": [
+        "Requirements Analysis",
+        "UI/UX Design",
+        "Development",
+        "Testing & QA",
+        "Deployment",
+        "Maintenance"
+      ]
+    },
+    {
+      "id": "mobile-apps",
+      "name": "Mobile Apps",
+      "description": "Native and cross-platform mobile applications",
+      "icon": "DevicePhoneMobileIcon",
+      "color": "green",
+      "features": [
+        "iOS Development",
+        "Android Development",
+        "Cross-platform Apps",
+        "App Store Optimization"
+      ],
+      "technologies": [
+        "React Native",
+        "Flutter",
+        "Swift",
+        "Kotlin",
+        "Firebase",
+        "AWS Amplify"
+      ],
+      "process": [
+        "App Strategy",
+        "Design & Prototyping",
+        "Development",
+        "Testing",
+        "App Store Submission",
+        "Post-launch Support"
+      ]
+    },
+    {
+      "id": "devsecops",
+      "name": "DevSecOps",
+      "description": "Security-first DevOps with automated security integration",
+      "icon": "ShieldCheckIcon",
+      "color": "emerald",
+      "features": [
+        "Security Automation",
+        "CI/CD Security",
+        "Infrastructure Security",
+        "Compliance & Governance"
+      ],
+      "technologies": [
+        "AWS Security",
+        "Azure Security",
+        "Docker Security",
+        "Kubernetes Security",
+        "Terraform Security",
+        "Security Scanning"
+      ],
+      "process": [
+        "Security Assessment",
+        "DevSecOps Implementation",
+        "Security Automation",
+        "Compliance Setup",
+        "Security Monitoring",
+        "Continuous Security"
+      ]
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud Solutions",
+      "description": "Scalable cloud infrastructure and DevOps",
+      "icon": "CloudArrowUpIcon",
+      "color": "purple",
+      "features": [
+        "Cloud Migration",
+        "DevOps & CI/CD",
+        "Microservices Architecture",
+        "Serverless Solutions"
+      ],
+      "technologies": [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "Docker",
+        "Kubernetes",
+        "Terraform"
+      ],
+      "process": [
+        "Infrastructure Assessment",
+        "Migration Planning",
+        "Implementation",
+        "Monitoring Setup",
+        "Optimization",
+        "Ongoing Management"
+      ]
+    },
+    {
+      "id": "strategy",
+      "name": "Digital Strategy",
+      "description": "Technology consulting and digital transformation",
+      "icon": "CogIcon",
+      "color": "orange",
+      "features": [
+        "Technology Consulting",
+        "Digital Transformation",
+        "Process Automation",
+        "Legacy Modernization"
+      ],
+      "technologies": [
+        "Business Analysis",
+        "Technology Assessment",
+        "Strategic Planning",
+        "Implementation Roadmap"
+      ],
+      "process": [
+        "Current State Analysis",
+        "Gap Assessment",
+        "Strategy Development",
+        "Implementation Planning",
+        "Change Management",
+        "Success Monitoring"
+      ]
+    },
+    {
+      "id": "api",
+      "name": "API Development",
+      "description": "Backend development and system integrations",
+      "icon": "ComputerDesktopIcon",
+      "color": "indigo",
+      "features": [
+        "RESTful APIs",
+        "GraphQL Services",
+        "Third-party Integrations",
+        "API Documentation"
+      ],
+      "technologies": [
+        "Node.js",
+        "Python",
+        "Java",
+        "GraphQL",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "process": [
+        "API Design",
+        "Development",
+        "Testing",
+        "Documentation",
+        "Deployment",
+        "Monitoring"
+      ]
+    },
+    {
+      "id": "data-analytics",
+      "name": "Data & Analytics",
+      "description": "Data engineering and business intelligence",
+      "icon": "ChartBarIcon",
+      "color": "teal",
+      "features": [
+        "Data Engineering",
+        "Business Intelligence",
+        "Machine Learning",
+        "Real-time Analytics"
+      ],
+      "technologies": [
+        "Python",
+        "Apache Spark",
+        "Tableau",
+        "Power BI",
+        "TensorFlow",
+        "Snowflake"
+      ],
+      "process": [
+        "Data Assessment",
+        "Architecture Design",
+        "Implementation",
+        "Testing",
+        "Deployment",
+        "Training & Support"
+      ]
+    }
+  ],
+  "serviceStats": {
+    "totalProjects": "150+",
+    "technologies": "25+",
+    "clientSatisfaction": "98%",
+    "averageDeliveryTime": "2-3 months"
+  },
+  "pricingTiers": [
+    {
+      "name": "Starter",
+      "price": "From $5,000",
+      "description": "Perfect for small projects and MVPs",
+      "features": [
+        "Basic functionality",
+        "Standard design",
+        "Basic testing",
+        "3 months support"
+      ]
+    },
+    {
+      "name": "Professional",
+      "price": "From $15,000",
+      "description": "Ideal for growing businesses",
+      "features": [
+        "Advanced features",
+        "Custom design",
+        "Comprehensive testing",
+        "6 months support",
+        "Performance optimization"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "price": "Custom",
+      "description": "For large-scale, complex solutions",
+      "features": [
+        "Full customization",
+        "Advanced architecture",
+        "Security audit",
+        "1 year support",
+        "Scalability planning",
+        "Dedicated team"
+      ]
+    }
+  ],
+  "technologies": {
+    "devsecops": [
+      "AWS Security",
+      "Azure Security",
+      "Docker Security",
+      "Kubernetes Security",
+      "Terraform Security",
+      "Security Scanning"
+    ],
+    "cloud": [
+      "AWS",
+      "Azure",
+      "Google Cloud",
+      "DigitalOcean",
+      "Heroku",
+      "Vercel"
+    ],
+    "frontend": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Vue.js",
+      "Angular",
+      "Tailwind CSS"
+    ],
+    "backend": ["Node.js", "Python", "Java", "Go", "PHP", "Ruby"],
+    "databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "Redis",
+      "Elasticsearch",
+      "Snowflake"
+    ],
+    "mobile": ["React Native", "Flutter", "Swift", "Kotlin", "Xamarin", "Ionic"]
+  }
+}

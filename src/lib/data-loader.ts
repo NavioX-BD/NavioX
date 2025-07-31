@@ -6,6 +6,7 @@ import contactData from "../data/contact.json";
 import leadershipData from "../data/leadership.json";
 import missionData from "../data/mission.json";
 import projectsData from "../data/projects.json";
+import servicesData from "../data/services.json";
 import storyData from "../data/story.json";
 import teamData from "../data/team.json";
 
@@ -18,6 +19,7 @@ export const loadAboutData = () => aboutData;
 export const loadContactData = () => contactData;
 export const loadLeadershipData = () => leadershipData;
 export const loadMissionData = () => missionData;
+export const loadServicesData = () => servicesData;
 export const loadStoryData = () => storyData;
 
 // Type definitions for better TypeScript support

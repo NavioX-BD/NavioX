@@ -82,6 +82,7 @@ const Header = () => {
       href: '/services',
       submenu: [
         { name: 'All Services', href: '/services', description: 'Complete service portfolio' },
+        { name: 'DevSecOps', href: '/services/devsecops', description: 'Security-first DevOps' },
         { name: 'Web Development', href: '/services/web-development', description: 'Custom web applications' },
         { name: 'Mobile Apps', href: '/services/mobile-apps', description: 'iOS and Android development' },
         { name: 'Cloud Solutions', href: '/services/cloud', description: 'Scalable cloud infrastructure' },
