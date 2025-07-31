@@ -80,7 +80,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-3xl lg:text-5xl font-bold text-white mb-6 tracking-tight"
+              className="text-3xl font-bold text-white mb-6 tracking-tight sm:text-4xl"
             >
               Software Engineering
               <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -162,7 +162,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
               Our Services
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -261,7 +261,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-                         <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                         <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
                Our Process
              </h2>
              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -308,7 +308,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-                         <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                         <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
                Technology Stack
              </h2>
              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -361,7 +361,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-                         <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                         <h2 className="text-2xl font-bold text-slate-900 mb-6 sm:text-3xl">
                Pricing Plans
              </h2>
              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -429,7 +429,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-                         <h2 className="text-3xl font-bold text-white mb-6">
+                         <h2 className="text-2xl font-bold text-white mb-6 sm:text-3xl">
                Ready to Build Something Amazing?
              </h2>
              <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
