@@ -219,7 +219,7 @@ export default function DigitalStrategyPage() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 gap-8"
           >
-            {strategyService.services.map((service, index) => (
+            {strategyService.services.map((service) => (
               <motion.div
                 key={service.title}
                 variants={itemVariants}

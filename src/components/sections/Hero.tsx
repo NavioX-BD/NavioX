@@ -31,7 +31,7 @@ const Hero = () => {
       setCurrentSlide((prev) => (prev + 1) % heroMessages.length)
     }, 4000)
     return () => clearInterval(timer)
-  }, [])
+  }, [heroMessages.length])
 
   return (
     <section className="relative overflow-hidden pt-16 pb-20">

@@ -412,7 +412,7 @@ export default function IndustryNewsPage() {
               Stay Informed with Industry Updates
             </h2>
             <p className="text-lg text-orange-100 max-w-3xl mx-auto mb-8">
-              Don&apos;t miss out on the latest technology trends and industry developments. Subscribe to our newsletter for weekly updates.
+              Don't miss out on the latest technology trends and industry developments. Subscribe to our newsletter for weekly updates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -409,7 +409,7 @@ export default function EnterpriseProjectsPage() {
               Ready to Scale Your Enterprise?
             </h2>
             <p className="text-lg text-slate-100 max-w-3xl mx-auto mb-8">
-              Let&apos;s build an enterprise solution that scales with your organization and drives digital transformation. From planning to deployment and beyond.
+              Let's build an enterprise solution that scales with your organization and drives digital transformation. From planning to deployment and beyond.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

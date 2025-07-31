@@ -372,7 +372,7 @@ export default function CaseStudiesPage() {
                   {/* Testimonial */}
                   <div className="bg-indigo-50 rounded-xl p-6">
                     <blockquote className="text-indigo-900 italic mb-4">
-                      "{caseStudy.testimonial.quote}"
+                      &quot;{caseStudy.testimonial.quote}&quot;
                     </blockquote>
                     <div className="flex items-center">
                       <div>
@@ -462,7 +462,7 @@ export default function CaseStudiesPage() {
               Ready to Create Your Success Story?
             </h2>
             <p className="text-lg text-indigo-100 max-w-3xl mx-auto mb-8">
-              Let&apos;s work together to build a solution that delivers measurable business impact. Your project could be our next featured case study.
+              Let's work together to build a solution that delivers measurable business impact. Your project could be our next featured case study.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

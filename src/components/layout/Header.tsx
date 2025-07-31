@@ -438,7 +438,7 @@ const Header = () => {
                             initial="hidden"
                             animate="visible"
                           >
-                            {item.submenu?.map((subItem, subIndex) => (
+                            {item.submenu?.map((subItem) => (
                               <motion.div
                                 key={subItem.name}
                                 variants={dropdownItemVariants}
@@ -683,7 +683,7 @@ const Header = () => {
                                         key={subItem.name}
                                         href={subItem.href}
                                         className="block px-10 py-4 text-sm text-gray-700 hover:text-blue-600 hover:bg-white active:bg-gray-50 transition-colors duration-200 touch-manipulation"
-                                        onClick={(e) => {
+                                        onClick={() => {
                                           // Close mobile menu and dropdown when navigating
                                           setMobileMenuOpen(false)
                                           setActiveDropdown(null)
