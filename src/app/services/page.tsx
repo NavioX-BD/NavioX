@@ -3,19 +3,17 @@
 import { loadServicesData } from '@/lib/data-loader'
 import {
     ArrowRightIcon,
+    ChartBarIcon,
     CheckIcon,
-    CodeBracketIcon,
-    DevicePhoneMobileIcon,
     CloudArrowUpIcon,
+    CodeBracketIcon,
     CogIcon,
     ComputerDesktopIcon,
-    ShieldCheckIcon,
-    ChartBarIcon,
-    SparklesIcon,
+    DevicePhoneMobileIcon,
     RocketLaunchIcon,
-    UserGroupIcon,
-    ClockIcon,
-    StarIcon
+    ShieldCheckIcon,
+    SparklesIcon,
+    UserGroupIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -82,7 +80,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-5xl lg:text-7xl font-bold text-white mb-6 tracking-tight"
+              className="text-3xl lg:text-5xl font-bold text-white mb-6 tracking-tight"
             >
               Software Engineering
               <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -94,7 +92,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-xl lg:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+              className="text-lg text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
               We build secure, scalable, and innovative software solutions that drive business transformation. 
               From concept to deployment, we deliver excellence at every step.
@@ -144,7 +142,7 @@ export default function ServicesPage() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">{value}</div>
+                <div className="text-2xl lg:text-3xl font-bold text-slate-900 mb-2">{value}</div>
                 <div className="text-sm font-medium text-slate-600 capitalize">
                   {key.replace(/([A-Z])/g, ' $1').trim()}
                 </div>
@@ -164,10 +162,10 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">
               Our Services
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Comprehensive software engineering solutions designed to accelerate your digital transformation
             </p>
           </motion.div>
@@ -197,7 +195,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-2xl font-bold text-white mb-1">{service.name}</h3>
+                      <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>
                       <p className="text-white/90 text-sm">{service.description}</p>
                     </div>
                   </div>
@@ -263,12 +261,12 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              Our Process
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              A proven methodology that ensures successful delivery and exceptional results
-            </p>
+                         <h2 className="text-3xl font-bold text-slate-900 mb-6">
+               Our Process
+             </h2>
+             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+               A proven methodology that ensures successful delivery and exceptional results
+             </p>
           </motion.div>
 
           <motion.div
@@ -292,7 +290,7 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <step.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{step.title}</h3>
+                                 <h3 className="text-lg font-bold text-slate-900 mb-3">{step.title}</h3>
                 <p className="text-slate-600">{step.description}</p>
               </motion.div>
             ))}
@@ -310,12 +308,12 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              Technology Stack
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies to build robust, scalable solutions
-            </p>
+                         <h2 className="text-3xl font-bold text-slate-900 mb-6">
+               Technology Stack
+             </h2>
+             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+               We leverage cutting-edge technologies to build robust, scalable solutions
+             </p>
           </motion.div>
 
           <motion.div
@@ -331,9 +329,9 @@ export default function ServicesPage() {
                 variants={itemVariants}
                 className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8"
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-6 capitalize">
-                  {category.replace('-', ' ')}
-                </h3>
+                                 <h3 className="text-lg font-bold text-slate-900 mb-6 capitalize">
+                    {category.replace('-', ' ')}
+                  </h3>
                 <div className="space-y-3">
                   {techList.slice(0, 8).map((tech) => (
                     <div key={tech} className="flex items-center text-slate-600">
@@ -363,12 +361,12 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              Pricing Plans
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Flexible pricing options designed to meet your project requirements and budget
-            </p>
+                         <h2 className="text-3xl font-bold text-slate-900 mb-6">
+               Pricing Plans
+             </h2>
+             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+               Flexible pricing options designed to meet your project requirements and budget
+             </p>
           </motion.div>
 
           <motion.div
@@ -393,8 +391,8 @@ export default function ServicesPage() {
                   </div>
                 )}
                 
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">{tier.name}</h3>
-                <div className="text-3xl font-bold text-slate-900 mb-1">{tier.price}</div>
+                                 <h3 className="text-xl font-bold text-slate-900 mb-2">{tier.name}</h3>
+                 <div className="text-2xl font-bold text-slate-900 mb-1">{tier.price}</div>
                 <p className="text-slate-600 mb-8">{tier.description}</p>
                 
                 <ul className="space-y-4 mb-8">
@@ -431,12 +429,12 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Build Something Amazing?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss your project and see how we can help you achieve your digital goals with our expert team.
-            </p>
+                         <h2 className="text-3xl font-bold text-white mb-6">
+               Ready to Build Something Amazing?
+             </h2>
+             <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+               Let&apos;s discuss your project and see how we can help you achieve your digital goals with our expert team.
+             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
