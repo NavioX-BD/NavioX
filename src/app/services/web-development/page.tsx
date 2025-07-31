@@ -1,374 +1,449 @@
 'use client'
 
-import { loadServicesData } from '@/lib/data-loader'
 import {
+    ArrowRightIcon,
     CheckIcon,
-    ClockIcon,
-    CodeBracketIcon,
-    CogIcon,
-    RocketLaunchIcon,
-    ShieldCheckIcon,
-    UserGroupIcon
+    CodeBracketIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import {
+    SiAmazon,
+    SiDocker,
+    SiMongodb,
+    SiNextdotjs,
+    SiNodedotjs,
+    SiPostgresql,
+    SiPython,
+    SiReact,
+    SiRedis,
+    SiTailwindcss,
+    SiTypescript,
+    SiVercel
+} from 'react-icons/si'
+
+// Process descriptions for Web Development
+const getProcessDescription = (step: string): string => {
+  const descriptions: { [key: string]: string } = {
+    'Discovery & Requirements Analysis': 'Understand your business goals, user needs, and technical requirements to create a comprehensive project plan.',
+    'UI/UX Design & Prototyping': 'Create intuitive user interfaces, wireframes, and interactive prototypes for optimal user experience.',
+    'Frontend Development': 'Build responsive, modern web applications using the latest technologies and best practices.',
+    'Backend Development': 'Develop robust server-side logic, APIs, and database architecture for scalable applications.',
+    'Testing & Quality Assurance': 'Comprehensive testing including unit tests, integration tests, and user acceptance testing.',
+    'Deployment & Launch': 'Deploy to production with monitoring, performance optimization, and launch support.',
+    'Post-Launch Support': 'Provide ongoing maintenance, updates, and support to ensure optimal performance.',
+    'Continuous Improvement': 'Regular updates, feature enhancements, and performance optimizations based on user feedback.'
+  }
+  return descriptions[step] || 'Professional web development process step.'
+}
+
+// Technology icon mapping for Web Development
+const techIconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
+  'React': SiReact,
+  'Next.js': SiNextdotjs,
+  'TypeScript': SiTypescript,
+  'Node.js': SiNodedotjs,
+  'Python': SiPython,
+  'PostgreSQL': SiPostgresql,
+  'MongoDB': SiMongodb,
+  'Redis': SiRedis,
+  'Docker': SiDocker,
+  'AWS': SiAmazon,
+  'Vercel': SiVercel,
+  'Tailwind CSS': SiTailwindcss
+}
+
+// Web Development service data
+const webDevService = {
+  id: 'web-development',
+  name: 'Web Development',
+  description: 'Custom web applications and digital solutions built with modern technologies and best practices',
+  features: [
+    'Custom Web Applications',
+    'E-commerce Solutions',
+    'Progressive Web Apps (PWA)',
+    'Content Management Systems',
+    'API Integration & Development',
+    'Database Design & Optimization',
+    'Performance Optimization',
+    'SEO & Analytics Implementation'
+  ],
+  webSolutions: [
+    {
+      type: 'E-commerce Platforms',
+      description: 'Full-featured online stores with payment integration and inventory management',
+      features: ['Shopping cart and checkout', 'Payment gateway integration', 'Inventory management', 'Order tracking and management', 'Customer accounts and profiles', 'Admin dashboard and analytics']
+    },
+    {
+      type: 'Business Applications',
+      description: 'Custom web applications tailored for business operations and workflows',
+      features: ['User authentication and authorization', 'Real-time data synchronization', 'Advanced search and filtering', 'Data visualization and reporting', 'Workflow automation', 'Third-party integrations']
+    },
+    {
+      type: 'Content Management Systems',
+      description: 'Flexible CMS solutions for content-driven websites and digital publishing',
+      features: ['Intuitive content editor', 'Multi-user permissions', 'SEO optimization tools', 'Media management', 'Custom content types', 'API-driven architecture']
+    },
+    {
+      type: 'Progressive Web Apps',
+      description: 'App-like experiences with web technologies for enhanced user engagement',
+      features: ['Offline functionality', 'Push notifications', 'App-like interface', 'Fast loading with caching', 'Cross-platform compatibility', 'Easy installation']
+    }
+  ],
+  technologies: [
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Node.js',
+    'Python',
+    'PostgreSQL',
+    'MongoDB',
+    'Redis',
+    'Docker',
+    'AWS',
+    'Vercel',
+    'Tailwind CSS'
+  ],
+  process: [
+    'Discovery & Requirements Analysis',
+    'UI/UX Design & Prototyping',
+    'Frontend Development',
+    'Backend API Development',
+    'Database Design & Integration',
+    'Testing & Quality Assurance',
+    'Deployment & Launch',
+    'Maintenance & Optimization'
+  ]
+}
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
+}
 
 export default function WebDevelopmentPage() {
-  const servicesData = loadServicesData()
-  const webDevelopment = servicesData.serviceCategories.find(service => service.id === 'web-development')
-
-  if (!webDevelopment) {
-    return <div>Service not found</div>
-  }
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  }
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  }
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <motion.section
-        className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 mb-20">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-20">
           <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <motion.div
-              variants={itemVariants}
-              className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8"
             >
-              <CodeBracketIcon className="h-5 w-5 mr-2" />
-              <span className="text-blue-100">Web Development</span>
+              <CodeBracketIcon className="h-4 w-4 text-blue-300 mr-2" />
+              <span className="text-sm font-medium text-blue-100">Web Innovation</span>
             </motion.div>
+            
             <motion.h1
-              variants={itemVariants}
-              className="text-4xl md:text-5xl font-bold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="text-3xl font-bold text-white mb-6 tracking-tight sm:text-4xl"
             >
-              Custom Web Development
+              Web Development &
+              <span className="block bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">
+                Digital Solutions
+              </span>
             </motion.h1>
+            
             <motion.p
-              variants={itemVariants}
-              className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-lg text-blue-100 max-w-3xl mx-auto mb-10"
             >
-              {webDevelopment.description}
+              Build powerful web applications with modern technologies. From responsive websites to complex 
+              web platforms, we deliver solutions that drive business growth.
             </motion.p>
+
             <motion.div
-              variants={itemVariants}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-50 transition-colors shadow-lg"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                Start Your Project
+                Start Your Web Project
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                href="/projects"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-colors"
+                href="#web-solutions"
+                className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-200 backdrop-blur-sm border border-white/20"
               >
-                View Our Work
+                Explore Solutions
               </Link>
             </motion.div>
           </motion.div>
         </div>
-      </motion.section>
+      </section>
 
-      {/* Main Content */}
-      <motion.section
-        className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 py-16"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid lg:grid-cols-3 gap-12"
-        >
-          {/* Left Column - Process & Info */}
-          <motion.div variants={itemVariants} className="lg:col-span-1">
-            <div className="space-y-8">
-              {/* Development Process */}
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <CogIcon className="h-6 w-6 mr-3 text-blue-600" />
-                  Development Process
-                </h2>
-                <div className="space-y-4">
-                  {webDevelopment.process.map((step, index) => (
-                    <motion.div
-                      key={step}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="bg-white rounded-xl shadow-sm border border-gray-200 p-4"
-                    >
-                      <div className="flex items-start">
-                        <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                          <span className="text-blue-600 font-semibold text-sm">{index + 1}</span>
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-gray-900 mb-1">{step}</h3>
-                          <p className="text-sm text-gray-600">
-                            {getProcessDescription(step)}
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Key Benefits */}
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <ShieldCheckIcon className="h-6 w-6 mr-3 text-blue-600" />
-                  Key Benefits
-                </h2>
-                <div className="space-y-3">
-                  {[
-                    "Scalable Architecture",
-                    "Performance Optimized",
-                    "SEO Friendly",
-                    "Mobile Responsive",
-                    "Security First",
-                    "Easy Maintenance"
-                  ].map((benefit) => (
-                    <div key={benefit} className="flex items-center text-sm">
-                      <CheckIcon className="h-4 w-4 text-green-500 mr-3" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Quick Links */}
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <UserGroupIcon className="h-6 w-6 mr-3 text-blue-600" />
-                  Get Started
-                </h2>
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
-                  <h3 className="font-semibold text-gray-900 mb-3">Ready to Build?</h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Let&rsquo;s discuss your web development project and create something amazing together.
-                  </p>
-                  <div className="space-y-2">
-                    <Link
-                      href="/contact"
-                      className="block text-blue-600 hover:text-blue-700 font-medium text-sm"
-                    >
-                      Start Your Project →
-                    </Link>
-                    <Link
-                      href="/projects"
-                      className="block text-blue-600 hover:text-blue-700 font-medium text-sm"
-                    >
-                      View Web Projects →
-                    </Link>
-                    <Link
-                      href="/services"
-                      className="block text-blue-600 hover:text-blue-700 font-medium text-sm"
-                    >
-                      All Services →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right Column - Service Details */}
-          <motion.div variants={itemVariants} className="lg:col-span-2">
-            <div className="space-y-8">
-              {/* Service Overview */}
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Service Overview</h2>
-                <p className="text-gray-600 mb-6">
-                  We specialize in creating custom web applications that drive business growth. Our web development services cover everything from simple landing pages to complex enterprise applications.
-                </p>
-              </div>
-
-              {/* Features Grid */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">What We Build</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {webDevelopment.features.map((feature) => (
-                    <motion.div
-                      key={feature}
-                      whileHover={{ y: -5 }}
-                      className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
-                    >
-                      <div className="flex items-center mb-3">
-                        <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                          <CodeBracketIcon className="h-5 w-5 text-blue-600" />
-                        </div>
-                        <h4 className="font-semibold text-gray-900">{feature}</h4>
-                      </div>
-                      <p className="text-sm text-gray-600">
-                        {getFeatureDescription(feature)}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Technologies */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Technologies We Use</h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {webDevelopment.technologies.map((tech) => (
-                    <div
-                      key={tech}
-                      className="bg-gray-50 rounded-lg px-4 py-3 text-center"
-                    >
-                      <span className="text-sm font-medium text-gray-700">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Project Examples */}
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Project Examples</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {[
-                    {
-                      title: "E-commerce Platforms",
-                      description: "Full-featured online stores with payment processing, inventory management, and analytics.",
-                      icon: RocketLaunchIcon
-                    },
-                    {
-                      title: "Business Applications",
-                      description: "Custom CRM, ERP, and workflow management systems tailored to your business needs.",
-                      icon: UserGroupIcon
-                    },
-                    {
-                      title: "Progressive Web Apps",
-                      description: "Modern web applications that work like native apps with offline capabilities.",
-                      icon: ClockIcon
-                    },
-                    {
-                      title: "Content Management",
-                      description: "Custom CMS solutions for easy content management and website updates.",
-                      icon: CogIcon
-                    }
-                  ].map((example) => (
-                    <motion.div
-                      key={example.title}
-                      whileHover={{ y: -5 }}
-                      className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
-                    >
-                      <div className="flex items-center mb-3">
-                        <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                          <example.icon className="h-5 w-5 text-blue-600" />
-                        </div>
-                        <h4 className="font-semibold text-gray-900">{example.title}</h4>
-                      </div>
-                      <p className="text-sm text-gray-600">{example.description}</p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      </motion.section>
-
-      {/* CTA Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700"
-      >
-        <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+      {/* Stats Section */}
+      <section className="py-16 bg-white/70 backdrop-blur-sm mb-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center"
+          >
+            <motion.div variants={itemVariants}>
+              <div className="text-3xl font-bold text-slate-900 mb-2">150+</div>
+              <div className="text-sm font-medium text-slate-600">Web Projects Delivered</div>
+            </motion.div>
+            <motion.div variants={itemVariants}>
+              <div className="text-3xl font-bold text-slate-900 mb-2">99.9%</div>
+              <div className="text-sm font-medium text-slate-600">Uptime Performance</div>
+            </motion.div>
+            <motion.div variants={itemVariants}>
+              <div className="text-3xl font-bold text-slate-900 mb-2">&lt;2s</div>
+              <div className="text-sm font-medium text-slate-600">Average Load Time</div>
+            </motion.div>
+            <motion.div variants={itemVariants}>
+              <div className="text-3xl font-bold text-slate-900 mb-2">100%</div>
+              <div className="text-sm font-medium text-slate-600">Mobile Responsive</div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Web Solutions Section */}
+      <section id="web-solutions" className="py-20 bg-slate-50/60 backdrop-blur-sm mb-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Web Solutions We Build
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              From simple websites to complex web applications, we deliver solutions tailored to your specific business needs.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-8"
+          >
+            {webDevService.webSolutions.map((solution) => (
+              <motion.div
+                key={solution.type}
+                variants={itemVariants}
+                className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 hover:shadow-lg transition-all duration-300"
+              >
+                <h3 className="text-xl font-bold text-slate-900 mb-4">
+                  {solution.type}
+                </h3>
+                <p className="text-slate-600 mb-6">
+                  {solution.description}
+                </p>
+                <div className="space-y-3">
+                  {solution.features.map((feature) => (
+                    <div key={feature} className="flex items-start">
+                      <CheckIcon className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-700 text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20 bg-white/70 backdrop-blur-sm mb-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Technologies We Use
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              We leverage modern technologies and frameworks to build robust, scalable, and maintainable web applications.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          >
+            {webDevService.technologies.map((tech) => {
+              const IconComponent = techIconMap[tech] || CodeBracketIcon
+              return (
+                <motion.div
+                  key={tech}
+                  variants={itemVariants}
+                  className="bg-white rounded-xl border border-slate-200 p-6 text-center hover:shadow-lg transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-100 transition-colors duration-300">
+                    <IconComponent className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-slate-900 text-sm">
+                    {tech}
+                  </h3>
+                </motion.div>
+              )
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-slate-50/60 backdrop-blur-sm mb-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Our Development Process
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              A structured approach that ensures quality, efficiency, and successful project delivery from concept to launch.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="relative"
+          >
+            {/* Flow Container */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 gap-y-2">
+              {webDevService.process.map((step, index) => (
+                <motion.div
+                  key={step}
+                  variants={itemVariants}
+                  className="group relative"
+                >
+                  {/* Process Card */}
+                  <div className="bg-white rounded-2xl border border-slate-200 p-8 hover:shadow-lg transition-all duration-300 group-hover:border-blue-200 group-hover:bg-blue-50/30 h-full flex flex-col">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-white font-bold text-lg">{index + 1}</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold text-slate-900 group-hover:text-blue-600 transition-colors duration-300">
+                          {step}
+                        </h3>
+                      </div>
+                    </div>
+                    <div className="text-sm text-slate-600 leading-relaxed flex-1">
+                      {getProcessDescription(step)}
+                    </div>
+                  </div>
+
+                  {/* Flow Arrow */}
+                  {index < webDevService.process.length - 1 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-4 z-10">
+                      <div className="w-8 h-8 bg-white rounded-full border-2 border-slate-200 flex items-center justify-center shadow-sm">
+                        <ArrowRightIcon className="w-4 h-4 text-slate-400" />
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Mobile Flow Arrow */}
+                  {index < webDevService.process.length - 1 && (
+                    <div className="lg:hidden flex justify-center -mt-6 mb-2 z-10 relative">
+                      <div className="w-8 h-8 bg-white rounded-full border-2 border-slate-200 flex items-center justify-center shadow-sm" style={{ boxShadow: '0 2px 8px 0 rgba(0,0,0,0.04)' }}>
+                        <ArrowRightIcon className="w-4 h-4 text-slate-400 rotate-90" />
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+
+
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-600">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Build Your Web Application?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let&rsquo;s discuss your project requirements and create a web solution that drives your business forward.
+            <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-8">
+              Let's create a powerful web solution that drives your business forward. From concept to launch, we'll be with you every step of the way.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-50 transition-colors shadow-lg"
-                >
-                  Start Your Project
-                </Link>
-              </motion.div>
-              
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href="/projects"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-colors"
-                >
-                  View Our Work
-                </Link>
-              </motion.div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-slate-50 transition-all duration-300 shadow-lg"
+              >
+                Start Your Project
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center px-8 py-4 bg-transparent text-white font-semibold rounded-xl border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300"
+              >
+                Explore All Services
+              </Link>
             </div>
           </motion.div>
         </div>
-      </motion.section>
+      </section>
     </div>
   )
 }
-
-// Helper functions for descriptions
-function getProcessDescription(step: string): string {
-  const descriptions: Record<string, string> = {
-    "Requirements Analysis": "We analyze your business needs and technical requirements to create a comprehensive project plan.",
-    "UI/UX Design": "Our designers create intuitive, user-friendly interfaces that enhance user experience.",
-    "Development": "Our developers build your application using modern technologies and best practices.",
-    "Testing & QA": "Rigorous testing ensures your application is bug-free and performs optimally.",
-    "Deployment": "We deploy your application to production with proper monitoring and security.",
-    "Maintenance": "Ongoing support and updates to keep your application running smoothly."
-  }
-  return descriptions[step] || "Professional development step with industry best practices."
-}
-
-function getFeatureDescription(feature: string): string {
-  const descriptions: Record<string, string> = {
-    "Custom Web Applications": "Tailored web applications built specifically for your business needs and workflows.",
-    "E-commerce Solutions": "Complete online store solutions with payment processing, inventory management, and analytics.",
-    "Progressive Web Apps": "Modern web applications that work like native apps with offline capabilities and push notifications.",
-    "Content Management Systems": "Custom CMS solutions that make it easy to manage and update your website content."
-  }
-  return descriptions[feature] || "Professional web development solution tailored to your needs."
-} 

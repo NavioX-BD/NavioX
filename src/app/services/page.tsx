@@ -331,7 +331,7 @@ export default function ServicesPage() {
                           What You Get
                         </h4>
                         <div className="space-y-3">
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {service.features.slice(0, 3).map((feature) => (
                             <div key={feature} className="flex items-start group/item">
                               <div className="flex-shrink-0 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5 mr-3 group-hover/item:bg-green-200 transition-colors duration-200">
                                 <CheckIcon className="h-3 w-3 text-green-600" />
@@ -420,7 +420,7 @@ export default function ServicesPage() {
               { icon: CogIcon, title: "Planning", description: "Strategic roadmap and architecture design" },
               { icon: CodeBracketIcon, title: "Development", description: "Agile development with continuous delivery" },
               { icon: RocketLaunchIcon, title: "Deployment", description: "Seamless launch and ongoing support" }
-            ].map((step, index) => (
+            ].map((step) => (
               <motion.div
                 key={step.title}
                 variants={itemVariants}
@@ -627,7 +627,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="grid md:grid-cols-3 gap-8"
           >
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map((tier) => (
               <motion.div
                 key={tier.name}
                 variants={itemVariants}
