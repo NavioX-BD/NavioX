@@ -122,7 +122,7 @@ export default function TeamPage() {
                   Team Overview
                 </h2>
                 <div className="grid grid-cols-2 gap-4">
-                  {companyStats.map((stat) => (
+                  {companyStats.map((stat, index) => (
                     <motion.div
                       key={stat.label}
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -144,7 +144,7 @@ export default function TeamPage() {
                   Leadership Stats
                 </h2>
                 <div className="space-y-4">
-                  {leadershipStats.map((stat) => (
+                  {leadershipStats.map((stat, index) => (
                     <motion.div
                       key={stat.label}
                       initial={{ opacity: 0, x: -20 }}
