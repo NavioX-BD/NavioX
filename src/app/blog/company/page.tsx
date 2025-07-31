@@ -217,7 +217,7 @@ export default function CompanyUpdatesPage() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-lg text-slate-100 max-w-3xl mx-auto mb-10"
             >
-              Stay connected with NavioX's journey, growth milestones, team achievements, and exciting 
+              Stay connected with NavioX&apos;s journey, growth milestones, team achievements, and exciting 
               developments as we continue to innovate and expand our services.
             </motion.p>
 
@@ -452,7 +452,7 @@ export default function CompanyUpdatesPage() {
               Join Our Growing Journey
             </h2>
             <p className="text-lg text-slate-100 max-w-3xl mx-auto mb-8">
-              Be part of NavioX's exciting growth story. Explore career opportunities or partner with us to build the future of technology.
+              Be part of NavioX&apos;s exciting growth story. Explore career opportunities or partner with us to build the future of technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

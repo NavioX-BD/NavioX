@@ -245,7 +245,7 @@ export default function MobileAppsPage() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 gap-8"
           >
-            {mobileService.platforms.map((platform, index) => (
+            {mobileService.platforms.map((platform) => (
               <motion.div
                 key={platform.name}
                 variants={itemVariants}
@@ -314,7 +314,7 @@ export default function MobileAppsPage() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 gap-8"
           >
-            {mobileService.appTypes.map((appType, index) => (
+            {mobileService.appTypes.map((appType) => (
               <motion.div
                 key={appType.type}
                 variants={itemVariants}

@@ -238,7 +238,7 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             className="grid grid-cols-2 lg:grid-cols-6 gap-8"
           >
-            {Object.entries(projectStats).map(([key, value], index) => (
+            {Object.entries(projectStats).map(([key, value]) => (
               <motion.div
                 key={key}
                 variants={itemVariants}
@@ -281,7 +281,7 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {projectCategories.map((category, index) => (
+            {projectCategories.map((category) => (
               <motion.div
                 key={category.name}
                 variants={itemVariants}

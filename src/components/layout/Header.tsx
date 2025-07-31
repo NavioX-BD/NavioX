@@ -372,7 +372,7 @@ const Header = () => {
           initial="initial"
           animate="animate"
         >
-          {navigation.map((item, index) => {
+          {navigation.map((item) => {
             const active = isActive(item.href)
             const hasSubmenu = 'submenu' in item && item.submenu
             const isDropdownOpen = activeDropdown === item.name
@@ -620,7 +620,7 @@ const Header = () => {
                   initial="closed"
                   animate="open"
                 >
-                  {navigation.map((item, index) => {
+                  {navigation.map((item) => {
                     const active = isActive(item.href)
                     const hasSubmenu = 'submenu' in item && item.submenu
                     const isDropdownOpen = activeDropdown === item.name

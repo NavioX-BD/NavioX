@@ -100,7 +100,7 @@ const CaseStudies = () => {
           className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none"
         >
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {caseStudies.map((study, index) => (
+            {caseStudies.map((study) => (
               <motion.div
                 key={study.id}
                 variants={item}

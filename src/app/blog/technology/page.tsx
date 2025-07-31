@@ -1,12 +1,12 @@
-'use client'
+'apos;use client'apos;
 
 import {
     ArrowRightIcon,
     CalendarDaysIcon,
     CpuChipIcon
-} from '@heroicons/react/24/outline'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+} from 'apos;@heroicons/react/24/outline'apos;
+import { motion } from 'apos;framer-motion'apos;
+import Link from 'apos;next/link'apos;
 
 // Technology blog data
 const technologyData = {
@@ -161,7 +161,7 @@ export default function TechnologyPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-cyan-600 via-blue-700 to-indigo-800 mb-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('apos;data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'apos;)] opacity-20"></div>
         
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-20">
           <motion.div
@@ -299,10 +299,10 @@ export default function TechnologyPage() {
                         </span>
                       )}
                       <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-                        post.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :
-                        post.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :
-                        post.difficulty === 'Advanced' ? 'bg-orange-100 text-orange-600' :
-                        'bg-red-100 text-red-600'
+                        post.difficulty === 'apos;Beginner'apos; ? 'apos;bg-green-100 text-green-600'apos; :
+                        post.difficulty === 'apos;Intermediate'apos; ? 'apos;bg-yellow-100 text-yellow-600'apos; :
+                        post.difficulty === 'apos;Advanced'apos; ? 'apos;bg-orange-100 text-orange-600'apos; :
+                        'apos;bg-red-100 text-red-600'apos;
                       }`}>
                         {post.difficulty}
                       </span>
@@ -386,11 +386,11 @@ export default function TechnologyPage() {
                     {category.category}
                   </h3>
                   <span className={`px-3 py-1 text-sm font-medium rounded-full ${
-                    category.color === 'purple' ? 'bg-purple-100 text-purple-800' :
-                    category.color === 'blue' ? 'bg-blue-100 text-blue-800' :
-                    category.color === 'green' ? 'bg-green-100 text-green-800' :
-                    category.color === 'orange' ? 'bg-orange-100 text-orange-800' :
-                    'bg-red-100 text-red-800'
+                    category.color === 'apos;purple'apos; ? 'apos;bg-purple-100 text-purple-800'apos; :
+                    category.color === 'apos;blue'apos; ? 'apos;bg-blue-100 text-blue-800'apos; :
+                    category.color === 'apos;green'apos; ? 'apos;bg-green-100 text-green-800'apos; :
+                    category.color === 'apos;orange'apos; ? 'apos;bg-orange-100 text-orange-800'apos; :
+                    'apos;bg-red-100 text-red-800'apos;
                   }`}>
                     {category.postCount} posts
                   </span>
@@ -438,7 +438,7 @@ export default function TechnologyPage() {
               Stay Ahead with Technology Insights
             </h2>
             <p className="text-lg text-cyan-100 max-w-3xl mx-auto mb-8">
-              Don't miss out on the latest technology trends and development insights. Subscribe to our newsletter for weekly tech updates.
+              Don'apos;t miss out on the latest technology trends and development insights. Subscribe to our newsletter for weekly tech updates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

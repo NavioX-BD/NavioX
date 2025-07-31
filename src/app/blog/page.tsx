@@ -228,7 +228,7 @@ export default function BlogPage() {
             viewport={{ once: true }}
             className="grid grid-cols-2 lg:grid-cols-4 gap-8"
           >
-            {Object.entries(blogStats).map(([key, value], index) => (
+            {Object.entries(blogStats).map(([key, value]) => (
               <motion.div
                 key={key}
                 variants={itemVariants}
@@ -271,7 +271,7 @@ export default function BlogPage() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {blogCategories.map((category, index) => (
+            {blogCategories.map((category) => (
               <motion.div
                 key={category.name}
                 variants={itemVariants}

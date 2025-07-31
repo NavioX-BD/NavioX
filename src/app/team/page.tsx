@@ -122,7 +122,7 @@ export default function TeamPage() {
                   Team Overview
                 </h2>
                 <div className="grid grid-cols-2 gap-4">
-                  {companyStats.map((stat, index) => (
+                  {companyStats.map((stat) => (
                     <motion.div
                       key={stat.label}
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -144,7 +144,7 @@ export default function TeamPage() {
                   Leadership Stats
                 </h2>
                 <div className="space-y-4">
-                  {leadershipStats.map((stat, index) => (
+                  {leadershipStats.map((stat) => (
                     <motion.div
                       key={stat.label}
                       initial={{ opacity: 0, x: -20 }}
@@ -219,7 +219,7 @@ export default function TeamPage() {
               viewport={{ once: true }}
               className="grid md:grid-cols-2 gap-8"
             >
-              {teamMembers.map((member, index) => (
+              {teamMembers.map((member) => (
                 <motion.div
                   key={member.name}
                   variants={cardVariants}

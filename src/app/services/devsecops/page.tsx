@@ -1,12 +1,12 @@
-'use client'
+'apos;use client'apos;
 
 import {
     ArrowRightIcon,
     CheckIcon,
     ShieldCheckIcon
-} from '@heroicons/react/24/outline'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+} from 'apos;@heroicons/react/24/outline'apos;
+import { motion } from 'apos;framer-motion'apos;
+import Link from 'apos;next/link'apos;
 import {
     SiAmazon,
     SiDocker,
@@ -14,99 +14,99 @@ import {
     SiSonarqube,
     SiTerraform,
     SiVault
-} from 'react-icons/si'
+} from 'apos;react-icons/si'apos;
 
 // Process descriptions for DevSecOps
 const getProcessDescription = (step: string): string => {
   const descriptions: { [key: string]: string } = {
-    'Security Assessment & Audit': 'Comprehensive security evaluation of existing infrastructure, identifying vulnerabilities and compliance gaps.',
-    'DevSecOps Strategy Development': 'Design security-first DevOps strategy integrating security practices throughout the development lifecycle.',
-    'Security Tool Integration': 'Implement automated security tools for code scanning, vulnerability assessment, and compliance monitoring.',
-    'Pipeline Security Implementation': 'Integrate security gates into CI/CD pipelines with automated testing and compliance checks.',
-    'Compliance Framework Setup': 'Establish security policies, compliance frameworks, and governance procedures for regulatory requirements.',
-    'Security Monitoring Deployment': 'Deploy comprehensive security monitoring with real-time threat detection and incident response.',
-    'Team Training & Knowledge Transfer': 'Provide security training, establish best practices, and transfer knowledge to development teams.',
-    'Continuous Security Optimization': 'Ongoing security improvements, threat monitoring, and proactive security enhancements.'
+    'apos;Security Assessment & Audit'apos;: 'apos;Comprehensive security evaluation of existing infrastructure, identifying vulnerabilities and compliance gaps.'apos;,
+    'apos;DevSecOps Strategy Development'apos;: 'apos;Design security-first DevOps strategy integrating security practices throughout the development lifecycle.'apos;,
+    'apos;Security Tool Integration'apos;: 'apos;Implement automated security tools for code scanning, vulnerability assessment, and compliance monitoring.'apos;,
+    'apos;Pipeline Security Implementation'apos;: 'apos;Integrate security gates into CI/CD pipelines with automated testing and compliance checks.'apos;,
+    'apos;Compliance Framework Setup'apos;: 'apos;Establish security policies, compliance frameworks, and governance procedures for regulatory requirements.'apos;,
+    'apos;Security Monitoring Deployment'apos;: 'apos;Deploy comprehensive security monitoring with real-time threat detection and incident response.'apos;,
+    'apos;Team Training & Knowledge Transfer'apos;: 'apos;Provide security training, establish best practices, and transfer knowledge to development teams.'apos;,
+    'apos;Continuous Security Optimization'apos;: 'apos;Ongoing security improvements, threat monitoring, and proactive security enhancements.'apos;
   }
-  return descriptions[step] || 'Professional DevSecOps process step.'
+  return descriptions[step] || 'apos;Professional DevSecOps process step.'apos;
 }
 
 // Technology icon mapping for DevSecOps
 const techIconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
-  'AWS Security Hub': SiAmazon,
-  'Azure Security Center': ShieldCheckIcon,
-  'Docker Security Scanning': SiDocker,
-  'Kubernetes Security Policies': SiKubernetes,
-  'Terraform Security Validation': SiTerraform,
-  'SAST/DAST Tools': ShieldCheckIcon,
-  'HashiCorp Vault': SiVault,
-  'OWASP ZAP': ShieldCheckIcon,
-  'SonarQube': SiSonarqube,
-  'Twistlock': ShieldCheckIcon,
-  'Falco': ShieldCheckIcon,
-  'OPA Gatekeeper': ShieldCheckIcon
+  'apos;AWS Security Hub'apos;: SiAmazon,
+  'apos;Azure Security Center'apos;: ShieldCheckIcon,
+  'apos;Docker Security Scanning'apos;: SiDocker,
+  'apos;Kubernetes Security Policies'apos;: SiKubernetes,
+  'apos;Terraform Security Validation'apos;: SiTerraform,
+  'apos;SAST/DAST Tools'apos;: ShieldCheckIcon,
+  'apos;HashiCorp Vault'apos;: SiVault,
+  'apos;OWASP ZAP'apos;: ShieldCheckIcon,
+  'apos;SonarQube'apos;: SiSonarqube,
+  'apos;Twistlock'apos;: ShieldCheckIcon,
+  'apos;Falco'apos;: ShieldCheckIcon,
+  'apos;OPA Gatekeeper'apos;: ShieldCheckIcon
 }
 
 // DevSecOps service data
 const devSecOpsService = {
-  id: 'devsecops',
-  name: 'DevSecOps',
-  description: 'Security-first DevOps with automated security integration throughout the development lifecycle',
+  id: 'apos;devsecops'apos;,
+  name: 'apos;DevSecOps'apos;,
+  description: 'apos;Security-first DevOps with automated security integration throughout the development lifecycle'apos;,
   features: [
-    'Security Automation & Integration',
-    'CI/CD Pipeline Security',
-    'Infrastructure as Code Security',
-    'Container & Kubernetes Security',
-    'Compliance & Governance Automation',
-    'Vulnerability Management',
-    'Security Monitoring & Alerting',
-    'Zero-Trust Architecture Implementation'
+    'apos;Security Automation & Integration'apos;,
+    'apos;CI/CD Pipeline Security'apos;,
+    'apos;Infrastructure as Code Security'apos;,
+    'apos;Container & Kubernetes Security'apos;,
+    'apos;Compliance & Governance Automation'apos;,
+    'apos;Vulnerability Management'apos;,
+    'apos;Security Monitoring & Alerting'apos;,
+    'apos;Zero-Trust Architecture Implementation'apos;
   ],
   securityAreas: [
     {
-      area: 'Pipeline Security',
-      description: 'Secure CI/CD pipelines with automated security gates and continuous scanning',
-      features: ['Source code security scanning', 'Dependency vulnerability checking', 'Container image security validation', 'Infrastructure security testing']
+      area: 'apos;Pipeline Security'apos;,
+      description: 'apos;Secure CI/CD pipelines with automated security gates and continuous scanning'apos;,
+      features: ['apos;Source code security scanning'apos;, 'apos;Dependency vulnerability checking'apos;, 'apos;Container image security validation'apos;, 'apos;Infrastructure security testing'apos;]
     },
     {
-      area: 'Infrastructure Security',
-      description: 'Secure cloud infrastructure with policy-as-code and automated compliance',
-      features: ['Cloud security posture management', 'Network security automation', 'Identity and access management', 'Encryption and key management']
+      area: 'apos;Infrastructure Security'apos;,
+      description: 'apos;Secure cloud infrastructure with policy-as-code and automated compliance'apos;,
+      features: ['apos;Cloud security posture management'apos;, 'apos;Network security automation'apos;, 'apos;Identity and access management'apos;, 'apos;Encryption and key management'apos;]
     },
     {
-      area: 'Runtime Security',
-      description: 'Continuous security monitoring and threat detection in production environments',
-      features: ['Runtime application protection', 'Container runtime security', 'Anomaly detection and alerting', 'Incident response automation']
+      area: 'apos;Runtime Security'apos;,
+      description: 'apos;Continuous security monitoring and threat detection in production environments'apos;,
+      features: ['apos;Runtime application protection'apos;, 'apos;Container runtime security'apos;, 'apos;Anomaly detection and alerting'apos;, 'apos;Incident response automation'apos;]
     },
     {
-      area: 'Compliance & Governance',
-      description: 'Automated compliance monitoring and security governance frameworks',
-      features: ['Policy enforcement automation', 'Compliance reporting and auditing', 'Risk assessment and management', 'Security metrics and KPIs']
+      area: 'apos;Compliance & Governance'apos;,
+      description: 'apos;Automated compliance monitoring and security governance frameworks'apos;,
+      features: ['apos;Policy enforcement automation'apos;, 'apos;Compliance reporting and auditing'apos;, 'apos;Risk assessment and management'apos;, 'apos;Security metrics and KPIs'apos;]
     }
   ],
   technologies: [
-    'AWS Security Hub',
-    'Azure Security Center',
-    'Docker Security Scanning',
-    'Kubernetes Security Policies',
-    'Terraform Security Validation',
-    'SAST/DAST Tools',
-    'HashiCorp Vault',
-    'OWASP ZAP',
-    'SonarQube',
-    'Twistlock',
-    'Falco',
-    'OPA Gatekeeper'
+    'apos;AWS Security Hub'apos;,
+    'apos;Azure Security Center'apos;,
+    'apos;Docker Security Scanning'apos;,
+    'apos;Kubernetes Security Policies'apos;,
+    'apos;Terraform Security Validation'apos;,
+    'apos;SAST/DAST Tools'apos;,
+    'apos;HashiCorp Vault'apos;,
+    'apos;OWASP ZAP'apos;,
+    'apos;SonarQube'apos;,
+    'apos;Twistlock'apos;,
+    'apos;Falco'apos;,
+    'apos;OPA Gatekeeper'apos;
   ],
   process: [
-    'Security Assessment & Audit',
-    'DevSecOps Strategy Development',
-    'Security Tool Integration',
-    'Pipeline Security Implementation',
-    'Compliance Framework Setup',
-    'Security Monitoring Deployment',
-    'Team Training & Knowledge Transfer',
-    'Continuous Security Optimization'
+    'apos;Security Assessment & Audit'apos;,
+    'apos;DevSecOps Strategy Development'apos;,
+    'apos;Security Tool Integration'apos;,
+    'apos;Pipeline Security Implementation'apos;,
+    'apos;Compliance Framework Setup'apos;,
+    'apos;Security Monitoring Deployment'apos;,
+    'apos;Team Training & Knowledge Transfer'apos;,
+    'apos;Continuous Security Optimization'apos;
   ]
 }
 
@@ -136,7 +136,7 @@ export default function DevSecOpsPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-green-700 to-teal-800 mb-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('apos;data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'apos;)] opacity-20"></div>
         
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-20">
           <motion.div
@@ -390,7 +390,7 @@ export default function DevSecOpsPage() {
                   {/* Mobile Flow Arrow */}
                   {index < devSecOpsService.process.length - 1 && (
                     <div className="lg:hidden flex justify-center -mt-6 mb-2 z-10 relative">
-                      <div className="w-8 h-8 bg-white rounded-full border-2 border-slate-200 flex items-center justify-center shadow-sm" style={{ boxShadow: '0 2px 8px 0 rgba(0,0,0,0.04)' }}>
+                      <div className="w-8 h-8 bg-white rounded-full border-2 border-slate-200 flex items-center justify-center shadow-sm" style={{ boxShadow: 'apos;0 2px 8px 0 rgba(0,0,0,0.04)'apos; }}>
                         <ArrowRightIcon className="w-4 h-4 text-slate-400 rotate-90" />
                       </div>
                     </div>
@@ -418,7 +418,7 @@ export default function DevSecOpsPage() {
               Ready to Secure Your Development Pipeline?
             </h2>
             <p className="text-lg text-emerald-100 max-w-3xl mx-auto mb-8">
-              Transform your development practices with security-first DevSecOps. Let's build a more secure, compliant, and efficient development lifecycle.
+              Transform your development practices with security-first DevSecOps. Let'apos;s build a more secure, compliant, and efficient development lifecycle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
