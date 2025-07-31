@@ -1,13 +1,13 @@
-'apos;use client'apos;
+'use client'
 
 import {
     ArrowRightIcon,
     BuildingOfficeIcon,
     ChartBarIcon,
     CheckIcon
-} from 'apos;@heroicons/react/24/outline'apos;
-import { motion } from 'apos;framer-motion'apos;
-import Link from 'apos;next/link'apos;
+} from '@heroicons/react/24/outline'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 // Enterprise Projects data
 const enterpriseProjectsData = {
@@ -159,7 +159,7 @@ export default function EnterpriseProjectsPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-800 via-gray-800 to-slate-900 mb-20">
-        <div className="absolute inset-0 bg-[url('apos;data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'apos;)] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-20">
           <motion.div
@@ -409,7 +409,7 @@ export default function EnterpriseProjectsPage() {
               Ready to Scale Your Enterprise?
             </h2>
             <p className="text-lg text-slate-100 max-w-3xl mx-auto mb-8">
-              Let'apos;s build an enterprise solution that scales with your organization and drives digital transformation. From planning to deployment and beyond.
+              Let&apos;s build an enterprise solution that scales with your organization and drives digital transformation. From planning to deployment and beyond.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

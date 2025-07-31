@@ -1,12 +1,12 @@
-'apos;use client'apos;
+'use client'
 
 import {
     ArrowRightIcon,
     CheckIcon,
     CodeBracketIcon
-} from 'apos;@heroicons/react/24/outline'apos;
-import { motion } from 'apos;framer-motion'apos;
-import Link from 'apos;next/link'apos;
+} from '@heroicons/react/24/outline'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 import {
     SiAmazon,
     SiDocker,
@@ -20,99 +20,99 @@ import {
     SiTailwindcss,
     SiTypescript,
     SiVercel
-} from 'apos;react-icons/si'apos;
+} from 'react-icons/si'
 
 // Process descriptions for Web Development
 const getProcessDescription = (step: string): string => {
   const descriptions: { [key: string]: string } = {
-    'apos;Discovery & Requirements Analysis'apos;: 'apos;Understand your business goals, user needs, and technical requirements to create a comprehensive project plan.'apos;,
-    'apos;UI/UX Design & Prototyping'apos;: 'apos;Create intuitive user interfaces, wireframes, and interactive prototypes for optimal user experience.'apos;,
-    'apos;Frontend Development'apos;: 'apos;Build responsive, modern web applications using the latest technologies and best practices.'apos;,
-    'apos;Backend Development'apos;: 'apos;Develop robust server-side logic, APIs, and database architecture for scalable applications.'apos;,
-    'apos;Testing & Quality Assurance'apos;: 'apos;Comprehensive testing including unit tests, integration tests, and user acceptance testing.'apos;,
-    'apos;Deployment & Launch'apos;: 'apos;Deploy to production with monitoring, performance optimization, and launch support.'apos;,
-    'apos;Post-Launch Support'apos;: 'apos;Provide ongoing maintenance, updates, and support to ensure optimal performance.'apos;,
-    'apos;Continuous Improvement'apos;: 'apos;Regular updates, feature enhancements, and performance optimizations based on user feedback.'apos;
+    'Discovery & Requirements Analysis': 'Understand your business goals, user needs, and technical requirements to create a comprehensive project plan.',
+    'UI/UX Design & Prototyping': 'Create intuitive user interfaces, wireframes, and interactive prototypes for optimal user experience.',
+    'Frontend Development': 'Build responsive, modern web applications using the latest technologies and best practices.',
+    'Backend Development': 'Develop robust server-side logic, APIs, and database architecture for scalable applications.',
+    'Testing & Quality Assurance': 'Comprehensive testing including unit tests, integration tests, and user acceptance testing.',
+    'Deployment & Launch': 'Deploy to production with monitoring, performance optimization, and launch support.',
+    'Post-Launch Support': 'Provide ongoing maintenance, updates, and support to ensure optimal performance.',
+    'Continuous Improvement': 'Regular updates, feature enhancements, and performance optimizations based on user feedback.'
   }
-  return descriptions[step] || 'apos;Professional web development process step.'apos;
+  return descriptions[step] || 'Professional web development process step.'
 }
 
 // Technology icon mapping for Web Development
 const techIconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
-  'apos;React'apos;: SiReact,
-  'apos;Next.js'apos;: SiNextdotjs,
-  'apos;TypeScript'apos;: SiTypescript,
-  'apos;Node.js'apos;: SiNodedotjs,
-  'apos;Python'apos;: SiPython,
-  'apos;PostgreSQL'apos;: SiPostgresql,
-  'apos;MongoDB'apos;: SiMongodb,
-  'apos;Redis'apos;: SiRedis,
-  'apos;Docker'apos;: SiDocker,
-  'apos;AWS'apos;: SiAmazon,
-  'apos;Vercel'apos;: SiVercel,
-  'apos;Tailwind CSS'apos;: SiTailwindcss
+  'React': SiReact,
+  'Next.js': SiNextdotjs,
+  'TypeScript': SiTypescript,
+  'Node.js': SiNodedotjs,
+  'Python': SiPython,
+  'PostgreSQL': SiPostgresql,
+  'MongoDB': SiMongodb,
+  'Redis': SiRedis,
+  'Docker': SiDocker,
+  'AWS': SiAmazon,
+  'Vercel': SiVercel,
+  'Tailwind CSS': SiTailwindcss
 }
 
 // Web Development service data
 const webDevService = {
-  id: 'apos;web-development'apos;,
-  name: 'apos;Web Development'apos;,
-  description: 'apos;Custom web applications and digital solutions built with modern technologies and best practices'apos;,
+  id: 'web-development',
+  name: 'Web Development',
+  description: 'Custom web applications and digital solutions built with modern technologies and best practices',
   features: [
-    'apos;Custom Web Applications'apos;,
-    'apos;E-commerce Solutions'apos;,
-    'apos;Progressive Web Apps (PWA)'apos;,
-    'apos;Content Management Systems'apos;,
-    'apos;API Integration & Development'apos;,
-    'apos;Database Design & Optimization'apos;,
-    'apos;Performance Optimization'apos;,
-    'apos;SEO & Analytics Implementation'apos;
+    'Custom Web Applications',
+    'E-commerce Solutions',
+    'Progressive Web Apps (PWA)',
+    'Content Management Systems',
+    'API Integration & Development',
+    'Database Design & Optimization',
+    'Performance Optimization',
+    'SEO & Analytics Implementation'
   ],
   webSolutions: [
     {
-      type: 'apos;E-commerce Platforms'apos;,
-      description: 'apos;Full-featured online stores with payment integration and inventory management'apos;,
-      features: ['apos;Shopping cart and checkout'apos;, 'apos;Payment gateway integration'apos;, 'apos;Inventory management'apos;, 'apos;Order tracking and management'apos;, 'apos;Customer accounts and profiles'apos;, 'apos;Admin dashboard and analytics'apos;]
+      type: 'E-commerce Platforms',
+      description: 'Full-featured online stores with payment integration and inventory management',
+      features: ['Shopping cart and checkout', 'Payment gateway integration', 'Inventory management', 'Order tracking and management', 'Customer accounts and profiles', 'Admin dashboard and analytics']
     },
     {
-      type: 'apos;Business Applications'apos;,
-      description: 'apos;Custom web applications tailored for business operations and workflows'apos;,
-      features: ['apos;User authentication and authorization'apos;, 'apos;Real-time data synchronization'apos;, 'apos;Advanced search and filtering'apos;, 'apos;Data visualization and reporting'apos;, 'apos;Workflow automation'apos;, 'apos;Third-party integrations'apos;]
+      type: 'Business Applications',
+      description: 'Custom web applications tailored for business operations and workflows',
+      features: ['User authentication and authorization', 'Real-time data synchronization', 'Advanced search and filtering', 'Data visualization and reporting', 'Workflow automation', 'Third-party integrations']
     },
     {
-      type: 'apos;Content Management Systems'apos;,
-      description: 'apos;Flexible CMS solutions for content-driven websites and digital publishing'apos;,
-      features: ['apos;Intuitive content editor'apos;, 'apos;Multi-user permissions'apos;, 'apos;SEO optimization tools'apos;, 'apos;Media management'apos;, 'apos;Custom content types'apos;, 'apos;API-driven architecture'apos;]
+      type: 'Content Management Systems',
+      description: 'Flexible CMS solutions for content-driven websites and digital publishing',
+      features: ['Intuitive content editor', 'Multi-user permissions', 'SEO optimization tools', 'Media management', 'Custom content types', 'API-driven architecture']
     },
     {
-      type: 'apos;Progressive Web Apps'apos;,
-      description: 'apos;App-like experiences with web technologies for enhanced user engagement'apos;,
-      features: ['apos;Offline functionality'apos;, 'apos;Push notifications'apos;, 'apos;App-like interface'apos;, 'apos;Fast loading with caching'apos;, 'apos;Cross-platform compatibility'apos;, 'apos;Easy installation'apos;]
+      type: 'Progressive Web Apps',
+      description: 'App-like experiences with web technologies for enhanced user engagement',
+      features: ['Offline functionality', 'Push notifications', 'App-like interface', 'Fast loading with caching', 'Cross-platform compatibility', 'Easy installation']
     }
   ],
   technologies: [
-    'apos;React'apos;,
-    'apos;Next.js'apos;,
-    'apos;TypeScript'apos;,
-    'apos;Node.js'apos;,
-    'apos;Python'apos;,
-    'apos;PostgreSQL'apos;,
-    'apos;MongoDB'apos;,
-    'apos;Redis'apos;,
-    'apos;Docker'apos;,
-    'apos;AWS'apos;,
-    'apos;Vercel'apos;,
-    'apos;Tailwind CSS'apos;
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Node.js',
+    'Python',
+    'PostgreSQL',
+    'MongoDB',
+    'Redis',
+    'Docker',
+    'AWS',
+    'Vercel',
+    'Tailwind CSS'
   ],
   process: [
-    'apos;Discovery & Requirements Analysis'apos;,
-    'apos;UI/UX Design & Prototyping'apos;,
-    'apos;Frontend Development'apos;,
-    'apos;Backend API Development'apos;,
-    'apos;Database Design & Integration'apos;,
-    'apos;Testing & Quality Assurance'apos;,
-    'apos;Deployment & Launch'apos;,
-    'apos;Maintenance & Optimization'apos;
+    'Discovery & Requirements Analysis',
+    'UI/UX Design & Prototyping',
+    'Frontend Development',
+    'Backend API Development',
+    'Database Design & Integration',
+    'Testing & Quality Assurance',
+    'Deployment & Launch',
+    'Maintenance & Optimization'
   ]
 }
 
@@ -142,7 +142,7 @@ export default function WebDevelopmentPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 mb-20">
-        <div className="absolute inset-0 bg-[url('apos;data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'apos;)] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-20">
           <motion.div
@@ -396,7 +396,7 @@ export default function WebDevelopmentPage() {
                   {/* Mobile Flow Arrow */}
                   {index < webDevService.process.length - 1 && (
                     <div className="lg:hidden flex justify-center -mt-6 mb-2 z-10 relative">
-                      <div className="w-8 h-8 bg-white rounded-full border-2 border-slate-200 flex items-center justify-center shadow-sm" style={{ boxShadow: 'apos;0 2px 8px 0 rgba(0,0,0,0.04)'apos; }}>
+                      <div className="w-8 h-8 bg-white rounded-full border-2 border-slate-200 flex items-center justify-center shadow-sm" style={{ boxShadow: '0 2px 8px 0 rgba(0,0,0,0.04)' }}>
                         <ArrowRightIcon className="w-4 h-4 text-slate-400 rotate-90" />
                       </div>
                     </div>
@@ -424,7 +424,7 @@ export default function WebDevelopmentPage() {
               Ready to Build Your Web Application?
             </h2>
             <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-8">
-              Let'apos;s create a powerful web solution that drives your business forward. From concept to launch, we'apos;ll be with you every step of the way.
+              Let&apos;s create a powerful web solution that drives your business forward. From concept to launch, we&apos;ll be with you every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

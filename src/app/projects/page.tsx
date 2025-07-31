@@ -336,7 +336,7 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             className="grid lg:grid-cols-2 gap-8"
           >
-            {featuredProjects.map((project, index) => (
+            {featuredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}

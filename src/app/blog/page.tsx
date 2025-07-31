@@ -326,7 +326,7 @@ export default function BlogPage() {
             viewport={{ once: true }}
             className="grid lg:grid-cols-2 gap-8"
           >
-            {featuredPosts.map((post, index) => (
+            {featuredPosts.map((post) => (
               <motion.article
                 key={post.id}
                 variants={itemVariants}
