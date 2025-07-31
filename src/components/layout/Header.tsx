@@ -382,7 +382,7 @@ const Header = () => {
                 key={item.name}
                 variants={navItemVariants}
                 whileHover="hover"
-                custom={index}
+
                 className="relative"
                 onMouseEnter={() => hasSubmenu && handleMouseEnter(item.name)}
                 onMouseLeave={handleMouseLeave}
