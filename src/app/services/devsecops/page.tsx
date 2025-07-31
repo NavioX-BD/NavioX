@@ -418,7 +418,7 @@ export default function DevSecOpsPage() {
               Ready to Secure Your Development Pipeline?
             </h2>
             <p className="text-lg text-emerald-100 max-w-3xl mx-auto mb-8">
-              Transform your development practices with security-first DevSecOps. Let's build a more secure, compliant, and efficient development lifecycle.
+              Transform your development practices with security-first DevSecOps. Let&apos;s build a more secure, compliant, and efficient development lifecycle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

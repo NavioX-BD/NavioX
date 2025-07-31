@@ -454,7 +454,7 @@ export default function WebProjectsPage() {
               Ready to Build Your Web Application?
             </h2>
             <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-8">
-              Let's create a powerful web application that engages your users and drives your business forward. From concept to deployment and beyond.
+              Let&apos;s create a powerful web application that engages your users and drives your business forward. From concept to deployment and beyond.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

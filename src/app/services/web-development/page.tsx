@@ -424,7 +424,7 @@ export default function WebDevelopmentPage() {
               Ready to Build Your Web Application?
             </h2>
             <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-8">
-              Let's create a powerful web solution that drives your business forward. From concept to launch, we'll be with you every step of the way.
+              Let&apos;s create a powerful web solution that drives your business forward. From concept to launch, we&apos;ll be with you every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

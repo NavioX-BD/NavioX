@@ -438,7 +438,7 @@ export default function TechnologyPage() {
               Stay Ahead with Technology Insights
             </h2>
             <p className="text-lg text-cyan-100 max-w-3xl mx-auto mb-8">
-              Don't miss out on the latest technology trends and development insights. Subscribe to our newsletter for weekly tech updates.
+              Don&apos;t miss out on the latest technology trends and development insights. Subscribe to our newsletter for weekly tech updates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

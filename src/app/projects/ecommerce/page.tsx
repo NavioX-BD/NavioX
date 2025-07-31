@@ -401,7 +401,7 @@ export default function EcommerceProjectsPage() {
               Ready to Launch Your E-commerce Store?
             </h2>
             <p className="text-lg text-purple-100 max-w-3xl mx-auto mb-8">
-              Let's build an e-commerce platform that converts visitors into customers and drives your online business growth. From concept to launch and beyond.
+              Let&apos;s build an e-commerce platform that converts visitors into customers and drives your online business growth. From concept to launch and beyond.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

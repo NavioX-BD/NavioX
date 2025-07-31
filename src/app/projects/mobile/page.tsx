@@ -376,7 +376,7 @@ export default function MobileProjectsPage() {
               Ready to Build Your Mobile App?
             </h2>
             <p className="text-lg text-green-100 max-w-3xl mx-auto mb-8">
-              Let's create a mobile application that engages your users and drives your business forward. From concept to App Store, we'll guide you through every step.
+              Let&apos;s create a mobile application that engages your users and drives your business forward. From concept to App Store, we&apos;ll guide you through every step.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
