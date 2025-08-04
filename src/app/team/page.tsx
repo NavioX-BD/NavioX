@@ -2,14 +2,14 @@
 
 import { loadCompanyStats, loadTeamData } from '@/lib/data-loader'
 import {
-  AcademicCapIcon,
-  BriefcaseIcon,
-  ChartBarIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-  StarIcon,
-  UserGroupIcon,
-  WrenchScrewdriverIcon
+    AcademicCapIcon,
+    BriefcaseIcon,
+    ChartBarIcon,
+    EnvelopeIcon,
+    MapPinIcon,
+    StarIcon,
+    UserGroupIcon,
+    WrenchScrewdriverIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
